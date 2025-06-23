@@ -179,7 +179,7 @@
                         <button class="navbar-link" data-nav-link>Portfolio</button>
                     </li>
 
-                   <!--  <li class="navbar-item">
+                    <!--  <li class="navbar-item">
                         <button class="navbar-link" data-nav-link>Blog</button>
                     </li> -->
 
@@ -310,7 +310,7 @@
                             </div>
                         </li>
 
-                        <li class="service-item">
+                        <!--  <li class="service-item">
                             <div class="service-icon-box">
                                 <img src="/assets/images/icon-dev.svg" alt="web development icon" width="40">
                             </div>
@@ -323,7 +323,7 @@
                                     functional interface, using modern technologies.
                                 </p>
                             </div>
-                        </li>
+                        </li> -->
 
                         <li class="service-item">
                             <div class="service-icon-box">
@@ -340,7 +340,7 @@
                             </div>
                         </li>
 
-                        <li class="service-item">
+                        <!-- <li class="service-item">
                             <div class="service-icon-box">
                                 <img src="/assets/images/deployment-hosting.png" alt="deployment hosting icon"
                                     width="40">
@@ -354,7 +354,7 @@
                                     such as AWS, Vercel, etc.), ensuring that they work in a stable and secure way.
                                 </p>
                             </div>
-                        </li>
+                        </li> -->
                     </ul>
 
                 </section>
@@ -672,14 +672,14 @@
                                         width="24"><span>Python</span></li>
                                 <li class="skills-item"><img src="/assets/images/logo-java.png" alt="Java"
                                         width="24"><span>Java</span></li>
-                                <li class="skills-item"><img src="/assets/images/logo-js.png" alt="JavaScript"
-                                        width="24px"><span>JavaScript</span></li>
+                                <!-- <li class="skills-item"><img src="/assets/images/logo-js.png" alt="JavaScript"
+                                        width="24px"><span>JavaScript</span></li> -->
                                 <li class="skills-item"><img src="/assets/images/logo-typescript.png" alt="TypeScript"
                                         width="24px"><span>TypeScript</span></li>
-                                <li class="skills-item"><img src="/assets/images/logo-html.png" alt="HTML"
+                                <!--  <li class="skills-item"><img src="/assets/images/logo-html.png" alt="HTML"
                                         width="24px"><span>HTML</span></li>
                                 <li class="skills-item"><img src="/assets/images/logo-css.png" alt="CSS"
-                                        width="24px"><span>CSS</span></li>
+                                        width="24px"><span>CSS</span></li> -->
                             </ul>
                         </div>
 
@@ -692,9 +692,9 @@
                                 <li class="skills-item"><img src="/assets/images/api-development.png" alt="APIS"
                                         width="24px"><span>APIs REST</span></li>
                                 <li class="skills-item"><img src="/assets/images/logo-python.png" alt="Python"
-                                    width="24px"><span>Asyncio (Python)</span></li>
+                                        width="24px"><span>Asyncio (Python)</span></li>
                                 <li class="skills-item"><img src="/assets/images/logo-docker.png" alt="Docker Podman"
-                                            width="24px"><span>Docker/Podman</span></li>
+                                        width="24px"><span>Docker/Podman</span></li>
                                 <li class="skills-item"><img src="/assets/images/logo-cicd.png" alt="CI/CD"
                                         width="24px"><span>CI/CD</span></li>
                             </ul>
@@ -708,8 +708,8 @@
                                         width="24px"><span>PostgreSQL</span></li>
                                 <li class="skills-item"><img src="/assets/images/logo-mysql.png" alt="MySQL"
                                         width="24px"><span>MySQL</span></li>
-                                <li class="skills-item"><img src="/assets/images/logo-mariadb.png" alt="MariaDB"
-                                        width="24px"><span>MariaDB</span></li>
+                                <!--  <li class="skills-item"><img src="/assets/images/logo-mariadb.png" alt="MariaDB"
+                                        width="24px"><span>MariaDB</span></li> -->
                                 <li class="skills-item"><img src="/assets/images/logo-mongodb.png" alt="MongoDB"
                                         width="24px"><span>MongoDB</span></li>
                                 <li class="skills-item"><img src="/assets/images/logo-cassandra.png" alt="Cassandra"
@@ -740,16 +740,16 @@
                         <div class="skills-group">
                             <h4 class="h4 group-title">Soft skills</h4>
                             <ul class="skills-list">
-                                <li class="skills-item"><img src="/assets/images/logo-comunication.png" alt="Communication"
-                                        width="24px"><span>Communication</span></li>
+                                <li class="skills-item"><img src="/assets/images/logo-comunication.png"
+                                        alt="Communication" width="24px"><span>Communication</span></li>
                                 <li class="skills-item"><img src="/assets/images/logo-teamwork.png" alt="Teamwork"
                                         width="24px"><span>Teamwork</span></li>
-                                <li class="skills-item"><img src="/assets/images/logo-analytical-thinking.png" alt="Analytical thinking"
-                                        width="24px"><span>Analytical thinking</span></li>
+                                <li class="skills-item"><img src="/assets/images/logo-analytical-thinking.png"
+                                        alt="Analytical thinking" width="24px"><span>Analytical thinking</span></li>
                                 <li class="skills-item"><img src="/assets/images/logo-proactivity.png" alt="Proactivity"
                                         width="24px"><span>Proactivity</span></li>
-                                <li class="skills-item"><img src="/assets/images/logo-time-management.png" alt="Time management"
-                                        width="24px"><span>Time management</span></li>
+                                <li class="skills-item"><img src="/assets/images/logo-time-management.png"
+                                        alt="Time management" width="24px"><span>Time management</span></li>
                             </ul>
                         </div>
 
@@ -1219,14 +1219,16 @@
 
                     <h3 class="h3 form-title">Contact Form</h3>
 
+                    <div id="form-message" class="form-message"></div>
+
                     <form action="#" class="form" data-form>
 
                         <div class="input-wrapper">
-                            <input type="text" name="fullname" class="form-input" placeholder="Full name" required
+                            <input type="text" name="from_name" class="form-input" placeholder="Full name" required
                                 data-form-input>
 
-                            <input type="email" name="email" class="form-input" placeholder="Email address" required
-                                data-form-input>
+                            <input type="email" name="from_email" class="form-input" placeholder="Email address"
+                                required data-form-input>
                         </div>
 
                         <textarea name="message" class="form-input" placeholder="Your Message" required
@@ -1236,7 +1238,6 @@
                             <ion-icon name="paper-plane"></ion-icon>
                             <span>Send Message</span>
                         </button>
-
                     </form>
 
                 </section>
@@ -1256,6 +1257,8 @@
     - custom js link
   -->
     <script src="./assets/js/script.js"></script>
+    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script src="./assets/js/email.js"></script>
 
     <!--
     - ionicon link
