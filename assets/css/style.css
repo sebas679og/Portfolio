@@ -443,6 +443,38 @@ main {
   font-size: 18px;
 }
 
+.lang-toggle {
+  position: relative;
+  z-index: 1;
+  margin-top: 8px;
+  margin-inline: auto;
+  padding: 6px 16px;
+  font-size: var(--fs-7);
+  font-weight: var(--fw-500);
+  color: var(--orange-yellow-crayola);
+  background: var(--border-gradient-onyx);
+  border-radius: 8px;
+  box-shadow: var(--shadow-2);
+  transition: var(--transition-1);
+}
+
+.lang-toggle::before {
+  content: "";
+  position: absolute;
+  inset: 1px;
+  background: var(--bg-gradient-jet);
+  border-radius: inherit;
+  z-index: -1;
+  transition: var(--transition-1);
+}
+
+.lang-toggle:hover {
+  background: var(--bg-gradient-yellow-1);
+}
+
+.lang-toggle:hover::before {
+  background: var(--bg-gradient-yellow-2);
+}
 
 .social-item .social-link:hover { color: var(--light-gray); }
 
@@ -875,6 +907,66 @@ main {
 /*-----------------------------------*\
   #PORTFOLIO
 \*-----------------------------------*/
+
+/* Botón de descarga de CV */
+.btn-download-cv {
+  position: relative;
+  overflow: hidden;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 24px;
+  background: var(--border-gradient-onyx);
+  color: var(--orange-yellow-crayola);
+  border-radius: 14px;
+  font-size: var(--fs-6);
+  font-weight: var(--fw-500);
+  box-shadow: var(--shadow-3);
+  transition: background var(--transition-1), color var(--transition-1), box-shadow var(--transition-1);
+  margin-top: 20px;
+  margin-bottom: 10px;
+  border: none;
+  cursor: pointer;
+  text-transform: capitalize;
+}
+
+.btn-download-cv ion-icon {
+  font-size: 20px;
+  color: var(--orange-yellow-crayola);
+  transition: color var(--transition-1);
+}
+
+.btn-download-cv::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--bg-gradient-yellow-1);
+  opacity: 0;
+  transition: opacity 0.4s cubic-bezier(0.4,0,0.2,1);
+  z-index: 0;
+}
+
+.btn-download-cv:hover::after,
+.btn-download-cv:focus::after {
+  opacity: 1;
+}
+
+.btn-download-cv > * {
+  position: relative;
+  z-index: 1;
+}
+
+.btn-download-cv:hover,
+.btn-download-cv:focus {
+  background: var(--bg-gradient-yellow-1);
+  color: var(--white-1);
+  box-shadow: var(--shadow-4);
+}
+
+.btn-download-cv:hover ion-icon,
+.btn-download-cv:focus ion-icon {
+  color: var(--white-1);
+}
 
 .filter-list { display: none; }
 
