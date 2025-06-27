@@ -1,44 +1,30 @@
-# vCard - Personal portfolio
+# Portafolio Personal – Sebastián Orjuela
 
-![GitHub repo size](https://img.shields.io/github/repo-size/codewithsadee/vcard-personal-portfolio)
-![GitHub stars](https://img.shields.io/github/stars/codewithsadee/vcard-personal-portfolio?style=social)
-![GitHub forks](https://img.shields.io/github/forks/codewithsadee/vcard-personal-portfolio?style=social)
-[![Twitter Follow](https://img.shields.io/twitter/follow/codewithsadee_?style=social)](https://twitter.com/intent/follow?screen_name=codewithsadee_)
-[![YouTube Video Views](https://img.shields.io/youtube/views/SoxmIlgf2zM?style=social)](https://youtu.be/SoxmIlgf2zM)
+Este proyecto es un portafolio web completamente responsivo, adaptado a partir de la plantilla **vCard** de [codewithsadee](https://github.com/codewithsadee/vcard-personal-portfolio).  
+Está construido con **HTML**, **CSS** y **JavaScript**, y es compatible con todos los dispositivos.
 
-vCard is a fully responsive personal portfolio website, responsive for all devices, built using HTML, CSS, and JavaScript.
+## 🚀 Vista previa
 
-## Demo
+Puedes visitar el portafolio en: [https://sebasorjuela.dev](https://sebasorjuela.dev)
 
-![vCard Desktop Demo](./website-demo-image/desktop.png "Desktop Demo")
-![vCard Mobile Demo](./website-demo-image/mobile.png "Mobile Demo")
+## 🛠️ Tecnologías usadas
 
-## Prerequisites
+- HTML5
+- CSS3
+- JavaScript
+- Diseño responsivo
+- GitHub Pages (para despliegue)
 
-Before you begin, ensure you have met the following requirements:
+## 🧰 Requisitos previos
 
-* [Git](https://git-scm.com/downloads "Download Git") must be installed on your operating system.
+Antes de comenzar, asegúrate de tener instalado:
 
-## Installing vCard
+- [Git](https://git-scm.com/downloads)
 
-To install **vCard**, follow these steps:
+## 📦 Instalación local
 
-Linux and macOS:
-
-```bash
-sudo git clone https://github.com/codewithsadee/vcard-personal-portfolio.git
-```
-
-Windows:
+Clona el repositorio con:
 
 ```bash
-git clone https://github.com/codewithsadee/vcard-personal-portfolio.git
-```
+git clone https://github.com/sebasorjuela/mi-portafolio.git
 
-## Contact
-
-If you want to contact me you can reach me at [Twitter](https://www.twitter.com/codewithsadee).
-
-## License
-
-MIT
