@@ -7,6 +7,8 @@ Está construido con **HTML**, **CSS** y **JavaScript**, y es compatible con tod
 
 Puedes visitar el portafolio en: [https://sebasorjuela.dev](https://sebasorjuela.dev)
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/ad475697-3bb5-4c99-a78b-c28d68ef281d/deploy-status)](https://app.netlify.com/projects/sebasorjuela/deploys)
+
 ## 🛠️ Tecnologías usadas
 
 - HTML5
