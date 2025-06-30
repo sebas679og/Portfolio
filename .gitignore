@@ -15,3 +15,8 @@ playwright-report/
 *.zip
 *.webm
 *.mp4
+
+# Playwright
+/playwright-report/
+/blob-report/
+/playwright/.cache/
