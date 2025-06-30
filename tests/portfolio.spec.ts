@@ -2,6 +2,18 @@ import { test, expect } from '@playwright/test';
 
 test('Personal information visibility test', async ({ page }) => {
   await page.goto('/');
+  const email = page.getByText('Email');
+
+  if (!(await email.isVisible())) {
+    const showContacts = page.getByRole('button', { name: /show contacts/i });
+    if (await showContacts.isVisible()) {
+      await showContacts.click();
+    } else {
+      const toggleIcon = page.getByRole('button', { name: /chevron down/i });
+      await toggleIcon.click();
+    }
+  }
+  
   await expect(page.getByRole('img', { name: 'Sebastian Orjuela' })).toBeVisible();
   await expect(page.getByRole('heading', { name: 'Sebastian Orjuela' })).toBeVisible();
   await expect(page.getByText('Backend developer')).toBeVisible();
