@@ -4,8 +4,9 @@
   "description": "Este proyecto es un portafolio web completamente responsivo, adaptado a partir de la plantilla **vCard** de [codewithsadee](https://github.com/codewithsadee/vcard-personal-portfolio).   Está construido con **HTML**, **CSS** y **JavaScript**, y es compatible con todos los dispositivos.",
   "main": "index.js",
   "scripts": {
+    "serve": "serve . -s",
     "test": "playwright test",
-    "serve": "serve . -s"
+    "test-ui": "playwright test --ui"
   },
   "repository": {
     "type": "git",
