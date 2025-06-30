@@ -8,6 +8,7 @@ package-lock.json
 # Playwright
 test-results/
 playwright-report/
+tests-examples/
 
 # Playwright trace/videos
 *.log
