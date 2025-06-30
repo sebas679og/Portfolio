@@ -103,5 +103,8 @@
   "t102": "Descargar CV",
   "t200": "Nombre completo",
   "t201": "Correo electrónico",
-  "t202": "Tu mensaje"
+  "t202": "Tu mensaje",
+  "msg_success": "Mensaje enviado con éxito 🎉",
+  "msg_error": "Ocurrió un error al enviar el mensaje.",
+  "msg_sending": "Enviando..."
 }
