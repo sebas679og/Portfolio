@@ -11,7 +11,7 @@
   "t010": "Ubicación",
   "t011": "Samaná, Caldas, Colombia",
   "t012": "Acerca de mí",
-  "t013": "Resumen",
+  "t013": "Currículum",
   "t014": "Portafolio",
   "t015": "Contacto",
   "t016": "Acerca de mí",
@@ -31,7 +31,7 @@
   "t030": "Modelado, optimización y administración de bases de datos SQL (como PostgreSQL, MySQL,\n                                    MariaDB) o NoSQL (como MongoDB, Cassandra), asegurando integridad y\n                                    rendimiento.",
   "t031": "Mantenimiento y actualizaciones de sistemas existentes",
   "t032": "Optimización de código, corrección de errores, refactorización o incorporación de nuevas funcionalidades a\n                                    proyectos en curso.",
-  "t033": "Resumen",
+  "t033": "Currículum",
   "t034": "Educación",
   "t035": "Tecnólogo en Análisis y Desarrollo de Software",
   "t036": "SENA (Servicio Nacional de Aprendizaje)",
@@ -103,5 +103,8 @@
   "t102": "Descargar CV",
   "t200": "Nombre completo",
   "t201": "Correo electrónico",
-  "t202": "Tu mensaje"
+  "t202": "Tu mensaje",
+  "msg_success": "Mensaje enviado con éxito 🎉",
+  "msg_error": "Ocurrió un error al enviar el mensaje.",
+  "msg_sending": "Enviando..."
 }

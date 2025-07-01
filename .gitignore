@@ -1,2 +1,23 @@
 # VScCode
 .vscode/
+
+# Node.js
+node_modules/
+package-lock.json
+
+# Playwright
+test-results/
+playwright-report/
+tests-examples/
+
+# Playwright trace/videos
+*.log
+*.tmp
+*.zip
+*.webm
+*.mp4
+
+# Playwright
+/playwright-report/
+/blob-report/
+/playwright/.cache/
