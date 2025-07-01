@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-sitemap: https://sebasorjuela.dev/sitemap.xml
+Sitemap: https://sebasorjuela.dev/sitemap.xml
