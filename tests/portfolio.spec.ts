@@ -650,7 +650,10 @@ test('SEO files accessibility test', async ({ page }) => {
   // Test robots.txt
   const robotsResponse = await page.goto('/robots.txt');
   expect(robotsResponse?.status()).toBe(200);
-  const robotsContent = await page.textContent('body');
+  if (!robotsResponse) {
+    throw new Error('robots.txt response is null');
+  }
+  const robotsContent = await robotsResponse.text();
   expect(robotsContent).toContain('User-agent: *');
   expect(robotsContent).toContain('Allow: /');
   expect(robotsContent).toContain('Sitemap: https://sebasorjuela.dev/sitemap.xml');
@@ -658,8 +661,13 @@ test('SEO files accessibility test', async ({ page }) => {
   // Test sitemap.xml
   const sitemapResponse = await page.goto('/sitemap.xml');
   expect(sitemapResponse?.status()).toBe(200);
-  const sitemapContent = await page.textContent('body');
+  if (!sitemapResponse) {
+    throw new Error('sitemap.xml response is null');
+  }
+  const sitemapContent = await sitemapResponse.text();
   expect(sitemapContent).toContain('<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">');
   expect(sitemapContent).toContain('<loc>https://sebasorjuela.dev/</loc>');
+  expect(sitemapContent).toContain('<lastmod>2025-07-01</lastmod>');
+  expect(sitemapContent).toContain('<changefreq>monthly</changefreq>');
   expect(sitemapContent).toContain('<priority>1.0</priority>');
 });
