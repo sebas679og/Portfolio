@@ -645,3 +645,29 @@ test('mock emailjs contact form submission with error in Spanish', async ({ page
   await expect(page.getByRole('button', { name: `paper plane ${es.msg_sending}` })).toBeVisible();
   await expect(page.getByText(es.msg_error)).toBeVisible();
 });
+
+test('SEO files accessibility test', async ({ page }) => {
+  // Test robots.txt
+  const robotsResponse = await page.goto('/robots.txt');
+  if (!robotsResponse) {
+    throw new Error('robots.txt response is null');
+  }
+  expect(robotsResponse?.status()).toBe(200);
+  const robotsContent = await robotsResponse.text();
+  expect(robotsContent).toContain('User-agent: *');
+  expect(robotsContent).toContain('Allow: /');
+  expect(robotsContent).toContain('Sitemap: https://sebasorjuela.dev/sitemap.xml');
+
+  // Test sitemap.xml
+  const sitemapResponse = await page.goto('/sitemap.xml');
+  if (!sitemapResponse) {
+    throw new Error('sitemap.xml response is null');
+  }
+  expect(sitemapResponse?.status()).toBe(200);
+  const sitemapContent = await sitemapResponse.text();
+  expect(sitemapContent).toContain('<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">');
+  expect(sitemapContent).toContain('<loc>https://sebasorjuela.dev/</loc>');
+  expect(sitemapContent).toMatch(/<lastmod>\d{4}-\d{2}-\d{2}<\/lastmod>/);
+  expect(sitemapContent).toContain('<changefreq>monthly</changefreq>');
+  expect(sitemapContent).toContain('<priority>1.0</priority>');
+});
