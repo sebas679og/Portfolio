@@ -345,15 +345,14 @@ test("portfolio and project visibility test in Spanish", async ({ page }) => {
       await expect(selectList).toBeVisible();
 
       const mobileFilters = [
-        es.t085, // Todo
-        es.t086, // APIs
-        es.t087, // Aplicaciones
-        es.t088, // Lógica de programación
-        es.t089, // En desarrollo
-        es.t090  // Colaborativo
+        es.t085,
+        es.t086,
+        es.t087,
+        es.t088,
+        es.t089,
+        es.t090
       ];
 
-      // Verificar que todos los filtros estén presentes
       for (const filter of mobileFilters) {
         const button = selectList.locator(`button:has-text("${filter}")`);
         await expect(button).toBeVisible();
@@ -362,37 +361,31 @@ test("portfolio and project visibility test in Spanish", async ({ page }) => {
         await expect(selectList).toBeVisible();
       }
 
-      // Test filtro "APIs" - debería mostrar GameHub
       await page.getByRole('button', { name: mobileFilters[1] }).click();
       await page.waitForTimeout(500); // Esperar a que se aplique el filtro
       await expect(page.getByRole('link', { name: `${es.t093} ${es.t094}` })).toBeVisible();
       
-      // Test filtro "Aplicaciones" - debería mostrar Vino App
       await selectButton.click();
       await page.getByRole('button', { name: mobileFilters[2] }).click();
       await page.waitForTimeout(500); // Esperar a que se aplique el filtro
       await expect(page.getByRole('link').filter({ hasText: es.t091 })).toBeVisible();
       
-      // Test filtro "Lógica de programación" - debería mostrar los desafíos técnicos
       await selectButton.click();
       await page.getByRole('button', { name: mobileFilters[3] }).click();
       await page.waitForTimeout(500);
       await expect(page.getByRole('link', { name: es.t095 })).toBeVisible();
       await expect(page.getByRole('link', { name: es.t097 })).toBeVisible();
       
-      // Test filtro "En desarrollo" - debería mostrar GameHub
       await selectButton.click();
       await page.getByRole('button', { name: mobileFilters[4] }).click();
       await page.waitForTimeout(500);
       await expect(page.getByRole('link', { name: `${es.t093} ${es.t094}` })).toBeVisible();
       
-      // Test filtro "Colaborativo" - debería mostrar GameHub
       await selectButton.click();
       await page.getByRole('button', { name: mobileFilters[5] }).click();
       await page.waitForTimeout(500);
       await expect(page.getByRole('link', { name: `${es.t093} ${es.t094}` })).toBeVisible();
       
-      // Test filtro "Todo" - debería mostrar todos los proyectos
       await selectButton.click();
       await page.getByRole('button', { name: mobileFilters[0] }).click();
       await page.waitForTimeout(500);
@@ -404,50 +397,42 @@ test("portfolio and project visibility test in Spanish", async ({ page }) => {
       
     case false:
       const desktopFilters = [
-        es.t079, // Todo
-        es.t080, // APIs
-        es.t081, // Aplicaciones
-        es.t082, // Lógica de Programación
-        es.t083, // En desarrollo
-        es.t084, // Colaborativo
+        es.t079,
+        es.t080,
+        es.t081,
+        es.t082,
+        es.t083,
+        es.t084,
       ];
 
-      // Verificar que todos los filtros estén presentes
       for (const filter of desktopFilters) {
         const button = page.getByRole("button", { name: filter });
         await expect(button).toBeVisible();
         await button.click();
-        await page.waitForTimeout(300); // Pequeña espera para el filtro
+        await page.waitForTimeout(300);
       }
       
-      // Test filtro "APIs" - debería mostrar GameHub
       await page.getByRole('button', { name: desktopFilters[1] }).click();
       await page.waitForTimeout(500);
       await expect(page.getByRole('link', { name: `${es.t093} ${es.t094}` })).toBeVisible();
       
-      // Test filtro "Aplicaciones" - debería mostrar Vino App
       await page.getByRole('button', { name: desktopFilters[2]}).click();
       await page.waitForTimeout(500);
-      // CAMBIO IMPORTANTE: Usar filter con hasText en lugar de nombre exacto
       await expect(page.getByRole('link').filter({ hasText: es.t091 })).toBeVisible();
       
-      // Test filtro "Lógica de Programación" - desafíos técnicos
       await page.getByRole('button', { name: desktopFilters[3] }).click();
       await page.waitForTimeout(500);
       await expect(page.getByRole('link', { name: es.t095 })).toBeVisible();
       await expect(page.getByRole('link', { name: es.t097 })).toBeVisible();
       
-      // Test filtro "En desarrollo" - GameHub
       await page.getByRole('button', { name: desktopFilters[4] }).click();
       await page.waitForTimeout(500);
       await expect(page.getByRole('link', { name: `${es.t093} ${es.t094}` })).toBeVisible();
       
-      // Test filtro "Colaborativo" - GameHub
       await page.getByRole('button', { name: desktopFilters[5] }).click();
       await page.waitForTimeout(500);
       await expect(page.getByRole('link', { name: `${es.t093} ${es.t094}` })).toBeVisible();
       
-      // Test filtro "Todo" - todos los proyectos
       await page.getByRole('button', { name: desktopFilters[0] }).click();
       await page.waitForTimeout(500);
       await expect(page.getByRole('link').filter({ hasText: es.t091 })).toBeVisible();
@@ -456,4 +441,33 @@ test("portfolio and project visibility test in Spanish", async ({ page }) => {
       await expect(page.getByRole('link', { name: es.t097 })).toBeVisible();
       break;
   }
+});
+
+
+test('contact visibility test', async ({ page }) => {
+  await page.goto('/');
+  await expect(page.getByRole('navigation').getByText(en.t099)).toBeVisible();
+  await page.getByRole('navigation').getByText(en.t099).click();
+  await expect(page.getByRole('heading', { name: en.t099, exact: true })).toBeVisible();
+  await expect(page.locator('iframe').contentFrame().locator('.gm-style > div > div:nth-child(2)').first()).toBeVisible();
+  await expect(page.getByRole('heading', { name: en.t100 })).toBeVisible();
+  await expect(page.getByRole('textbox', { name: en.t200 })).toBeVisible();
+  await expect(page.getByRole('textbox', { name: en.t201 })).toBeVisible();
+  await expect(page.getByRole('textbox', { name: en.t202 })).toBeVisible();
+  await expect(page.getByRole('button', { name: `paper plane ${en.t101}` })).toBeVisible();
+});
+
+
+test('contact visibility test in Spanish', async ({ page }) => {
+  await page.goto('/');
+  await page.getByRole("button", { name: "ES" }).click();
+  await expect(page.getByRole('navigation').getByText(es.t099)).toBeVisible();
+  await page.getByRole('navigation').getByText(es.t099).click();
+  await expect(page.getByRole('heading', { name: es.t099, exact: true })).toBeVisible();
+  await expect(page.locator('iframe').contentFrame().locator('.gm-style > div > div:nth-child(2)').first()).toBeVisible();
+  await expect(page.getByRole('heading', { name: es.t100 })).toBeVisible();
+  await expect(page.getByRole('textbox', { name: es.t200 })).toBeVisible();
+  await expect(page.getByRole('textbox', { name: es.t201 })).toBeVisible();
+  await expect(page.getByRole('textbox', { name: es.t202 })).toBeVisible();
+  await expect(page.getByRole('button', { name: `paper plane ${es.t101}` })).toBeVisible();
 });
