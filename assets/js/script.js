@@ -56,7 +56,6 @@ const filterMapping = {
   'apis': 'apis',
   'aplicaciones': 'applications',
   'applications': 'applications',
-  'lógica de programación': 'program_logic',
   'program logic': 'program_logic',
   'lógica de programación': 'program_logic',
   'en desarrollo': 'under_development',
