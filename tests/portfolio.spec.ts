@@ -514,3 +514,134 @@ test('mock resume download test in Spanish', async ({ page }) => {
 
   expect(download.suggestedFilename()).toBe('Sebastian_Orjuela_CV.pdf');
 });
+
+
+test('mock emailjs contact form submission', async ({ page }) => {
+  await page.route('**/email.min.js', route => route.abort());
+
+  await page.addInitScript(() => {
+    (window as any).emailjs = {
+      init: () => {},
+      sendForm: () => {
+        return new Promise((resolve) => {
+          setTimeout(() => {
+            resolve("mocked success");
+          }, 1000)
+        });
+      }
+    };
+  });
+
+
+  await page.goto('/');
+  await expect(page.getByRole('navigation').getByText(en.t099)).toBeVisible();
+  await page.getByRole('navigation').getByText(en.t099).click();
+  await expect(page.getByRole('heading', { name: en.t100 })).toBeVisible();
+  await page.getByRole('textbox', { name: en.t200 }).fill('Sebastian Orjuela Giraldo');
+  await page.getByRole('textbox', { name: en.t201 }).fill('sebasorjuela.dev@gmail.com');
+  await page.getByRole('textbox', { name: en.t202 }).fill('Hello this is a message for the test');
+  const button = page.getByRole('button', { name: `paper plane ${en.t101}` });
+  await expect(button).toBeVisible();
+  await button.click();
+  await expect(page.getByRole('button', { name: `paper plane ${en.msg_sending}` })).toBeVisible();
+  await expect(page.getByText(en.msg_success)).toBeVisible();
+});
+
+
+test('mock emailjs contact form submission in Spanish', async ({ page }) => {
+  await page.route('**/email.min.js', route => route.abort());
+
+  await page.addInitScript(() => {
+    (window as any).emailjs = {
+      init: () => {},
+      sendForm: () => {
+        return new Promise((resolve) => {
+          setTimeout(() => {
+            resolve("mocked success");
+          }, 1000)
+        });
+      }
+    };
+  });
+
+  await page.goto('/');
+  await page.getByRole("button", { name: "ES" }).click();
+  await expect(page.getByRole('navigation').getByText(es.t099)).toBeVisible();
+  await page.getByRole('navigation').getByText(es.t099).click();
+  await expect(page.getByRole('heading', { name: es.t100 })).toBeVisible();
+  await page.getByRole('textbox', { name: es.t200 }).fill('Sebastian Orjuela Giraldo');
+  await page.getByRole('textbox', { name: es.t201 }).fill('sebasorjuela.dev@gmail.com');
+  await page.getByRole('textbox', { name: es.t202 }).fill('Hola este es un mensaje para el test');
+  const button = page.getByRole('button', { name: `paper plane ${es.t101}` });
+  await expect(button).toBeVisible();
+  await button.click();
+  await expect(page.getByRole('button', { name: `paper plane ${es.msg_sending}` })).toBeVisible();
+  await expect(page.getByText(es.msg_success)).toBeVisible();
+});
+
+
+test('mock emailjs contact form submission witch error', async ({ page }) => {
+  await page.route('**/email.min.js', route => {
+    return route.abort();
+  });
+
+  await page.addInitScript(() => {
+    (window as any).emailjs = {
+      init: () => {},
+      sendForm: () => {
+        return new Promise((_, reject) => {
+          setTimeout(() => {
+            reject(new Error("mocked error after delay"));
+          }, 1000);
+        });
+      }
+    };
+  });
+
+  await page.goto('/');
+  await expect(page.getByRole('navigation').getByText(en.t099)).toBeVisible();
+  await page.getByRole('navigation').getByText(en.t099).click();
+  await expect(page.getByRole('heading', { name: en.t100 })).toBeVisible();
+  await page.getByRole('textbox', { name: en.t200 }).fill('Sebastian Orjuela Giraldo');
+  await page.getByRole('textbox', { name: en.t201 }).fill('sebasorjuela.dev@gmail.com');
+  await page.getByRole('textbox', { name: en.t202 }).fill('Hello this is a message for the test');
+  const button = page.getByRole('button', { name: `paper plane ${en.t101}` });
+  await expect(button).toBeVisible();
+  await button.click();
+  await expect(page.getByRole('button', { name: `paper plane ${en.msg_sending}` })).toBeVisible();
+  await expect(page.getByText(en.msg_error)).toBeVisible();
+});
+
+
+test('mock emailjs contact form submission with error in Spanish', async ({ page }) => {
+  await page.route('**/email.min.js', route => {
+    return route.abort();
+  });
+
+  await page.addInitScript(() => {
+    (window as any).emailjs = {
+      init: () => {},
+      sendForm: () => {
+        return new Promise((_, reject) => {
+          setTimeout(() => {
+            reject(new Error("mocked error after delay"));
+          }, 1000);
+        });
+      }
+    };
+  });
+
+  await page.goto('/');
+  await page.getByRole("button", { name: "ES" }).click();
+  await expect(page.getByRole('navigation').getByText(es.t099)).toBeVisible();
+  await page.getByRole('navigation').getByText(es.t099).click();
+  await expect(page.getByRole('heading', { name: es.t100 })).toBeVisible();
+  await page.getByRole('textbox', { name: es.t200 }).fill('Sebastian Orjuela Giraldo');
+  await page.getByRole('textbox', { name: es.t201 }).fill('sebasorjuela.dev@gmail.com');
+  await page.getByRole('textbox', { name: es.t202 }).fill('Hola este es un mensaje para el test');
+  const button = page.getByRole('button', { name: `paper plane ${es.t101}` });
+  await expect(button).toBeVisible();
+  await button.click();
+  await expect(page.getByRole('button', { name: `paper plane ${es.msg_sending}` })).toBeVisible();
+  await expect(page.getByText(es.msg_error)).toBeVisible();
+});
