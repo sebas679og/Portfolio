@@ -28,5 +28,5 @@ Antes de comenzar, asegúrate de tener instalado:
 Clona el repositorio con:
 
 ```bash
-git clone https://github.com/sebasorjuela/potfolio.git
+git clone https://github.com/sebasorjuela/portfolio.git
 
