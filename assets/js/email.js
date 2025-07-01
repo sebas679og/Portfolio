@@ -3,10 +3,14 @@ document.addEventListener("DOMContentLoaded", () => {
     const sendBtn = document.querySelector("[data-form-btn]");
     const messageBox = document.getElementById("form-message");
 
+    function translate(key){
+        return window.translations?.[key] || key;
+    }
+
     if (typeof emailjs !== "undefined") {
         emailjs.init("XesP358N3K3XNloGJ");
     } else {
-        console.error("EmailJS no está cargado correctamente.");
+        console.error("EmailJS is not loaded correctly.");
         return;
     }
 
@@ -20,20 +24,20 @@ document.addEventListener("DOMContentLoaded", () => {
         e.preventDefault();
 
         sendBtn.disabled = true;
-        sendBtn.querySelector("span").textContent = "Sending...";
+        sendBtn.querySelector("span").textContent = translate("msg_sending");
 
         emailjs.sendForm("service_q7r35ir", "template_s7v45rp", form)
             .then(() => {
-                showMessage("Mensaje enviado con éxito 🎉", "success");
+                showMessage(translate("msg_success"), "success");
                 form.reset();
                 sendBtn.disabled = true;
             })
             .catch((error) => {
                 console.error("Error al enviar el mensaje:", error);
-                showMessage("Ocurrió un error al enviar el mensaje.", "error");
+                showMessage(translate("msg_error"), "error");
             })
             .finally(() => {
-                sendBtn.querySelector("span").textContent = "Send Message";
+                sendBtn.querySelector("span").textContent = translate("t101");
             });
     });
 
