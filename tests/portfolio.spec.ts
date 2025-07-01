@@ -471,3 +471,46 @@ test('contact visibility test in Spanish', async ({ page }) => {
   await expect(page.getByRole('textbox', { name: es.t202 })).toBeVisible();
   await expect(page.getByRole('button', { name: `paper plane ${es.t101}` })).toBeVisible();
 });
+
+
+test('mock resume download test', async ({ page }) => {
+  await page.route('**/assets/cv/Sebastian_Orjuela_CV.pdf', async (route) => {
+    await route.fulfill({
+      status: 200,
+      contentType: 'application/pdf',
+      body: 'PDF mock content',
+    });
+  });
+
+  await page.goto('/');
+  await page.getByRole('navigation').getByText(en.t013).click();
+  await expect(page.getByRole('link', { name: `download outline ${en.t102}` })).toBeVisible();
+
+  const downloadPromise = page.waitForEvent('download');
+  await page.getByRole('link', { name: `download outline ${en.t102}` }).click();
+  const download = await downloadPromise;
+
+  expect(download.suggestedFilename()).toBe('Sebastian_Orjuela_CV.pdf');
+});
+
+
+test('mock resume download test in Spanish', async ({ page }) => {
+  await page.route('**/assets/cv/Sebastian_Orjuela_CV.pdf', async (route) => {
+    await route.fulfill({
+      status: 200,
+      contentType: 'application/pdf',
+      body: 'PDF mock content',
+    });
+  });
+
+  await page.goto('/');
+  await page.getByRole("button", { name: "ES" }).click();
+  await page.getByRole('navigation').getByText(es.t013).click();
+  await expect(page.getByRole('link', { name: `download outline ${es.t102}` })).toBeVisible();
+
+  const downloadPromise = page.waitForEvent('download');
+  await page.getByRole('link', { name: `download outline ${es.t102}` }).click();
+  const download = await downloadPromise;
+
+  expect(download.suggestedFilename()).toBe('Sebastian_Orjuela_CV.pdf');
+});
