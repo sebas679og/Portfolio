@@ -55,7 +55,7 @@
   "t054": "Technologies",
   "t055": "React + MUI",
   "t056": "APIs REST",
-  "t057": "Asyncio (Python)",
+  "t057": "Quart (Asyncio)",
   "t058": "Docker/Podman",
   "t059": "CI/CD",
   "t060": "Databases",
@@ -104,6 +104,7 @@
   "t200": "Full name",
   "t201": "Email address",
   "t202": "Your Message",
+  "t203": "Spring Boot",
   "msg_success": "Message sent successfully 🎉",
   "msg_error": "An error occurred while sending the message.",
   "msg_sending": "Sending..."
