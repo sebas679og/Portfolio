@@ -153,6 +153,7 @@ test("Visibility tests resume", async ({ page }) => {
   ).toBeVisible();
   await expect(page.getByText(en.t055)).toBeVisible();
   await expect(page.getByText(en.t056)).toBeVisible();
+  await expect(page.getByText(en.t203)).toBeVisible();
   await expect(page.getByText(en.t057)).toBeVisible();
   await expect(page.getByText(en.t058)).toBeVisible();
   await expect(page.getByText(en.t059)).toBeVisible();
@@ -211,6 +212,7 @@ test("Visibility tests resume in Spanish", async ({ page }) => {
   ).toBeVisible();
   await expect(page.getByText(es.t055)).toBeVisible();
   await expect(page.getByText(es.t056)).toBeVisible();
+  await expect(page.getByText(es.t203)).toBeVisible();
   await expect(page.getByText(es.t057)).toBeVisible();
   await expect(page.getByText(es.t058)).toBeVisible();
   await expect(page.getByText(es.t059)).toBeVisible();
