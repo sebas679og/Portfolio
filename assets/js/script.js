@@ -91,6 +91,9 @@ for (let i = 0; i < selectItems.length; i++) {
     selectValue.innerText = this.innerText;
     elementToggleFunc(select);
     filterFunc(selectedValue);
+    
+    // Update URL with portfolio filter
+    updateUrlHash('portfolio:' + selectedValue);
   });
 }
 
@@ -124,6 +127,9 @@ for (let i = 0; i < filterBtn.length; i++) {
     }
     this.classList.add("active");
     lastClickedBtn = this;
+    
+    // Update URL with portfolio filter
+    updateUrlHash('portfolio:' + selectedValue);
   });
 }
 
@@ -150,19 +156,155 @@ if (form && formInputs.length && formBtn) {
 const navigationLinks = document.querySelectorAll("[data-nav-link]");
 const pages = document.querySelectorAll("[data-page]");
 
+// Function to navigate to a specific section
+const navigateToSection = function(targetSection) {
+  for (let j = 0; j < pages.length; j++) {
+    if (targetSection === pages[j].dataset.page) {
+      pages[j].classList.add("active");
+      // Find the corresponding navigation link
+      for (let k = 0; k < navigationLinks.length; k++) {
+        if (navigationLinks[k].getAttribute("data-nav") === targetSection) {
+          navigationLinks[k].classList.add("active");
+        } else {
+          navigationLinks[k].classList.remove("active");
+        }
+      }
+      window.scrollTo(0, 0);
+    } else {
+      pages[j].classList.remove("active");
+    }
+  }
+};
+
+// Function to update URL hash
+const updateUrlHash = function(section) {
+  if (history.pushState) {
+    history.pushState(null, null, '#' + section);
+  } else {
+    location.hash = '#' + section;
+  }
+};
+
+// Function to get current hash from URL
+const getCurrentHash = function() {
+  return location.hash.slice(1) || 'about'; // Default to 'about' if no hash
+};
+
+// Function to handle subsection navigation
+const handleSubsectionNavigation = function(hash) {
+  // Check if it's a subsection (contains a dot like 'resume.education')
+  if (hash.includes('.')) {
+    const [section, subsection] = hash.split('.');
+    
+    // First navigate to the main section
+    navigateToSection(section);
+    
+    // Then scroll to the subsection after a brief delay to ensure section is loaded
+    setTimeout(() => {
+      const subsectionElement = document.getElementById(subsection);
+      if (subsectionElement) {
+        subsectionElement.scrollIntoView({ 
+          behavior: 'smooth', 
+          block: 'start' 
+        });
+      }
+    }, 100);
+    
+    return true; // Indicates this was a subsection navigation
+  }
+  return false; // Not a subsection
+};
+
+// Function to handle portfolio filter navigation
+const handlePortfolioFilterNavigation = function(hash) {
+  // Check if it's a portfolio filter (like 'portfolio:apis' or 'portfolio:all')
+  if (hash.includes(':')) {
+    const [section, filter] = hash.split(':');
+    
+    if (section === 'portfolio') {
+      // First navigate to portfolio section
+      navigateToSection('portfolio');
+      
+      // Then apply the filter after a brief delay
+      setTimeout(() => {
+        applyPortfolioFilter(filter);
+      }, 100);
+      
+      return true; // Indicates this was a portfolio filter navigation
+    }
+  }
+  return false; // Not a portfolio filter
+};
+
+// Function to apply portfolio filter and update UI
+const applyPortfolioFilter = function(filterValue) {
+  // Apply the filter
+  filterFunc(filterValue);
+  
+  // Update filter buttons active state
+  for (let i = 0; i < filterBtn.length; i++) {
+    filterBtn[i].classList.remove("active");
+    const btnFilterValue = getFilterValue(filterBtn[i]);
+    if (btnFilterValue === filterValue) {
+      filterBtn[i].classList.add("active");
+      lastClickedBtn = filterBtn[i];
+      
+      // Update select value if it exists
+      if (selectValue) {
+        selectValue.innerText = filterBtn[i].innerText;
+      }
+    }
+  }
+};
+
+// Handle hash changes (back/forward browser buttons)
+window.addEventListener('hashchange', function() {
+  const currentHash = getCurrentHash();
+  
+  // Check if it's a portfolio filter navigation
+  if (handlePortfolioFilterNavigation(currentHash)) {
+    return;
+  }
+  
+  // Check if it's a subsection navigation
+  if (!handleSubsectionNavigation(currentHash)) {
+    // If not a subsection, handle as normal section navigation
+    navigateToSection(currentHash);
+  }
+});
+
+// Load correct section on page load
+window.addEventListener('DOMContentLoaded', function() {
+  const currentHash = getCurrentHash();
+  
+  // Check if it's a portfolio filter navigation
+  if (handlePortfolioFilterNavigation(currentHash)) {
+    return;
+  }
+  
+  // Check if it's a subsection navigation
+  if (!handleSubsectionNavigation(currentHash)) {
+    // If not a subsection, handle as normal section navigation
+    navigateToSection(currentHash);
+  }
+});
+
 // add event to all nav link
 for (let i = 0; i < navigationLinks.length; i++) {
-  navigationLinks[i].addEventListener("click", function () {
+  navigationLinks[i].addEventListener("click", function (e) {
+    e.preventDefault(); // Prevent default link behavior
     const navTarget = this.getAttribute("data-nav");
-    for (let j = 0; j < pages.length; j++) {
-      if (navTarget === pages[j].dataset.page) {
-        pages[j].classList.add("active");
-        navigationLinks[j].classList.add("active");
-        window.scrollTo(0, 0);
-      } else {
-        pages[j].classList.remove("active");
-        navigationLinks[j].classList.remove("active");
-      }
+    navigateToSection(navTarget);
+    
+    // If going to portfolio, set default filter to 'all'
+    if (navTarget === 'portfolio') {
+      updateUrlHash('portfolio:all');
+      // Apply default filter after navigation
+      setTimeout(() => {
+        applyPortfolioFilter('all');
+      }, 100);
+    } else {
+      updateUrlHash(navTarget);
     }
   });
 }
