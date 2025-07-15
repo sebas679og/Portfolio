@@ -673,3 +673,121 @@ test('SEO files accessibility test', async ({ page }) => {
   expect(sitemapContent).toContain('<changefreq>monthly</changefreq>');
   expect(sitemapContent).toContain('<priority>1.0</priority>');
 });
+
+test('test portfolio filter anchor functionality', async ({ page }) => {
+  await page.goto('/#portfolio:all');
+  await expect(page.getByRole('heading', { name: 'Portfolio' })).toBeVisible();
+
+  const isMobile = await page.locator("button.filter-select").isVisible();
+  
+  if (isMobile) {
+
+    const selectButton = page.locator("button.filter-select");
+    await expect(selectButton).toBeVisible();
+
+    await selectButton.click();
+    const selectList = page.locator(".select-list");
+    await expect(selectList).toBeVisible();
+    
+    const allOptionInList = selectList.getByRole('button', { name: 'All', exact: true });
+    await expect(allOptionInList).toBeVisible();
+
+    await selectButton.click();
+
+    await page.goto('/#portfolio:apis');
+    await expect(page.getByRole('heading', { name: 'Portfolio' })).toBeVisible();
+    
+    await page.goto('/#portfolio:applications');
+    await expect(page.getByRole('heading', { name: 'Portfolio' })).toBeVisible();
+
+    await page.goto('/#portfolio:all');
+    await expect(page.getByRole('heading', { name: 'Portfolio' })).toBeVisible();
+    
+  } else {
+
+    const allButton = page.getByRole('button', { name: 'All' });
+    await expect(allButton).toBeVisible();
+
+    await expect(allButton).toHaveClass(/active/);
+
+    await page.goto('/#portfolio:apis');
+    await expect(page.getByRole('heading', { name: 'Portfolio' })).toBeVisible();
+    const apisButton = page.getByRole('button', { name: 'APIs' });
+    await expect(apisButton).toHaveClass(/active/);
+    
+    await page.goto('/#portfolio:applications');
+    await expect(page.getByRole('heading', { name: 'Portfolio' })).toBeVisible();
+    const applicationsButton = page.getByRole('button', { name: 'Applications' });
+    await expect(applicationsButton).toHaveClass(/active/);
+
+    await page.goto('/#portfolio:all');
+    await expect(allButton).toHaveClass(/active/);
+  }
+});
+
+test('test anchor subsection navigation functionality', async ({ page }) => {
+  await page.goto('/#resume.education');
+  await expect(page.getByRole('heading', { name: 'Resume' })).toBeVisible();
+  await expect(page.getByRole('heading', { name: 'Education' })).toBeVisible();
+  
+  await page.goto('/#resume.experience');
+  await expect(page.getByRole('heading', { name: 'Resume' })).toBeVisible();
+  await expect(page.getByRole('heading', { name: 'Experience' })).toBeVisible();
+  
+  await page.goto('/#resume.skills');
+  await expect(page.getByRole('heading', { name: 'Resume' })).toBeVisible();
+  await expect(page.getByRole('heading', { name: 'My Skills' })).toBeVisible();
+});
+
+test('test portfolio filter URL persistence', async ({ page }) => {
+  // Navegar a la sección portfolio primero para detectar correctamente el dispositivo
+  await page.goto('/#portfolio');
+  await expect(page.getByRole('heading', { name: 'Portfolio' })).toBeVisible();
+  
+  await page.waitForLoadState('networkidle');
+  const isMobile = await page.locator("button.filter-select").isVisible();
+  
+  if (isMobile) {
+
+    await page.goto('/#portfolio:program_logic');
+    await expect(page.getByRole('heading', { name: 'Portfolio' })).toBeVisible();
+    await page.waitForLoadState('networkidle');
+    
+    const selectButton = page.locator("button.filter-select");
+    await selectButton.click();
+    
+    const selectList = page.locator(".select-list");
+    await expect(selectList).toBeVisible();
+    
+    const programLogicOption = selectList.getByRole('button', { name: 'Program logic', exact: true });
+    await expect(programLogicOption).toBeVisible();
+    
+    await selectButton.click();
+    
+    await page.goto('/#portfolio:apis');
+    await expect(page.getByRole('heading', { name: 'Portfolio' })).toBeVisible();
+    await page.waitForLoadState('networkidle');
+    
+    await selectButton.click();
+    const apisOption = selectList.getByRole('button', { name: 'APIs', exact: true });
+    await expect(apisOption).toBeVisible();
+    
+  } else {
+
+    await page.goto('/#portfolio:program_logic');
+    await expect(page.getByRole('heading', { name: 'Portfolio' })).toBeVisible();
+    await page.waitForLoadState('networkidle');
+    
+    const programLogicButton = page.getByRole('button', { name: 'Program Logic' });
+    await expect(programLogicButton).toHaveClass(/active/);
+    
+    await page.goto('/#portfolio:apis');
+    await expect(page.getByRole('heading', { name: 'Portfolio' })).toBeVisible();
+    await page.waitForLoadState('networkidle');
+    
+    const apisButton = page.getByRole('button', { name: 'APIs' });
+    await expect(apisButton).toHaveClass(/active/);
+    
+    await expect(programLogicButton).not.toHaveClass(/active/);
+  }
+});
