@@ -475,8 +475,8 @@ test('contact visibility test in Spanish', async ({ page }) => {
 });
 
 
-test('mock resume download test', async ({ page }) => {
-  await page.route('**/assets/cv/Sebastian_Orjuela_CV.pdf', async (route) => {
+test('mock resume download test in english', async ({ page }) => {
+  await page.route('**/assets/cv/Sebastian_Orjuela_CV_EN.pdf', async (route) => {
     await route.fulfill({
       status: 200,
       contentType: 'application/pdf',
@@ -492,12 +492,12 @@ test('mock resume download test', async ({ page }) => {
   await page.getByRole('link', { name: `download outline ${en.t102}` }).click();
   const download = await downloadPromise;
 
-  expect(download.suggestedFilename()).toBe('Sebastian_Orjuela_CV.pdf');
+  expect(download.suggestedFilename()).toBe('Sebastian_Orjuela_CV_EN.pdf');
 });
 
 
 test('mock resume download test in Spanish', async ({ page }) => {
-  await page.route('**/assets/cv/Sebastian_Orjuela_CV.pdf', async (route) => {
+  await page.route('**/assets/cv/Sebastian_Orjuela_CV_ES.pdf', async (route) => {
     await route.fulfill({
       status: 200,
       contentType: 'application/pdf',
@@ -514,7 +514,7 @@ test('mock resume download test in Spanish', async ({ page }) => {
   await page.getByRole('link', { name: `download outline ${es.t102}` }).click();
   const download = await downloadPromise;
 
-  expect(download.suggestedFilename()).toBe('Sebastian_Orjuela_CV.pdf');
+  expect(download.suggestedFilename()).toBe('Sebastian_Orjuela_CV_ES.pdf');
 });
 
 
