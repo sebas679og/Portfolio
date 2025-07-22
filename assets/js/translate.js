@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const cvDownloadLink = document.getElementById("cv-download-link");
         if (cvDownloadLink) {
             const cvFileName = lang === "es" ? "Sebastian_Orjuela_CV_ES.pdf" : "Sebastian_Orjuela_CV_EN.pdf";
-            cvDownloadLink.setAttribute("href", `./assets/cv/${cvFileName}`);
+            cvDownloadLink.setAttribute("href", `/assets/cv/${cvFileName}`);
         }
 
         currentLang = lang;
