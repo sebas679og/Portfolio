@@ -18,6 +18,13 @@ document.addEventListener("DOMContentLoaded", () => {
             if (translations[key]) el.setAttribute("placeholder", translations[key]);
         });
 
+        // Update CV download link based on language
+        const cvDownloadLink = document.getElementById("cv-download-link");
+        if (cvDownloadLink) {
+            const cvFileName = lang === "es" ? "Sebastian_Orjuela_CV_ES.pdf" : "Sebastian_Orjuela_CV_EN.pdf";
+            cvDownloadLink.setAttribute("href", `./assets/cv/${cvFileName}`);
+        }
+
         currentLang = lang;
         document.getElementById("lang-toggle").textContent = lang === "en" ? "ES" : "EN";
     }
