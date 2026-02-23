@@ -115,30 +115,27 @@ Para más opciones consulta la documentación oficial:
 ```Directorio del proyecto
 portfolio/
 │
-├── .github/                # Workflows (CI/CD)
+├── .github/
 │
-├── public/                 # Archivos estáticos principales
-│   ├── index.html
-│   ├── robots.txt
-│   ├── sitemap.xml
+├── assets/
+│   ├── css/
+│   ├── cv/
+│   ├── i18n/
+│   ├── images/
+│   └── js/
 │
-├── src/                    # Código fuente principal
-│   ├── assets/
-│   │   ├── css/
-│   │   ├── js/
-│   │   ├── images/
-│   │   ├── cv/
-│   │   └── i18n/
-│
-├── tests/                  # Tests E2E
+├── tests/
 │   └── portfolio.spec.ts
 │
-├── playwright.config.ts
-├── package.json
-├── package-lock.json
 ├── .gitignore
+├── index.html
 ├── LICENSE
-└── README.md
+├── package-lock.json
+├── package.json
+├── playwright.config.ts
+├── README.md
+├── robots.txt
+└── sitemap.xml
 ```
 
 ---
