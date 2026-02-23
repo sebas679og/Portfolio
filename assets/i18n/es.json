@@ -105,6 +105,8 @@
   "t201": "Correo electrónico",
   "t202": "Tu mensaje",
   "t203": "Spring Boot",
+  "t204": "Sistema BankCore",
+  "t205": "API bancaria colaborativa desarrollada en Java con arquitectura de microservicios.",
   "msg_success": "Mensaje enviado con éxito 🎉",
   "msg_error": "Ocurrió un error al enviar el mensaje.",
   "msg_sending": "Enviando..."
