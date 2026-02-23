@@ -282,14 +282,16 @@ test("portfolio and project visibility test", async ({ page }) => {
       await expect(page.getByRole('link', { name: en.t097 })).toBeVisible();
       await selectButton.click();
       await page.getByRole('button', { name: mobileFilters[4] }).click();
-      await expect(page.getByRole('link', { name: `${en.t093} ${en.t094}` })).toBeVisible();
+      await expect(page.getByRole('link', { name: `${en.t204} ${en.t205}` })).toBeVisible();
       await selectButton.click();
       await page.getByRole('button', { name: mobileFilters[5] }).click();
       await expect(page.getByRole('link', { name: `${en.t093} ${en.t094}` })).toBeVisible();
+      await expect(page.getByRole('link', { name: `${en.t204} ${en.t205}` })).toBeVisible();
       await selectButton.click();
       await page.getByRole('button', { name: mobileFilters[0] }).click();
       await expect(page.getByRole('link', { name: `${en.t091} ${en.t092}` })).toBeVisible();
       await expect(page.getByRole('link', { name: `${en.t093} ${en.t094}` })).toBeVisible();
+      await expect(page.getByRole('link', { name: `${en.t204} ${en.t205}` })).toBeVisible();
       await expect(page.getByRole('link', { name: en.t095 })).toBeVisible();
       await expect(page.getByRole('link', { name: en.t097 })).toBeVisible();
       break;
@@ -316,12 +318,14 @@ test("portfolio and project visibility test", async ({ page }) => {
       await expect(page.getByRole('link', { name: en.t095 })).toBeVisible();
       await expect(page.getByRole('link', { name: en.t097 })).toBeVisible();
       await page.getByRole('button', { name: desktopFilters[4] }).click();
-      await expect(page.getByRole('link', { name: `${en.t093} ${en.t094}` })).toBeVisible();
+      await expect(page.getByRole('link', { name: `${en.t204} ${en.t205}` })).toBeVisible();
       await page.getByRole('button', { name: desktopFilters[5] }).click();
       await expect(page.getByRole('link', { name: `${en.t093} ${en.t094}` })).toBeVisible();
+      await expect(page.getByRole('link', { name: `${en.t204} ${en.t205}` })).toBeVisible();
       await page.getByRole('button', { name: desktopFilters[0] }).click();
       await expect(page.getByRole('link', { name: `${en.t091} ${en.t092}` })).toBeVisible();
       await expect(page.getByRole('link', { name: `${en.t093} ${en.t094}` })).toBeVisible();
+      await expect(page.getByRole('link', { name: `${en.t204} ${en.t205}` })).toBeVisible();
       await expect(page.getByRole('link', { name: en.t095 })).toBeVisible();
       await expect(page.getByRole('link', { name: en.t097 })).toBeVisible();
     break;
@@ -381,18 +385,21 @@ test("portfolio and project visibility test in Spanish", async ({ page }) => {
       await selectButton.click();
       await page.getByRole('button', { name: mobileFilters[4] }).click();
       await page.waitForTimeout(500);
-      await expect(page.getByRole('link', { name: `${es.t093} ${es.t094}` })).toBeVisible();
+      await expect(page.getByRole('link', { name: `${es.t204} ${es.t205}` })).toBeVisible();
       
       await selectButton.click();
       await page.getByRole('button', { name: mobileFilters[5] }).click();
       await page.waitForTimeout(500);
       await expect(page.getByRole('link', { name: `${es.t093} ${es.t094}` })).toBeVisible();
+      await expect(page.getByRole('link', { name: `${es.t204} ${es.t205}` })).toBeVisible();
       
       await selectButton.click();
       await page.getByRole('button', { name: mobileFilters[0] }).click();
       await page.waitForTimeout(500);
       await expect(page.getByRole('link').filter({ hasText: es.t091 })).toBeVisible();
+      await expect(page.getByRole('link', { name: `${es.t091} ${es.t092}` })).toBeVisible();
       await expect(page.getByRole('link', { name: `${es.t093} ${es.t094}` })).toBeVisible();
+      await expect(page.getByRole('link', { name: `${es.t204} ${es.t205}` })).toBeVisible();
       await expect(page.getByRole('link', { name: es.t095 })).toBeVisible();
       await expect(page.getByRole('link', { name: es.t097 })).toBeVisible();
       break;
@@ -429,16 +436,19 @@ test("portfolio and project visibility test in Spanish", async ({ page }) => {
       
       await page.getByRole('button', { name: desktopFilters[4] }).click();
       await page.waitForTimeout(500);
-      await expect(page.getByRole('link', { name: `${es.t093} ${es.t094}` })).toBeVisible();
+      await expect(page.getByRole('link', { name: `${es.t204} ${es.t205}` })).toBeVisible();
       
       await page.getByRole('button', { name: desktopFilters[5] }).click();
       await page.waitForTimeout(500);
       await expect(page.getByRole('link', { name: `${es.t093} ${es.t094}` })).toBeVisible();
+      await expect(page.getByRole('link', { name: `${es.t204} ${es.t205}` })).toBeVisible();
       
       await page.getByRole('button', { name: desktopFilters[0] }).click();
       await page.waitForTimeout(500);
       await expect(page.getByRole('link').filter({ hasText: es.t091 })).toBeVisible();
+      await expect(page.getByRole('link', { name: `${es.t091} ${es.t092}` })).toBeVisible();
       await expect(page.getByRole('link', { name: `${es.t093} ${es.t094}` })).toBeVisible();
+      await expect(page.getByRole('link', { name: `${es.t204} ${es.t205}` })).toBeVisible();
       await expect(page.getByRole('link', { name: es.t095 })).toBeVisible();
       await expect(page.getByRole('link', { name: es.t097 })).toBeVisible();
       break;
