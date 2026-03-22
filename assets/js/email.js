@@ -33,7 +33,9 @@ document.addEventListener("DOMContentLoaded", () => {
                 sendBtn.disabled = true;
             })
             .catch((error) => {
-                console.error("Error al enviar el mensaje:", error);
+                console.error("Complete error:", error);
+                console.log("Status:", error?.status);
+                console.log("Text:", error?.text);
                 showMessage(translate("msg_error"), "error");
             })
             .finally(() => {
