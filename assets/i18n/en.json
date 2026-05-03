@@ -107,6 +107,11 @@
   "t203": "Spring Boot",
   "t204": "BankCore System",
   "t205": "Collaborative banking API developed in Java with microservices architecture.",
+  "t206": "Sports Pulse",
+  "t207": "Real-time football analytics platform.",
+  "t208": "Technician in programming applications and services for the cloud",
+  "t209": "During this training, I am acquiring knowledge in the development of cloud-oriented applications, including the design of scalable services, consumption and creation of APIs, and the use of modern architectures such as microservices. I am strengthening skills in continuous deployment (CI/CD), containers, and virtualization tools, as well as in the use of cloud platforms. Additionally, I am delving into best practices for secure development, application monitoring, and resource optimization in distributed environments.",
+  "t210": "2026 - Currently",
   "msg_success": "Message sent successfully 🎉",
   "msg_error": "An error occurred while sending the message.",
   "msg_sending": "Sending..."
