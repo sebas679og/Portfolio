@@ -1,113 +1,100 @@
 {
-  "t001": "Sebastian Orjuela",
-  "t002": "Desarrollador Backend",
-  "t003": "Mostrar Contactos",
-  "t004": "Correo",
-  "t005": "sebastianorjuelagiraldo@gmail.com",
-  "t006": "Teléfono",
-  "t007": "+57 (314) 510 9114",
-  "t008": "Cumpleaños",
-  "t009": "13 de noviembre de 2005",
-  "t010": "Ubicación",
-  "t011": "Samaná, Caldas, Colombia",
-  "t012": "Acerca de mí",
-  "t013": "Currículum",
-  "t014": "Portafolio",
-  "t015": "Contacto",
-  "t016": "Acerca de mí",
-  "t017": "Soy un desarrollador de software con enfoque principal en desarrollo backend, aunque también tengo\n                        experiencia en frontend. Me apasiona construir soluciones eficientes, escalables y bien estructuradas,\n                        siempre prestando mucha atención a la calidad del código y el rendimiento de las aplicaciones.",
-  "t018": "A lo largo de mi carrera, he trabajado con una variedad de tecnologías, frameworks y bases de datos,\n                        resolviendo problemas complejos tanto en entornos colaborativos como de forma independiente. Disfruto\n                        entender profundamente los procesos detrás de cada sistema y contribuir con soluciones que realmente\n                        marcan la diferencia.",
-  "t019": "También disfruto del trabajo en equipo, compartir conocimiento y aprender continuamente en un\n                        panorama tecnológico que evoluciona cada día.",
-  "t020": "Lo que estoy haciendo",
-  "t021": "Análisis de software y gestión de documentos",
-  "t022": "Analizo los requisitos y procesos del sistema, creando documentación técnica y funcional\n                                    clara.\n                                    Esto incluye casos de uso, diagramas UML, APIs, manuales de usuario y arquitectura.\n                                    Organizo la información para mejorar la comunicación del equipo y garantizar la continuidad del proyecto.",
-  "t023": "Consultoría técnica para proyectos",
-  "t024": "Asesoramiento sobre arquitectura de software, herramientas a utilizar o mejores prácticas para\n                                    pequeños equipos o emprendedores.",
-  "t025": "Desarrollo de APIs",
-  "t026": "Diseño e implementación de APIs robustas y seguras para conectar aplicaciones web,\n                                    móviles o sistemas internos.",
-  "t027": "Integración de servicios y sistemas",
-  "t028": "Conecto aplicaciones con servicios externos (como pasarelas de pago, servicios de correo,\n                                    APIs públicas o privadas) para automatizar y mejorar procesos.",
-  "t029": "Diseño y gestión de bases de datos",
-  "t030": "Modelado, optimización y administración de bases de datos SQL (como PostgreSQL, MySQL,\n                                    MariaDB) o NoSQL (como MongoDB, Cassandra), asegurando integridad y\n                                    rendimiento.",
-  "t031": "Mantenimiento y actualizaciones de sistemas existentes",
-  "t032": "Optimización de código, corrección de errores, refactorización o incorporación de nuevas funcionalidades a\n                                    proyectos en curso.",
-  "t033": "Currículum",
-  "t034": "Educación",
-  "t035": "Tecnólogo en Análisis y Desarrollo de Software",
-  "t036": "SENA (Servicio Nacional de Aprendizaje)",
-  "t037": "2023 — 2025",
-  "t038": "Durante esta formación profundicé en todo el ciclo de vida del software, desde la recopilación\n                                de requisitos hasta el análisis, diseño, desarrollo, despliegue y mantenimiento de aplicaciones.\n                                Aprendí sobre arquitectura de sistemas, gestión de documentos, diseño de software orientado\n                                a objetos, modelado con diagramas UML y gestión de bases de datos, integrando conocimiento\n                                técnico con buenas prácticas en desarrollo ágil y estructurado.",
-  "t039": "Técnico en Sistemas",
-  "t040": "SENA (Servicio Nacional de Aprendizaje)",
-  "t041": "2021 — 2022",
-  "t042": "Durante esta formación adquirí conocimientos en mantenimiento preventivo y correctivo de\n                                equipos informáticos, tanto hardware como software. También aprendí sobre la instalación\n                                y configuración de sistemas operativos y aplicaciones, gestión de redes y\n                                cableado estructurado, así como la gestión y administración de salas de informática.",
-  "t043": "Experiencia",
-  "t044": "Desarrollador de Software",
-  "t045": "Lumu Technologies",
-  "t046": "2024 — 2025",
-  "t047": "Trabajé como interno en el área de desarrollo de software, donde participé en la\n                                construcción de soluciones tecnológicas para la empresa. Entre mis responsabilidades\n                                estuvieron el desarrollo y exposición de APIs, trabajar en proyectos internos tanto en\n                                backend como frontend, y colaborar en tareas de mantenimiento, documentación y\n                                mejora continua. Durante esta experiencia apliqué buenas prácticas de programación,\n                                control de versiones y metodologías ágiles, fortaleciendo mis habilidades técnicas y de trabajo en equipo.",
-  "t048": "Mis Habilidades",
-  "t049": "Lenguajes",
-  "t050": "Python",
-  "t051": "Java",
-  "t052": "TypeScript",
-  "t053": "CSS",
-  "t054": "Tecnologías",
-  "t055": "React + MUI",
-  "t056": "APIs REST",
-  "t057": "Quart (Asyncio)",
-  "t058": "Docker/Podman",
-  "t059": "CI/CD",
-  "t060": "Bases de Datos",
-  "t061": "PostgreSQL",
-  "t062": "MySQL",
-  "t063": "MongoDB",
-  "t064": "Cassandra",
-  "t065": "Herramientas",
-  "t066": "Git",
-  "t067": "GitHub",
-  "t068": "Bitbucket",
-  "t069": "JIRA, Trello",
-  "t070": "Pytest",
-  "t071": "Playwright",
-  "t072": "Habilidades blandas",
-  "t073": "Comunicación",
-  "t074": "Trabajo en equipo",
-  "t075": "Pensamiento analítico",
-  "t076": "Proactividad",
-  "t077": "Gestión del tiempo",
-  "t078": "Portafolio",
-  "t079": "Todo",
-  "t080": "APIs",
-  "t081": "Aplicaciones",
-  "t082": "Lógica de Programación",
-  "t083": "En desarrollo",
-  "t084": "Colaborativo",
-  "t085": "Todo",
-  "t086": "APIs",
-  "t087": "Aplicaciones",
-  "t088": "Lógica de programación",
-  "t089": "En desarrollo",
-  "t090": "Colaborativo",
-  "t091": "Vino App",
-  "t092": "Aplicaciones",
-  "t093": "GameHub",
-  "t094": "API Colaborativa Java",
-  "t095": "Puzzle-Decoder (Desafío técnico)",
-  "t096": "Lógica de programación",
-  "t097": "Guess-the-Number-Game (Desafío técnico)",
-  "t098": "Lógica de programación",
-  "t099": "Contacto",
-  "t100": "Formulario de Contacto",
-  "t101": "Enviar Mensaje",
-  "t102": "Descargar CV",
-  "t200": "Nombre completo",
-  "t201": "Correo electrónico",
-  "t202": "Tu mensaje",
-  "t203": "Spring Boot",
-  "t204": "Sistema BankCore",
-  "t205": "API bancaria colaborativa desarrollada en Java con arquitectura de microservicios.",
-  "msg_success": "Mensaje enviado con éxito 🎉",
-  "msg_error": "Ocurrió un error al enviar el mensaje.",
-  "msg_sending": "Enviando..."
+  "header": {
+    "nav": {
+      "about": "Sobre mí",
+      "skills": "Habilidades",
+      "experience": "Experiencia",
+      "projects": "Proyectos",
+      "contact": "Contacto"
+    }
+  },
+  "hero": {
+    "greeting": "Hola, soy",
+    "title": "Desarrollador Backend",
+    "description": "Backend Developer especializado en Java y Spring Boot. Desarrollo APIs robustas y escalables, integrando Python (FastAPI, Quart), CI/CD con GitHub Actions y prácticas de testing para asegurar calidad.",
+    "actions": {
+      "contact": "Contáctame",
+      "cv": "Descargar CV"
+    }
+  },
+  "about": {
+    "title": "Sobre mí",
+    "paragraphs": {
+      "p1": "Soy un desarrollador backend enfocado en Java y Spring Boot, especializado en diseñar y construir APIs robustas, escalables y mantenibles.",
+      "p2": "Tengo experiencia complementaria en Python usando frameworks como FastAPI y Quart, lo que me permite adaptarme a distintos entornos y necesidades. Además, trabajo con automatización de procesos mediante GitHub Actions y aplico pruebas para garantizar la calidad y confiabilidad de las aplicaciones.",
+      "p3": "Me enfoco en escribir código limpio, aplicar buenas prácticas y construir soluciones orientadas a resolver problemas reales de forma eficiente."
+    },
+    "card": {
+      "edu1": {
+        "degree": "Técnico en Programación de Aplicaciones y Servicios para la Nube",
+        "institution": "SENA | 2026 - Actualmente"
+      },
+      "edu2": {
+        "degree": "Tecnólogo en Análisis y Desarrollo de Software",
+        "institution": "SENA | 2023 - 2025"
+      },
+      "edu3": {
+        "degree": "Técnico en Sistemas",
+        "institution": "SENA | 2021 - 2022"
+      },
+      "location": "Colombia",
+      "availability": "Disponible para trabajo remoto"
+    }
+  },
+  "skills": {
+    "title": "Habilidades y Tecnologías",
+    "groups": {
+      "languages": "Lenguajes",
+      "frameworks": "Frameworks",
+      "databases": "Bases de datos",
+      "tools": "Herramientas",
+      "concepts": "Conceptos"
+    }
+  },
+  "experience": {
+    "title": "Experiencia",
+    "items": {
+      "lumu": {
+        "date": "2024 - 2025 | 6 meses",
+        "role": "Desarrollador de Software Practicante",
+        "company": "Lumu Technologies",
+        "description": "Contribuí al desarrollo de soluciones tecnológicas construyendo APIs, funcionalidades backend y componentes frontend para aplicaciones internas. Participé en proyectos siguiendo buenas prácticas de programación, control de versiones y metodologías ágiles, apoyando además el mantenimiento, la documentación y la mejora continua del sistema. Esta experiencia fortaleció mis habilidades en desarrollo ágil y me permitió entregar mejoras funcionales a herramientas internas que optimizaron los procesos del equipo."
+      }
+    }
+  },
+  "projects": {
+    "title": "Proyectos",
+    "items": {
+      "bankcore": {
+        "title": "Bankcore System Api",
+        "description": "Sistema bancario compuesto por dos microservicios que se comunican entre sí para gestionar clientes y sus cuentas bancarias, permitiendo operaciones como transferencias, consultas de saldo y transacciones."
+      },
+      "sportspulse": {
+        "title": "Sports Pulse API",
+        "description": "Plataforma de análisis de fútbol en tiempo real compuesta por 8 microservicios interconectados que se comunican entre sí y consumen datos de la API de fútbol de RapidAPI."
+      }
+    }
+  },
+  "contact": {
+    "title": "Contáctame",
+    "subtitle": "¿Tienes un proyecto en mente o solo quieres saludar? Me encantaría saber de ti.",
+    "form": {
+      "name": { "label": "Nombre", "placeholder": "Tu nombre" },
+      "email": { "label": "Correo", "placeholder": "tu@ejemplo.com" },
+      "message": { "label": "Mensaje", "placeholder": "Cuéntame sobre tu proyecto..." },
+      "submit": "Enviar Mensaje",
+      "sending": "Enviando…",
+      "success": "¡Mensaje enviado! Me pondré en contacto contigo pronto.",
+      "error": "Algo salió mal. Por favor intenta de nuevo o contáctame directamente."
+    }
+  },
+    "errors": {
+    "nameRequired": "El nombre es obligatorio.",
+    "emailRequired": "El correo es obligatorio.",
+    "emailInvalid": "Ingresa un correo válido.",
+    "messageRequired": "El mensaje no puede estar vacío."
+  },
+  "footer": {
+    "copy": "© 2026 Sebastian Orjuela. Todos los derechos reservados."
+  }
 }

@@ -1,635 +1,498 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sebastian Orjuela — Backend Developer</title>
+    <meta
+      name="description"
+      content="Portfolio of Sebastian Orjuela Giraldo — Backend Developer specializing in Java, Python, Spring Boot, and microservices architecture."
+    />
+    <meta
+      name="keywords"
+      content="desarrollador backend, Java, Spring Boot, portafolio, Colombia, API, programador, Sebastian, Orjuela, Sebastian, Dev"
+    />
+    <meta name="author" content="Sebas" />
+    <link rel="canonical" href="https://sebasorjuela.dev" />
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
 
-<head>
-    <meta charset="utf-8" />
-    <meta content="IE=edge" http-equiv="X-UA-Compatible" />
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <meta content="#fccf69" name="theme-color" />
-    <title>Sebastian Orjuela Giraldo | Dev Backend</title>
-    <meta name="description"
-        content="Soy Sebas, desarrollador backend apasionado por crear soluciones eficientes con Java, Spring Boot y tecnologías modernas. Mira mis proyectos y contáctame.">
-    <meta name="keywords"
-        content="desarrollador backend, Java, Spring Boot, portafolio, Colombia, API, programador, Sebastian, Orjuela, Sebastian, Dev">
-    <meta name="author" content="Sebas">
-    <link rel="canonical" href="https://sebasorjuela.dev">
-    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <meta property="og:title" content="Sebastian Orjuela | Backend Developer" />
+    <meta
+      property="og:description"
+      content="Explora mis proyectos backend y contacta conmigo."
+    />
+    <meta
+      property="og:image"
+      content="https://sebasorjuela.dev/assets/images/preview.png"
+    />
+    <meta property="og:url" content="https://sebasorjuela.dev" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
 
-    <!-- SEO para redes sociales (Open Graph y Twitter Cards) -->
-    <meta property="og:title" content="Portafolio de Sebas Orjuela | Backend Developer">
-    <meta property="og:description" content="Explora mis proyectos backend y contacta conmigo.">
-    <meta property="og:image" content="https://sebasorjuela.dev/assets/images/preview.png">
-    <meta property="og:url" content="https://sebasorjuela.dev">
-    <meta property="og:type" content="website">
-    <meta name="twitter:card" content="summary_large_image">
-    <!--
-    - favicon
-  -->
-    <link href="./assets/images/my-avatar.png" rel="shortcut icon" type="image/x-icon" />
-    <!--
-    - custom css link
-  -->
-    <link href="./assets/css/style.css" rel="stylesheet" />
-    <!--
-    - google font link
-  -->
-    <link href="https://fonts.googleapis.com" rel="preconnect" />
-    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&amp;display=swap"
-        rel="stylesheet" />
-</head>
-
-<body>
-    <!--
-    - #MAIN
-  -->
-    <main>
-        <!--
-      - #SIDEBAR
-    -->
-        <aside class="sidebar" data-sidebar="">
-            <div class="sidebar-info">
-                <figure class="avatar-box">
-                    <img alt="Sebastian Orjuela" src="./assets/images/my-avatar.png" width="80" />
-                </figure>
-                <div class="info-content">
-                    <h1 class="name" data-i18n="t001" title="Sebastian Orjuela">Sebastian Orjuela</h1>
-                    <p class="title" data-i18n="t002">Backend developer</p>
-                </div>
-                <button id="lang-toggle" class="lang-toggle">ES</button>
-                <button class="info_more-btn" data-sidebar-btn="">
-                    <span data-i18n="t003">Show Contacts</span>
-                    <ion-icon name="chevron-down"></ion-icon>
-                </button>
-            </div>
-            <div class="sidebar-info_more">
-                <div class="separator"></div>
-                <ul class="contacts-list">
-                    <li class="contact-item">
-                        <div class="icon-box">
-                            <ion-icon name="mail-outline"></ion-icon>
-                        </div>
-                        <div class="contact-info">
-                            <p class="contact-title" data-i18n="t004">Email</p>
-                            <a class="contact-link" data-i18n="t005"
-                                href="mailto:sebastianorjuelagiraldo@gmail.com">sebastianorjuelagiraldo@gmail.com</a>
-                        </div>
-                    </li>
-                    <li class="contact-item">
-                        <div class="icon-box">
-                            <ion-icon name="phone-portrait-outline"></ion-icon>
-                        </div>
-                        <div class="contact-info">
-                            <p class="contact-title" data-i18n="t006">Phone</p>
-                            <a class="contact-link" data-i18n="t007" href="tel:+573145109114">+57 (314) 510 9114</a>
-                        </div>
-                    </li>
-                    <li class="contact-item">
-                        <div class="icon-box">
-                            <ion-icon name="calendar-outline"></ion-icon>
-                        </div>
-                        <div class="contact-info">
-                            <p class="contact-title" data-i18n="t008">Birthday</p>
-                            <time data-i18n="t009" datetime="2005-11-13">November 13, 2005</time>
-                        </div>
-                    </li>
-                    <li class="contact-item">
-                        <div class="icon-box">
-                            <ion-icon name="location-outline"></ion-icon>
-                        </div>
-                        <div class="contact-info">
-                            <p class="contact-title" data-i18n="t010">Location</p>
-                            <address data-i18n="t011">Samaná, Caldas, Colombia</address>
-                        </div>
-                    </li>
-                </ul>
-                <div class="separator"></div>
-                <ul class="social-list">
-                    <li class="social-item">
-                        <a class="social-link" href="https://github.com/sebas679og/" rel="noopener noreferrer"
-                            target="_blank">
-                            <ion-icon name="logo-github"></ion-icon>
-                        </a>
-                    </li>
-                    <li class="social-item">
-                        <a class="social-link" href="https://www.linkedin.com/in/sebas679og/" rel="noopener noreferrer"
-                            target="_blank">
-                            <ion-icon name="logo-linkedin"></ion-icon>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </aside>
-        <!--
-      - #main-content
-    -->
-        <div class="main-content">
-            <!--
-        - #NAVBAR
-      -->
-            <nav class="navbar">
-                <ul class="navbar-list">
-                    <li class="navbar-item">
-                        <a class="navbar-link" href="#about" data-nav-link data-nav="about" data-i18n="t012">Acerca
-                            de</a>
-                    </li>
-                    <li class="navbar-item">
-                        <a class="navbar-link" href="#resume" data-nav-link data-nav="resume"
-                            data-i18n="t013">Currículum</a>
-                    </li>
-                    <li class="navbar-item">
-                        <a class="navbar-link" href="#portfolio" data-nav-link data-nav="portfolio"
-                            data-i18n="t014">Portafolio</a>
-                    </li>
-                    <li class="navbar-item">
-                        <a class="navbar-link" href="#contact" data-nav-link data-nav="contact"
-                            data-i18n="t015">Contacto</a>
-                    </li>
-                </ul>
-            </nav>
-            <!--
-        - #ABOUT
-      -->
-            <article class="about active" data-page="about">
-                <header>
-                    <h2 class="h2 article-title" data-i18n="t016">About me</h2>
-                </header>
-                <section class="about-text">
-                    <p data-i18n="t017">I’m a software developer with a primary focus on backend development, though I
-                        also have
-                        experience in frontend. I’m passionate about building efficient, scalable, and well-structured
-                        solutions, always paying close attention to code quality and application performance.</p>
-                    <p data-i18n="t018">Throughout my career, I’ve worked with a variety of technologies, frameworks,
-                        and
-                        databases,
-                        solving complex problems both in collaborative environments and independently. I enjoy deeply
-                        understanding the processes behind each system and contributing with solutions that truly make a
-                        difference.</p>
-                    <p data-i18n="t019">I also enjoy teamwork, sharing knowledge, and continuously learning in a tech
-                        landscape
-                        that
-                        evolves every day.</p>
-                </section>
-                <!--
-          - service
-        -->
-                <section class="service" id="i-do">
-                    <h3 class="h3 service-title" data-i18n="t020">What i'm doing</h3>
-                    <ul class="service-list">
-                        <li class="service-item">
-                            <div class="service-icon-box">
-                                <img alt="complete documentation icon" src="/assets/images/complete-documentation.png"
-                                    width="40" />
-                            </div>
-                            <div class="service-content-box">
-                                <h4 class="h4 service-item-title" data-i18n="t021">Software analysis and document
-                                    management</h4>
-                                <p class="service-item-text" data-i18n="t022">
-                                    I analyze system requirements and processes, creating clear technical and functional
-                                    documentation.
-                                    This includes use cases, UML diagrams, APIs, user manuals, and architecture.
-                                    I organize information to improve team communication and ensure project continuity.
-                                </p>
-                            </div>
-                        </li>
-                        <li class="service-item">
-                            <div class="service-icon-box">
-                                <img alt="technical consultancy icon" src="/assets/images/tecnical-consultancy.png"
-                                    width="40" />
-                            </div>
-                            <div class="service-content-box">
-                                <h4 class="h4 service-item-title" data-i18n="t023">Technical consultancy for projects
-                                </h4>
-                                <p class="service-item-text" data-i18n="t024">
-                                    Advice on software architecture, tools to use or best practices for small teams or
-                                    entrepreneurs.
-                                </p>
-                            </div>
-                        </li>
-                        <li class="service-item">
-                            <div class="service-icon-box">
-                                <img alt="APIs Rest GraphQL icon" src="/assets/images/api-development.png" width="40" />
-                            </div>
-                            <div class="service-content-box">
-                                <h4 class="h4 service-item-title" data-i18n="t025">API's Development </h4>
-                                <p class="service-item-text" data-i18n="t026">
-                                    Design and implementation of robust and secure APIs to connect web applications,
-                                    mobile or internal systems.
-                                </p>
-                            </div>
-                        </li>
-                        <li class="service-item">
-                            <div class="service-icon-box">
-                                <img alt="integration systems icon" src="/assets/images/integration-services.png"
-                                    width="40" />
-                            </div>
-                            <div class="service-content-box">
-                                <h4 class="h4 service-item-title" data-i18n="t027"> Integration of services and systems
-                                </h4>
-                                <p class="service-item-text" data-i18n="t028">
-                                    I connect applications with external services (such as payment gateways, mail
-                                    services, public or private APIs) to automate and improve processes.
-                                </p>
-                            </div>
-                        </li>
-                        <li class="service-item">
-                            <div class="service-icon-box">
-                                <img alt="database design icon" src="/assets/images/database-management.png"
-                                    width="40" />
-                            </div>
-                            <div class="service-content-box">
-                                <h4 class="h4 service-item-title" data-i18n="t029">Database design and management</h4>
-                                <p class="service-item-text" data-i18n="t030">
-                                    Modeling, optimization and administration of SQL (such as PostgreSQL, MySQL,
-                                    MariaDB) or NoSQL (such as MongoDB, Cassandra) databases, ensuring integrity and
-                                    performance.
-                                </p>
-                            </div>
-                        </li>
-                        <li class="service-item">
-                            <div class="service-icon-box">
-                                <img alt="maintenance code icon" src="/assets/images/maintenance-update.png"
-                                    width="40" />
-                            </div>
-                            <div class="service-content-box">
-                                <h4 class="h4 service-item-title" data-i18n="t031">Maintenance and upgrades of existing
-                                    systems</h4>
-                                <p class="service-item-text" data-i18n="t032">
-                                    Code optimization, bug fixes, refactoring or incorporation of new functionalities to
-                                    ongoing projects.
-                                </p>
-                            </div>
-                        </li>
-                    </ul>
-                </section>
-            </article>
-            <!--
-        - #RESUME
-      -->
-            <article class="resume" data-page="resume">
-                <header>
-                    <h2 class="h2 article-title" data-i18n="t033">Resume</h2>
-                </header>
-                <section class="timeline" id="education">
-                    <div class="title-wrapper">
-                        <div class="icon-box">
-                            <ion-icon name="book-outline"></ion-icon>
-                        </div>
-                        <h3 class="h3" data-i18n="t034">Education</h3>
-                    </div>
-                    <ol class="timeline-list">
-                        <li class="timeline-item">
-                            <h4 class="h4 timeline-item-tittle" data-i18n="t035">Software Analysis and Development
-                                Technologist</h4>
-                            <h5 class="h5 timeline-item-tittle" data-i18n="t036">SENA (Servicio Nacional de Aprendizaje)
-                            </h5>
-                            <span data-i18n="t037">2023 — 2025</span>
-                            <p class="timeline-text" data-i18n="t038">
-                                During this training I delved into the entire software life cycle, from requirements
-                                gathering to analysis, design, development, deployment and maintenance of applications.
-                                I learned about systems architecture, document management, object-oriented software
-                                design, modeling with UML diagrams and database management, integrating technical
-                                knowledge with good practices in agile and structured development.
-                            </p>
-                        </li>
-                        <li class="timeline-item">
-                            <h4 class="h4 timeline-item-tittle" data-i18n="t039">Systems Technician</h4>
-                            <h5 class="h5 timeline-item-tittle" data-i18n="t040">SENA (Servicio Nacional de Aprendizaje)
-                            </h5>
-                            <span data-i18n="t041">2021 — 2022</span>
-                            <p class="timeline-text" data-i18n="t042">
-                                During this training I acquired knowledge in preventive and corrective maintenance of
-                                computer equipment, both hardware and software. I also learned about the installation
-                                and configuration of operating systems and applications, network management and
-                                structured cabling, as well as the management and administration of computer rooms.
-                            </p>
-                        </li>
-                    </ol>
-                </section>
-                <section class="timeline" id="experience">
-                    <div class="title-wrapper">
-                        <div class="icon-box">
-                            <ion-icon name="book-outline"></ion-icon>
-                        </div>
-                        <h3 class="h3" data-i18n="t043">Experience</h3>
-                    </div>
-                    <ol class="timeline-list">
-                        <li class="timeline-item">
-                            <h4 class="h4 timeline-item-tittle" data-i18n="t044">Software Developer</h4>
-                            <h5 class="h5 timeline-item-tittle" data-i18n="t045">Lumu Technologies</h5>
-                            <span data-i18n="t046">2024 — 2025</span>
-                            <p class="timeline-text" data-i18n="t047">
-                                I worked as an intern in the software development area, where I participated in the
-                                construction of technological solutions for the company. Among my responsibilities
-                                were the development and exposure of APIs, working on internal projects in both
-                                backend and frontend, and collaboration in maintenance tasks, documentation and
-                                continuous improvement. During this experience I applied good programming practices,
-                                version control and agile methodologies, strengthening my technical and teamwork
-                                skills.
-                            </p>
-                        </li>
-                    </ol>
-                    <div class="timeline-cv">
-                        <a href="/assets/cv/Sebastian_Orjuela_CV_EN.pdf" download id="cv-download-link"
-                            class="btn-download-cv" target="_blank" rel="noopener">
-                            <ion-icon name="download-outline"></ion-icon>
-                            <span data-i18n="t102">Dowload CV</span>
-                        </a>
-                    </div>
-                </section>
-                <section class="skill" id="skills">
-                    <h3 class="h3 skills-title" data-i18n="t048">My Skills</h3>
-                    <div class="skills-grid">
-                        <!-- Programming Languages -->
-                        <div class="skills-group">
-                            <h4 class="h4 group-title" data-i18n="t049">Language</h4>
-                            <ul class="skills-list">
-                                <li class="skills-item"><img alt="Python" src="/assets/images/logo-python.png"
-                                        width="24" /><span data-i18n="t050">Python</span></li>
-                                <li class="skills-item"><img alt="Java" src="/assets/images/logo-java.png"
-                                        width="24" /><span data-i18n="t051">Java</span></li>
-                                <li class="skills-item"><img alt="TypeScript" src="/assets/images/logo-typescript.png"
-                                        width="24px" /><span data-i18n="t052">TypeScript</span></li>
-                            </ul>
-                        </div>
-                        <!-- Technologies -->
-                        <div class="skills-group">
-                            <h4 class="h4 group-title" data-i18n="t054">Technologies</h4>
-                            <ul class="skills-list">
-                                <li class="skills-item"><img alt="React" src="/assets/images/logo-react.png"
-                                        width="24px" /><span data-i18n="t055">React + MUI</span></li>
-                                <li class="skills-item"><img alt="APIS" src="/assets/images/api-development.png"
-                                        width="24px" /><span data-i18n="t056">APIs REST</span></li>
-                                <li class="skills-item"><img alt="Spring Boot" src="/assets/images/logo-springboot.png"
-                                        width="24px" /><span data-i18n="t203">Spring Boot</span></li>
-                                <li class="skills-item"><img alt="Quart" src="/assets/images/logo-quart.png"
-                                        width="24px" /><span data-i18n="t057">Quart (Asyncio)</span></li>
-                                <li class="skills-item"><img alt="Docker Podman" src="/assets/images/logo-docker.png"
-                                        width="24px" /><span data-i18n="t058">Docker/Podman</span></li>
-                                <li class="skills-item"><img alt="CI/CD" src="/assets/images/logo-cicd.png"
-                                        width="24px" /><span data-i18n="t059">CI/CD</span></li>
-                            </ul>
-                        </div>
-                        <!-- Databases -->
-                        <div class="skills-group">
-                            <h4 class="h4 group-title" data-i18n="t060">Databases</h4>
-                            <ul class="skills-list">
-                                <li class="skills-item"><img alt="PostgreSQL" src="/assets/images/logo-postgres.png"
-                                        width="24px" /><span data-i18n="t061">PostgreSQL</span></li>
-                                <li class="skills-item"><img alt="MySQL" src="/assets/images/logo-mysql.png"
-                                        width="24px" /><span data-i18n="t062">MySQL</span></li>
-                                <li class="skills-item"><img alt="MongoDB" src="/assets/images/logo-mongodb.png"
-                                        width="24px" /><span data-i18n="t063">MongoDB</span></li>
-                                <li class="skills-item"><img alt="Cassandra" src="/assets/images/logo-cassandra.png"
-                                        width="24px" /><span data-i18n="t064">Cassandra</span></li>
-                            </ul>
-                        </div>
-                        <!-- Tools -->
-                        <div class="skills-group">
-                            <h4 class="h4 group-title" data-i18n="t065">Tools</h4>
-                            <ul class="skills-list">
-                                <li class="skills-item"><img alt="Git" src="/assets/images/logo-git.png"
-                                        width="24px" /><span data-i18n="t066">Git</span></li>
-                                <li class="skills-item"><img alt="GitHub" src="/assets/images/logo-github.png"
-                                        width="24px" /><span data-i18n="t067">GitHub</span></li>
-                                <li class="skills-item"><img alt="GitHub" src="/assets/images/logo-bitbucket.png"
-                                        width="24px" /><span data-i18n="t068">Bitbucket</span></li>
-                                <li class="skills-item"><img alt="JIRA" src="/assets/images/logo-jira.png"
-                                        width="24px" /><span data-i18n="t069">JIRA, Trello</span></li>
-                                <li class="skills-item"><img alt="Pytest" src="/assets/images/logo-pytest.png"
-                                        width="24px" /><span data-i18n="t070">Pytest</span></li>
-                                <li class="skills-item"><img alt="Playwright" src="/assets/images/logo-playwright.png"
-                                        width="24px" /><span data-i18n="t071">Playwright</span></li>
-                            </ul>
-                        </div>
-                        <!-- Soft skills -->
-                        <div class="skills-group">
-                            <h4 class="h4 group-title" data-i18n="t072">Soft skills</h4>
-                            <ul class="skills-list">
-                                <li class="skills-item"><img alt="Communication"
-                                        src="/assets/images/logo-comunication.png" width="24px" /><span
-                                        data-i18n="t073">Communication</span></li>
-                                <li class="skills-item"><img alt="Teamwork" src="/assets/images/logo-teamwork.png"
-                                        width="24px" /><span data-i18n="t074">Teamwork</span></li>
-                                <li class="skills-item"><img alt="Analytical thinking"
-                                        src="/assets/images/logo-analytical-thinking.png" width="24px" /><span
-                                        data-i18n="t075">Analytical thinking</span></li>
-                                <li class="skills-item"><img alt="Proactivity" src="/assets/images/logo-proactivity.png"
-                                        width="24px" /><span data-i18n="t076">Proactivity</span></li>
-                                <li class="skills-item"><img alt="Time management"
-                                        src="/assets/images/logo-time-management.png" width="24px" /><span
-                                        data-i18n="t077">Time management</span></li>
-                            </ul>
-                        </div>
-                    </div>
-                </section>
-            </article>
-            <!--
-        - #PORTFOLIO
-      -->
-            <article class="portfolio" data-page="portfolio">
-                <header>
-                    <h2 class="h2 article-title" data-i18n="t078">Portfolio</h2>
-                </header>
-                <section class="projects">
-                    <ul class="filter-list">
-                        <li class="filter-item">
-                            <button class="active" data-filter-btn="" data-i18n="t079">All</button>
-                        </li>
-                        <li class="filter-item">
-                            <button data-filter-btn="" data-i18n="t080">APIs</button>
-                        </li>
-                        <li class="filter-item">
-                            <button data-filter-btn="" data-i18n="t081">Applications</button>
-                        </li>
-                        <li class="filter-item">
-                            <button data-filter="program_logic" data-filter-btn="" data-i18n="t082">Program
-                                Logic</button>
-                        </li>
-                        <li class="filter-item">
-                            <button data-filter="under_development" data-filter-btn="" data-i18n="t083">Under
-                                development</button>
-                        </li>
-                        <li class="filter-item">
-                            <button data-filter-btn="" data-i18n="t084">Collaborative</button>
-                        </li>
-                    </ul>
-                    <div class="filter-select-box">
-                        <button class="filter-select" data-select="">
-                            <div class="select-value" data-selecct-value="">Select category</div>
-                            <div class="select-icon">
-                                <ion-icon name="chevron-down"></ion-icon>
-                            </div>
-                        </button>
-                        <ul class="select-list">
-                            <li class="select-item">
-                                <button data-i18n="t085" data-select-item="">All</button>
-                            </li>
-                            <li class="select-item">
-                                <button data-i18n="t086" data-select-item="">APIs</button>
-                            </li>
-                            <li class="select-item">
-                                <button data-i18n="t087" data-select-item="">Applications</button>
-                            </li>
-                            <li class="select-item">
-                                <button data-filter="program_logic" data-i18n="t088" data-select-item="">Program
-                                    logic</button>
-                            </li>
-                            <li class="select-item">
-                                <button data-filter="under_development" data-i18n="t089" data-select-item="">Under
-                                    development</button>
-                            </li>
-                            <li class="select-item">
-                                <button data-i18n="t090" data-select-item="">Collaborative</button>
-                            </li>
-                        </ul>
-                    </div>
-                    <ul class="project-list">
-                        <li class="project-item active" data-category="applications" data-filter-item="">
-                            <a href="https://github.com/sebas679og/vino-app" rel="noopener noreferrer" target="_blank">
-                                <figure class="project-img">
-                                    <div class="project-item-icon-box">
-                                        <ion-icon name="logo-github"></ion-icon>
-                                    </div>
-                                    <img alt="vino application" loading="lazy" src="./assets/images/vino-app.png" />
-                                </figure>
-                                <h3 class="project-title" data-i18n="t091">Vino App</h3>
-                                <p class="project-category" data-i18n="t092">Applications</p>
-                            </a>
-                        </li>
-                        <li class="project-item active" data-category="apis collaborative"
-                            data-filter-item="">
-                            <a href="https://github.com/sebas679og/gamehub" rel="noopener noreferrer" target="_blank">
-                                <figure class="project-img">
-                                    <div class="project-item-icon-box">
-                                        <ion-icon name="logo-github"></ion-icon>
-                                    </div>
-                                    <div class="project-item-icon-box">
-                                        <ion-icon name="logo-github"></ion-icon>
-                                    </div>
-                                    <img alt="GameHub" loading="lazy" src="./assets/images/gamehub-api.png" />
-                                </figure>
-                                <h3 class="project-title" data-i18n="t093">GameHub</h3>
-                                <p class="project-category" data-i18n="t094">Collaborative API Java</p>
-                            </a>
-                        </li>
-                         <li class="project-item active" data-category="apis collaborative under_development"
-                            data-filter-item="">
-                            <a href="https://github.com/sebas679og/bankcore-system" rel="noopener noreferrer" target="_blank">
-                                <figure class="project-img">
-                                    <div class="project-item-icon-box">
-                                        <ion-icon name="logo-github"></ion-icon>
-                                    </div>
-                                    <div class="project-item-icon-box">
-                                        <ion-icon name="logo-github"></ion-icon>
-                                    </div>
-                                    <img alt="BankCore System" loading="lazy" src="./assets/images/bankCoreSystem.png" />
-                                </figure>
-                                <h3 class="project-title" data-i18n="t204">BankCore System</h3>
-                                <p class="project-category" data-i18n="t205">Collaborative banking API developed in Java with microservices architecture.</p>
-                            </a>
-                        </li>
-                        <li class="project-item active" data-category="program_logic" data-filter-item="">
-                            <a href="https://github.com/sebas679og/puzzle-decoder" rel="noopener noreferrer"
-                                target="_blank">
-                                <figure class="project-img">
-                                    <div class="project-item-icon-box">
-                                        <ion-icon name="logo-github"></ion-icon>
-                                    </div>
-                                    <img alt="puzzle-decoder" loading="lazy" src="./assets/images/puzzleDecoder.png" />
-                                </figure>
-                                <h3 class="project-title" data-i18n="t095">Puzzle-Decoder (Technical challenge)</h3>
-                                <p class="project-category" data-i18n="t096">Program logic</p>
-                            </a>
-                        </li>
-                        <li class="project-item active" data-category="program_logic" data-filter-item="">
-                            <a href="https://github.com/sebas679og/Guess-the-Number-Game" rel="noopener noreferrer"
-                                target="_blank">
-                                <figure class="project-img">
-                                    <div class="project-item-icon-box">
-                                        <ion-icon name="logo-github"></ion-icon>
-                                    </div>
-                                    <img alt="Guess-the-Number-Game" loading="lazy"
-                                        src="./assets/images/guesTheNumberGame.png" />
-                                </figure>
-                                <h3 class="project-title" data-i18n="t097">Guess-the-Number-Game (Technical challenge)
-                                </h3>
-                                <p class="project-category" data-i18n="t098">Program logic</p>
-                            </a>
-                        </li>
-                    </ul>
-                </section>
-            </article>
-            <!--
-        - #CONTACT
-      -->
-            <article class="contact" data-page="contact">
-                <header>
-                    <h2 class="h2 article-title" data-i18n="t099">Contact</h2>
-                </header>
-                <section class="mapbox" data-mapbox="">
-                    <figure>
-                        <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3972.0257618675932!2d-74.99403937428747!3d5.41304699456613!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e472d1fead8a72b%3A0xeec25fbdb6946b40!2zU2FtYW7DoSwgQ2FsZGFz!5e0!3m2!1ses!2sco!4v1770424097847!5m2!1ses!2sco"
-                            width="400" height="300" loading="lazy"></iframe>
-                    </figure>
-                </section>
-                <section class="contact-form">
-                    <h3 class="h3 form-title" data-i18n="t100">Contact Form</h3>
-                    <div class="form-message" id="form-message"></div>
-                    <form action="#" class="form" data-form="">
-                        <div class="input-wrapper">
-                            <input class="form-input" data-form-input="" name="from_name" placeholder="Full name"
-                                required="" type="text" data-i18n-placeholder="t200" />
-                            <input class="form-input" data-form-input="" name="from_email" placeholder="Email address"
-                                required="" type="email" data-i18n-placeholder="t201" />
-                        </div>
-                        <textarea class="form-input" data-form-input="" name="message" placeholder="Your Message"
-                            required="" data-i18n-placeholder="t202"></textarea>
-                        <button class="form-btn" data-form-btn="" disabled="" type="submit">
-                            <ion-icon name="paper-plane"></ion-icon>
-                            <span data-i18n="t101">Send Message</span>
-                        </button>
-                    </form>
-                </section>
-            </article>
+    <link
+      href="./assets/images/my-avatar.png"
+      rel="shortcut icon"
+      type="image/x-icon"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fira+Code:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+  </head>
+  <body>
+    <!-- ======================== NAVBAR ======================== -->
+    <header class="navbar" id="navbar">
+      <div class="container navbar__inner">
+        <div class="navbar__brand">
+          <a href="#hero" class="navbar__logo">
+            <span class="logo-bracket">&lt;</span>Sog<span class="logo-bracket">
+              /&gt;</span
+            >
+          </a>
+          <button id="lang-toggle" class="lang-toggle"><span>ES</span></button>
         </div>
-    </main>
-    <!--
-    - custom js link
-  -->
+
+        <button
+          class="navbar__toggle"
+          id="nav-toggle"
+          aria-label="Toggle navigation"
+        >
+          <span></span><span></span><span></span>
+        </button>
+
+        <nav class="navbar__menu" id="nav-menu">
+          <a href="#about" class="navbar__link" data-i18n="header.nav.about"
+            >About</a
+          >
+          <a href="#skills" class="navbar__link" data-i18n="header.nav.skills"
+            >Skills</a
+          >
+          <a
+            href="#experience"
+            class="navbar__link"
+            data-i18n="header.nav.experience"
+            >Experience</a
+          >
+          <a
+            href="#projects"
+            class="navbar__link"
+            data-i18n="header.nav.projects"
+            >Projects</a
+          >
+          <a href="#contact" class="navbar__link" data-i18n="header.nav.contact"
+            >Contact</a
+          >
+        </nav>
+      </div>
+    </header>
+
+    <!-- ======================== HERO ======================== -->
+    <section class="hero" id="hero">
+      <div class="container hero__inner">
+        <p class="hero__greeting fade-up" data-i18n="hero.greeting">
+          Hello, I'm
+        </p>
+        <h1 class="hero__name fade-up">Sebastian Orjuela</h1>
+        <h2 class="hero__title fade-up" data-i18n="hero.title">
+          Backend Developer
+        </h2>
+        <p class="hero__description fade-up" data-i18n="hero.description">
+          Backend Developer specialized in Java and Spring Boot. I develop
+          robust and scalable APIs, integrating Python (FastAPI, Quart), CI/CD
+          with GitHub Actions, and testing practices to ensure quality.
+        </p>
+        <div class="hero__actions fade-up">
+          <a
+            href="#contact"
+            class="btn btn--primary"
+            data-i18n="hero.actions.contact"
+            >Get in Touch</a
+          >
+          <a
+            href="/assets/cv/Sebastian_Orjuela_CV_EN.pdf"
+            class="btn btn--outline"
+            download
+            id="cv-download-link"
+            target="_blank"
+            rel="noopener"
+          >
+            <i class="fa-solid fa-download"></i>
+            <span data-i18n="hero.actions.cv">Download CV</span>
+          </a>
+        </div>
+      </div>
+      <div class="hero__scroll-indicator" aria-hidden="true">
+        <div class="mouse"><div class="mouse__wheel"></div></div>
+      </div>
+    </section>
+
+    <!-- ======================== ABOUT ======================== -->
+    <section class="section about" id="about">
+      <div class="container">
+        <h2 class="section__title fade-up" data-i18n="about.title">About Me</h2>
+        <div class="about__grid">
+          <div class="about__text fade-up">
+            <p data-i18n="about.paragraphs.p1">
+              I am a backend developer with a focus on Java and Spring Boot,
+              specialized in designing and building robust, scalable, and
+              maintainable APIs.
+            </p>
+            <p data-i18n="about.paragraphs.p2">
+              I have complementary experience in Python using frameworks such as
+              FastAPI and Quart, which allows me to adapt to different
+              environments and development needs. Additionally, I work with
+              process automation through GitHub Actions and apply testing to
+              ensure the quality and reliability of applications.
+            </p>
+            <p data-i18n="about.paragraphs.p3">
+              I focus on writing clean code, applying best practices, and
+              building solutions aimed at efficiently solving real problems.
+            </p>
+          </div>
+          <div class="about__details fade-up">
+            <div class="about__card">
+              <div class="about__card-item">
+                <i class="fa-solid fa-graduation-cap"></i>
+                <div>
+                  <strong data-i18n="about.card.edu1.degree"
+                    >Technician in Application and Cloud Services
+                    Programming</strong
+                  >
+                  <span data-i18n="about.card.edu1.institution"
+                    >SENA | 2026 - Present</span
+                  >
+                </div>
+              </div>
+              <div class="about__card-item">
+                <i class="fa-solid fa-graduation-cap"></i>
+                <div>
+                  <strong data-i18n="about.card.edu2.degree"
+                    >Technologist in Software Analysis and Development</strong
+                  >
+                  <span data-i18n="about.card.edu2.institution"
+                    >SENA | 2023 - 2025</span
+                  >
+                </div>
+              </div>
+              <div class="about__card-item">
+                <i class="fa-solid fa-graduation-cap"></i>
+                <div>
+                  <strong data-i18n="about.card.edu3.degree"
+                    >System Technician</strong
+                  >
+                  <span data-i18n="about.card.edu3.institution"
+                    >SENA | 2021 - 2022</span
+                  >
+                </div>
+              </div>
+              <div class="about__card-item">
+                <i class="fa-solid fa-location-dot"></i>
+                <div>
+                  <strong data-i18n="about.card.location">Colombia</strong>
+                  <span data-i18n="about.card.availability"
+                    >Available for remote work</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================== SKILLS ======================== -->
+    <section class="section skills" id="skills">
+      <div class="container">
+        <h2 class="section__title fade-up" data-i18n="skills.title">
+          Skills &amp; Technologies
+        </h2>
+        <div class="skills__grid">
+          <div class="skills__group fade-up">
+            <h3 class="skills__group-title">
+              <i class="fa-solid fa-code"></i>
+              <span data-i18n="skills.groups.languages">Languages</span>
+            </h3>
+            <ul class="skills__list">
+              <li>Java</li>
+              <li>Python</li>
+            </ul>
+          </div>
+          <div class="skills__group fade-up">
+            <h3 class="skills__group-title">
+              <i class="fa-solid fa-layer-group"></i>
+              <span data-i18n="skills.groups.frameworks">Frameworks</span>
+            </h3>
+            <ul class="skills__list">
+              <li>Spring Boot</li>
+              <li>Quart</li>
+              <li>FastAPI</li>
+            </ul>
+          </div>
+          <div class="skills__group fade-up">
+            <h3 class="skills__group-title">
+              <i class="fa-solid fa-database"></i>
+              <span data-i18n="skills.groups.databases">Databases</span>
+            </h3>
+            <ul class="skills__list">
+              <li>PostgreSQL</li>
+              <li>MySQL</li>
+              <li>MongoDB</li>
+            </ul>
+          </div>
+          <div class="skills__group fade-up">
+            <h3 class="skills__group-title">
+              <i class="fa-solid fa-wrench"></i>
+              <span data-i18n="skills.groups.tools">Tools</span>
+            </h3>
+            <ul class="skills__list">
+              <li>Git</li>
+              <li>GitHub</li>
+              <li>Docker</li>
+              <li>Podman</li>
+            </ul>
+          </div>
+          <div class="skills__group fade-up">
+            <h3 class="skills__group-title">
+              <i class="fa-solid fa-diagram-project"></i>
+              <span data-i18n="skills.groups.concepts">Concepts</span>
+            </h3>
+            <ul class="skills__list">
+              <li>CI/CD</li>
+              <li>Microservices</li>
+              <li>REST APIs</li>
+              <li>Asynchronism</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================== EXPERIENCE ======================== -->
+    <section class="section experience" id="experience">
+      <div class="container">
+        <h2 class="section__title fade-up" data-i18n="experience.title">
+          Experience
+        </h2>
+        <div class="timeline">
+          <div class="timeline__item fade-up">
+            <div class="timeline__marker"></div>
+            <div class="timeline__content">
+              <span
+                class="timeline__date"
+                data-i18n="experience.items.lumu.date"
+                >2024 - 2025 | 6 months</span
+              >
+              <h3
+                class="timeline__title"
+                data-i18n="experience.items.lumu.role"
+              >
+                Software Developer Intern
+              </h3>
+              <span
+                class="timeline__company"
+                data-i18n="experience.items.lumu.company"
+                >Lumu Technologies</span
+              >
+              <p data-i18n="experience.items.lumu.description">
+                I contributed to the development of technological solutions by
+                building APIs, backend functionalities, and frontend components
+                for internal applications...
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================== PROJECTS ======================== -->
+    <section class="section projects" id="projects">
+      <div class="container">
+        <h2 class="section__title fade-up" data-i18n="projects.title">
+          Projects
+        </h2>
+        <div class="projects__grid">
+          <article class="project-card fade-up">
+            <div class="project-card__header">
+              <i class="fa-solid fa-folder-open"></i>
+              <div class="project-card__links">
+                <a
+                  href="https://github.com/sebas679og/bankcore-system"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  aria-label="GitHub"
+                  ><i class="fa-brands fa-github"></i
+                ></a>
+              </div>
+            </div>
+            <h3
+              class="project-card__title"
+              data-i18n="projects.items.bankcore.title"
+            >
+              Bankcore System Api
+            </h3>
+            <p
+              class="project-card__description"
+              data-i18n="projects.items.bankcore.description"
+            >
+              Banking system composed of two microservices...
+            </p>
+            <ul class="project-card__tags">
+              <li>Java</li>
+              <li>Spring Boot</li>
+              <li>PostgreSQL</li>
+              <li>Docker</li>
+              <li>CI/CD</li>
+            </ul>
+          </article>
+
+          <article class="project-card fade-up">
+            <div class="project-card__header">
+              <i class="fa-solid fa-folder-open"></i>
+              <div class="project-card__links">
+                <a
+                  href="https://github.com/sebas679og/Equipo03-SportsPulseMS"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  aria-label="GitHub"
+                  ><i class="fa-brands fa-github"></i
+                ></a>
+              </div>
+            </div>
+            <h3
+              class="project-card__title"
+              data-i18n="projects.items.sportspulse.title"
+            >
+              Sports Pulse API
+            </h3>
+            <p
+              class="project-card__description"
+              data-i18n="projects.items.sportspulse.description"
+            >
+              Real-time football analytics platform...
+            </p>
+            <ul class="project-card__tags">
+              <li>Java</li>
+              <li>Spring Boot</li>
+              <li>PostgreSQL</li>
+              <li>Docker</li>
+              <li>CI/CD</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================== CONTACT ======================== -->
+    <section class="section contact" id="contact">
+      <div class="container">
+        <h2 class="section__title fade-up" data-i18n="contact.title">
+          Get in Touch
+        </h2>
+        <p class="contact__subtitle fade-up" data-i18n="contact.subtitle">
+          Have a project in mind or just want to say hello? I'd love to hear
+          from you.
+        </p>
+        <form
+          class="contact__form fade-up"
+          id="contact-form"
+          action="#"
+          data-form=""
+        >
+          <div class="form-group">
+            <label for="name" data-i18n="contact.form.name.label">Name</label>
+            <input
+              type="text"
+              id="name"
+              name="from_name"
+              required
+              placeholder="Your name"
+              data-i18n-placeholder="contact.form.name.placeholder"
+            />
+            <span class="form-error" id="name-error"></span>
+          </div>
+          <div class="form-group">
+            <label for="email" data-i18n="contact.form.email.label"
+              >Email</label
+            >
+            <input
+              type="email"
+              id="email"
+              name="from_email"
+              required
+              placeholder="you@example.com"
+              data-i18n-placeholder="contact.form.email.placeholder"
+            />
+            <span class="form-error" id="email-error"></span>
+          </div>
+          <div class="form-group form-group--full">
+            <label for="message" data-i18n="contact.form.message.label"
+              >Message</label
+            >
+            <textarea
+              id="message"
+              name="message"
+              rows="5"
+              required
+              placeholder="Tell me about your project..."
+              data-i18n-placeholder="contact.form.message.placeholder"
+            ></textarea>
+            <span class="form-error" id="message-error"></span>
+          </div>
+          <button
+            data-form-btn=""
+            disabled
+            type="submit"
+            class="btn btn--primary btn--full"
+          >
+            <i class="fa-solid fa-paper-plane"></i>
+            <span data-i18n="contact.form.submit">Send Message</span>
+          </button>
+          <div class="form-status" id="form-status"></div>
+        </form>
+      </div>
+    </section>
+
+    <!-- ======================== FOOTER ======================== -->
+    <footer class="footer">
+      <div class="container footer__inner">
+        <p class="footer__copy" data-i18n="footer.copy">
+          &copy; 2026 Sebastian Orjuela. All rights reserved.
+        </p>
+        <div class="footer__socials">
+          <a
+            href="https://github.com/sebas679og"
+            rel="noopener noreferrer"
+            target="_blank"
+            aria-label="GitHub"
+            ><i class="fa-brands fa-github"></i
+          ></a>
+          <a
+            href="https://www.linkedin.com/in/sebas679og/"
+            rel="noopener noreferrer"
+            target="_blank"
+            aria-label="LinkedIn"
+            ><i class="fa-brands fa-linkedin-in"></i
+          ></a>
+          <a href="mailto:sebastianorjuelagiraldo@gmail.com" aria-label="Email"
+            ><i class="fa-solid fa-envelope"></i
+          ></a>
+        </div>
+      </div>
+    </footer>
+
     <script src="./assets/js/script.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js" type="text/javascript"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+      type="text/javascript"
+    ></script>
     <script src="./assets/js/email.js"></script>
     <script src="./assets/js/translate.js"></script>
-    <!--
-    - ionicon link
-  -->
-    <script src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js" type="module"></script>
-    <script nomodule="" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-    <!--
-        MIT License
-        Copyright (c) 2022 codewithsadee
-        Copyright (c) 2025 Sebas679og
-
-        Permission is hereby granted, free of charge, to any person obtaining a copy
-        of this software and associated documentation files (the "Software"), to deal
-        in the Software without restriction, including without limitation the rights
-        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-        copies of the Software, and to permit persons to whom the Software is
-        furnished to do so, subject to the following conditions:
-
-        The above copyright notice and this permission notice shall be included in all
-        copies or substantial portions of the Software.
-
-        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-        SOFTWARE.
-    -->
-</body>
-
+  </body>
 </html>

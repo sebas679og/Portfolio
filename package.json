@@ -1,7 +1,7 @@
 {
   "name": "portfolio",
-  "version": "1.0.0",
-  "description": "Este proyecto es un portafolio web completamente responsivo, adaptado a partir de la plantilla **vCard** de [codewithsadee](https://github.com/codewithsadee/vcard-personal-portfolio).   Está construido con **HTML**, **CSS** y **JavaScript**, y es compatible con todos los dispositivos.",
+  "version": "2.0.0",
+  "description": "Web Portfolio Backend Dev",
   "main": "index.js",
   "scripts": {
     "serve": "serve . -s",
@@ -21,8 +21,8 @@
   },
   "homepage": "https://github.com/sebas679og/Portfolio?tab=readme-ov-file#portafolio-personal--sebasti%C3%A1n-orjuela",
   "devDependencies": {
-    "@playwright/test": "^1.58.2",
-    "@types/node": "^25.3.0",
-    "serve": "^14.2.5"
+    "@playwright/test": "^1.59.1",
+    "@types/node": "^25.6.0",
+    "serve": "^14.2.6"
   }
 }
