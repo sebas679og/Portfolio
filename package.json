@@ -1,7 +1,7 @@
 {
   "name": "portfolio",
-  "version": "1.0.0",
-  "description": "Este proyecto es un portafolio web completamente responsivo, adaptado a partir de la plantilla **vCard** de [codewithsadee](https://github.com/codewithsadee/vcard-personal-portfolio).   Está construido con **HTML**, **CSS** y **JavaScript**, y es compatible con todos los dispositivos.",
+  "version": "2.0.0",
+  "description": "Web Portfolio Backend Dev",
   "main": "index.js",
   "scripts": {
     "serve": "serve . -s",
