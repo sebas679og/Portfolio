@@ -2,8 +2,6 @@
 
 Este repositorio contiene el código fuente de mi **portafolio web personal**, desarrollado para presentar mi perfil profesional, experiencia, proyectos y habilidades como desarrollador de software.
 
-El diseño está basado en la plantilla **vCard** de [codewithsadee](https://github.com/codewithsadee/vcard-personal-portfolio), adaptado y personalizado según mis necesidades.
-
 🌐 **Sitio en producción:**
 👉 [https://sebasorjuela.dev](https://sebasorjuela.dev)
 
