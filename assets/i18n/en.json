@@ -26,7 +26,7 @@
     },
     "card": {
       "edu1": {
-        "degree": "Tecnico en Programacion de Aplicaciones y Servicios para la Nube",
+        "degree": "Technician in Application and Cloud Services Programming",
         "institution": "SENA | 2026 - Present"
       },
       "edu2": {
@@ -34,7 +34,7 @@
         "institution": "SENA | 2023 - 2025"
       },
       "edu3": {
-        "degree": "Computer Technician",
+        "degree": "System Technician",
         "institution": "SENA | 2021 - 2022"
       },
       "location": "Colombia",
@@ -81,14 +81,17 @@
     "form": {
       "name": { "label": "Name", "placeholder": "Your name" },
       "email": { "label": "Email", "placeholder": "you@example.com" },
-      "message": { "label": "Message", "placeholder": "Tell me about your project..." },
+      "message": {
+        "label": "Message",
+        "placeholder": "Tell me about your project..."
+      },
       "submit": "Send Message",
       "sending": "Sending…",
       "success": "Message sent successfully! I'll get back to you soon.",
       "error": "Something went wrong. Please try again or contact me directly."
     }
   },
-    "errors": {
+  "errors": {
     "nameRequired": "Name is required.",
     "emailRequired": "Email is required.",
     "emailInvalid": "Enter a valid email address.",

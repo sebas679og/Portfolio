@@ -1,307 +1,498 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sebastian Orjuela — Backend Developer</title>
-  <meta name="description" content="Portfolio of Sebastian Orjuela Giraldo — Backend Developer specializing in Java, Python, Spring Boot, and microservices architecture." />
-  <meta name="keywords" content="desarrollador backend, Java, Spring Boot, portafolio, Colombia, API, programador, Sebastian, Orjuela, Sebastian, Dev">
-  <meta name="author" content="Sebas">
-  <link rel="canonical" href="https://sebasorjuela.dev">
-  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sebastian Orjuela — Backend Developer</title>
+    <meta
+      name="description"
+      content="Portfolio of Sebastian Orjuela Giraldo — Backend Developer specializing in Java, Python, Spring Boot, and microservices architecture."
+    />
+    <meta
+      name="keywords"
+      content="desarrollador backend, Java, Spring Boot, portafolio, Colombia, API, programador, Sebastian, Orjuela, Sebastian, Dev"
+    />
+    <meta name="author" content="Sebas" />
+    <link rel="canonical" href="https://sebasorjuela.dev" />
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
 
-  <meta property="og:title" content="Sebastian Orjuela | Backend Developer">
-  <meta property="og:description" content="Explora mis proyectos backend y contacta conmigo.">
-  <meta property="og:image" content="https://sebasorjuela.dev/assets/images/preview.png">
-  <meta property="og:url" content="https://sebasorjuela.dev">
-  <meta property="og:type" content="website">
-  <meta name="twitter:card" content="summary_large_image">
+    <meta property="og:title" content="Sebastian Orjuela | Backend Developer" />
+    <meta
+      property="og:description"
+      content="Explora mis proyectos backend y contacta conmigo."
+    />
+    <meta
+      property="og:image"
+      content="https://sebasorjuela.dev/assets/images/preview.png"
+    />
+    <meta property="og:url" content="https://sebasorjuela.dev" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
 
-  <link href="./assets/images/my-avatar.png" rel="shortcut icon" type="image/x-icon" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
-  <link rel="stylesheet" href="./assets/css/styles.css" />
-</head>
-<body>
+    <link
+      href="./assets/images/my-avatar.png"
+      rel="shortcut icon"
+      type="image/x-icon"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fira+Code:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+  </head>
+  <body>
+    <!-- ======================== NAVBAR ======================== -->
+    <header class="navbar" id="navbar">
+      <div class="container navbar__inner">
+        <div class="navbar__brand">
+          <a href="#hero" class="navbar__logo">
+            <span class="logo-bracket">&lt;</span>Sog<span class="logo-bracket">
+              /&gt;</span
+            >
+          </a>
+          <button id="lang-toggle" class="lang-toggle"><span>ES</span></button>
+        </div>
 
-  <!-- ======================== NAVBAR ======================== -->
-  <header class="navbar" id="navbar">
-    <div class="container navbar__inner">
-      <div class="navbar__brand">
-        <a href="#hero" class="navbar__logo">
-          <span class="logo-bracket">&lt;</span>Sog<span class="logo-bracket"> /&gt;</span>
-        </a>
-        <button id="lang-toggle" class="lang-toggle"><span>ES</span></button>
+        <button
+          class="navbar__toggle"
+          id="nav-toggle"
+          aria-label="Toggle navigation"
+        >
+          <span></span><span></span><span></span>
+        </button>
+
+        <nav class="navbar__menu" id="nav-menu">
+          <a href="#about" class="navbar__link" data-i18n="header.nav.about"
+            >About</a
+          >
+          <a href="#skills" class="navbar__link" data-i18n="header.nav.skills"
+            >Skills</a
+          >
+          <a
+            href="#experience"
+            class="navbar__link"
+            data-i18n="header.nav.experience"
+            >Experience</a
+          >
+          <a
+            href="#projects"
+            class="navbar__link"
+            data-i18n="header.nav.projects"
+            >Projects</a
+          >
+          <a href="#contact" class="navbar__link" data-i18n="header.nav.contact"
+            >Contact</a
+          >
+        </nav>
       </div>
+    </header>
 
-      <button class="navbar__toggle" id="nav-toggle" aria-label="Toggle navigation">
-        <span></span><span></span><span></span>
-      </button>
-
-      <nav class="navbar__menu" id="nav-menu">
-        <a href="#about"      class="navbar__link" data-i18n="header.nav.about">About</a>
-        <a href="#skills"     class="navbar__link" data-i18n="header.nav.skills">Skills</a>
-        <a href="#experience" class="navbar__link" data-i18n="header.nav.experience">Experience</a>
-        <a href="#projects"   class="navbar__link" data-i18n="header.nav.projects">Projects</a>
-        <a href="#contact"    class="navbar__link" data-i18n="header.nav.contact">Contact</a>
-      </nav>
-    </div>
-  </header>
-
-  <!-- ======================== HERO ======================== -->
-  <section class="hero" id="hero">
-    <div class="container hero__inner">
-      <p class="hero__greeting fade-up" data-i18n="hero.greeting">Hello, I'm</p>
-      <h1 class="hero__name fade-up">Sebastian Orjuela</h1>
-      <h2 class="hero__title fade-up" data-i18n="hero.title">Backend Developer</h2>
-      <p class="hero__description fade-up" data-i18n="hero.description">
-        Backend Developer specialized in Java and Spring Boot. I develop robust and scalable APIs, integrating Python (FastAPI, Quart), CI/CD with GitHub Actions, and testing practices to ensure quality.
-      </p>
-      <div class="hero__actions fade-up">
-        <a href="#contact" class="btn btn--primary" data-i18n="hero.actions.contact">Get in Touch</a>
-        <a href="/assets/cv/Sebastian_Orjuela_CV_EN.pdf" class="btn btn--outline"
-           download id="cv-download-link" target="_blank" rel="noopener">
-          <i class="fa-solid fa-download"></i>
-          <span data-i18n="hero.actions.cv">Download CV</span>
-        </a>
-      </div>
-    </div>
-    <div class="hero__scroll-indicator" aria-hidden="true">
-      <div class="mouse"><div class="mouse__wheel"></div></div>
-    </div>
-  </section>
-
-  <!-- ======================== ABOUT ======================== -->
-  <section class="section about" id="about">
-    <div class="container">
-      <h2 class="section__title fade-up" data-i18n="about.title">About Me</h2>
-      <div class="about__grid">
-        <div class="about__text fade-up">
-          <p data-i18n="about.paragraphs.p1">
-            I am a backend developer with a focus on Java and Spring Boot, specialized in
-            designing and building robust, scalable, and maintainable APIs.
-          </p>
-          <p data-i18n="about.paragraphs.p2">
-            I have complementary experience in Python using frameworks such as FastAPI and Quart,
-            which allows me to adapt to different environments and development needs. Additionally,
-            I work with process automation through GitHub Actions and apply testing to ensure the quality
-            and reliability of applications.
-          </p>
-          <p data-i18n="about.paragraphs.p3">
-            I focus on writing clean code, applying best practices, and building solutions aimed at efficiently
-            solving real problems.
-          </p>
-        </div>
-        <div class="about__details fade-up">
-          <div class="about__card">
-            <div class="about__card-item">
-              <i class="fa-solid fa-graduation-cap"></i>
-              <div>
-                <strong data-i18n="about.card.edu1.degree">Tecnico en Programacion de Aplicaciones y Servicios para la Nube</strong>
-                <span data-i18n="about.card.edu1.institution">SENA | 2026 - Present</span>
-              </div>
-            </div>
-            <div class="about__card-item">
-              <i class="fa-solid fa-graduation-cap"></i>
-              <div>
-                <strong data-i18n="about.card.edu2.degree">Technologist in Software Analysis and Development</strong>
-                <span data-i18n="about.card.edu2.institution">SENA | 2023 - 2025</span>
-              </div>
-            </div>
-            <div class="about__card-item">
-              <i class="fa-solid fa-graduation-cap"></i>
-              <div>
-                <strong data-i18n="about.card.edu3.degree">Computer Technician</strong>
-                <span data-i18n="about.card.edu3.institution">SENA | 2021 - 2022</span>
-              </div>
-            </div>
-            <div class="about__card-item">
-              <i class="fa-solid fa-location-dot"></i>
-              <div>
-                <strong data-i18n="about.card.location">Colombia</strong>
-                <span data-i18n="about.card.availability">Available for remote work</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ======================== SKILLS ======================== -->
-  <section class="section skills" id="skills">
-    <div class="container">
-      <h2 class="section__title fade-up" data-i18n="skills.title">Skills &amp; Technologies</h2>
-      <div class="skills__grid">
-        <div class="skills__group fade-up">
-          <h3 class="skills__group-title">
-            <i class="fa-solid fa-code"></i>
-            <span data-i18n="skills.groups.languages">Languages</span>
-          </h3>
-          <ul class="skills__list">
-            <li>Java</li><li>Python</li>
-          </ul>
-        </div>
-        <div class="skills__group fade-up">
-          <h3 class="skills__group-title">
-            <i class="fa-solid fa-layer-group"></i>
-            <span data-i18n="skills.groups.frameworks">Frameworks</span>
-          </h3>
-          <ul class="skills__list">
-            <li>Spring Boot</li><li>Quart</li><li>FastAPI</li>
-          </ul>
-        </div>
-        <div class="skills__group fade-up">
-          <h3 class="skills__group-title">
-            <i class="fa-solid fa-database"></i>
-            <span data-i18n="skills.groups.databases">Databases</span>
-          </h3>
-          <ul class="skills__list">
-            <li>PostgreSQL</li><li>MySQL</li><li>MongoDB</li>
-          </ul>
-        </div>
-        <div class="skills__group fade-up">
-          <h3 class="skills__group-title">
-            <i class="fa-solid fa-wrench"></i>
-            <span data-i18n="skills.groups.tools">Tools</span>
-          </h3>
-          <ul class="skills__list">
-            <li>Git</li><li>GitHub</li><li>Docker</li><li>Podman</li>
-          </ul>
-        </div>
-        <div class="skills__group fade-up">
-          <h3 class="skills__group-title">
-            <i class="fa-solid fa-diagram-project"></i>
-            <span data-i18n="skills.groups.concepts">Concepts</span>
-          </h3>
-          <ul class="skills__list">
-            <li>CI/CD</li><li>Microservices</li><li>REST APIs</li><li>Asynchronism</li>
-          </ul>
+    <!-- ======================== HERO ======================== -->
+    <section class="hero" id="hero">
+      <div class="container hero__inner">
+        <p class="hero__greeting fade-up" data-i18n="hero.greeting">
+          Hello, I'm
+        </p>
+        <h1 class="hero__name fade-up">Sebastian Orjuela</h1>
+        <h2 class="hero__title fade-up" data-i18n="hero.title">
+          Backend Developer
+        </h2>
+        <p class="hero__description fade-up" data-i18n="hero.description">
+          Backend Developer specialized in Java and Spring Boot. I develop
+          robust and scalable APIs, integrating Python (FastAPI, Quart), CI/CD
+          with GitHub Actions, and testing practices to ensure quality.
+        </p>
+        <div class="hero__actions fade-up">
+          <a
+            href="#contact"
+            class="btn btn--primary"
+            data-i18n="hero.actions.contact"
+            >Get in Touch</a
+          >
+          <a
+            href="/assets/cv/Sebastian_Orjuela_CV_EN.pdf"
+            class="btn btn--outline"
+            download
+            id="cv-download-link"
+            target="_blank"
+            rel="noopener"
+          >
+            <i class="fa-solid fa-download"></i>
+            <span data-i18n="hero.actions.cv">Download CV</span>
+          </a>
         </div>
       </div>
-    </div>
-  </section>
+      <div class="hero__scroll-indicator" aria-hidden="true">
+        <div class="mouse"><div class="mouse__wheel"></div></div>
+      </div>
+    </section>
 
-  <!-- ======================== EXPERIENCE ======================== -->
-  <section class="section experience" id="experience">
-    <div class="container">
-      <h2 class="section__title fade-up" data-i18n="experience.title">Experience</h2>
-      <div class="timeline">
-        <div class="timeline__item fade-up">
-          <div class="timeline__marker"></div>
-          <div class="timeline__content">
-            <span class="timeline__date" data-i18n="experience.items.lumu.date">2024 - 2025 | 6 months</span>
-            <h3 class="timeline__title" data-i18n="experience.items.lumu.role">Software Developer Intern</h3>
-            <span class="timeline__company" data-i18n="experience.items.lumu.company">Lumu Technologies</span>
-            <p data-i18n="experience.items.lumu.description">
-              I contributed to the development of technological solutions by building APIs, backend
-              functionalities, and frontend components for internal applications...
+    <!-- ======================== ABOUT ======================== -->
+    <section class="section about" id="about">
+      <div class="container">
+        <h2 class="section__title fade-up" data-i18n="about.title">About Me</h2>
+        <div class="about__grid">
+          <div class="about__text fade-up">
+            <p data-i18n="about.paragraphs.p1">
+              I am a backend developer with a focus on Java and Spring Boot,
+              specialized in designing and building robust, scalable, and
+              maintainable APIs.
+            </p>
+            <p data-i18n="about.paragraphs.p2">
+              I have complementary experience in Python using frameworks such as
+              FastAPI and Quart, which allows me to adapt to different
+              environments and development needs. Additionally, I work with
+              process automation through GitHub Actions and apply testing to
+              ensure the quality and reliability of applications.
+            </p>
+            <p data-i18n="about.paragraphs.p3">
+              I focus on writing clean code, applying best practices, and
+              building solutions aimed at efficiently solving real problems.
             </p>
           </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ======================== PROJECTS ======================== -->
-  <section class="section projects" id="projects">
-    <div class="container">
-      <h2 class="section__title fade-up" data-i18n="projects.title">Projects</h2>
-      <div class="projects__grid">
-        <article class="project-card fade-up">
-          <div class="project-card__header">
-            <i class="fa-solid fa-folder-open"></i>
-            <div class="project-card__links">
-              <a href="https://github.com/sebas679og/bankcore-system" rel="noopener noreferrer"
-                target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+          <div class="about__details fade-up">
+            <div class="about__card">
+              <div class="about__card-item">
+                <i class="fa-solid fa-graduation-cap"></i>
+                <div>
+                  <strong data-i18n="about.card.edu1.degree"
+                    >Technician in Application and Cloud Services
+                    Programming</strong
+                  >
+                  <span data-i18n="about.card.edu1.institution"
+                    >SENA | 2026 - Present</span
+                  >
+                </div>
+              </div>
+              <div class="about__card-item">
+                <i class="fa-solid fa-graduation-cap"></i>
+                <div>
+                  <strong data-i18n="about.card.edu2.degree"
+                    >Technologist in Software Analysis and Development</strong
+                  >
+                  <span data-i18n="about.card.edu2.institution"
+                    >SENA | 2023 - 2025</span
+                  >
+                </div>
+              </div>
+              <div class="about__card-item">
+                <i class="fa-solid fa-graduation-cap"></i>
+                <div>
+                  <strong data-i18n="about.card.edu3.degree"
+                    >System Technician</strong
+                  >
+                  <span data-i18n="about.card.edu3.institution"
+                    >SENA | 2021 - 2022</span
+                  >
+                </div>
+              </div>
+              <div class="about__card-item">
+                <i class="fa-solid fa-location-dot"></i>
+                <div>
+                  <strong data-i18n="about.card.location">Colombia</strong>
+                  <span data-i18n="about.card.availability"
+                    >Available for remote work</span
+                  >
+                </div>
+              </div>
             </div>
           </div>
-          <h3 class="project-card__title" data-i18n="projects.items.bankcore.title">Bankcore System Api</h3>
-          <p class="project-card__description" data-i18n="projects.items.bankcore.description">
-            Banking system composed of two microservices...
-          </p>
-          <ul class="project-card__tags">
-            <li>Java</li><li>Spring Boot</li><li>PostgreSQL</li><li>Docker</li><li>CI/CD</li>
-          </ul>
-        </article>
+        </div>
+      </div>
+    </section>
 
-        <article class="project-card fade-up">
-          <div class="project-card__header">
-            <i class="fa-solid fa-folder-open"></i>
-            <div class="project-card__links">
-              <a href="https://github.com/sebas679og/Equipo03-SportsPulseMS" rel="noopener noreferrer"
-                target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+    <!-- ======================== SKILLS ======================== -->
+    <section class="section skills" id="skills">
+      <div class="container">
+        <h2 class="section__title fade-up" data-i18n="skills.title">
+          Skills &amp; Technologies
+        </h2>
+        <div class="skills__grid">
+          <div class="skills__group fade-up">
+            <h3 class="skills__group-title">
+              <i class="fa-solid fa-code"></i>
+              <span data-i18n="skills.groups.languages">Languages</span>
+            </h3>
+            <ul class="skills__list">
+              <li>Java</li>
+              <li>Python</li>
+            </ul>
+          </div>
+          <div class="skills__group fade-up">
+            <h3 class="skills__group-title">
+              <i class="fa-solid fa-layer-group"></i>
+              <span data-i18n="skills.groups.frameworks">Frameworks</span>
+            </h3>
+            <ul class="skills__list">
+              <li>Spring Boot</li>
+              <li>Quart</li>
+              <li>FastAPI</li>
+            </ul>
+          </div>
+          <div class="skills__group fade-up">
+            <h3 class="skills__group-title">
+              <i class="fa-solid fa-database"></i>
+              <span data-i18n="skills.groups.databases">Databases</span>
+            </h3>
+            <ul class="skills__list">
+              <li>PostgreSQL</li>
+              <li>MySQL</li>
+              <li>MongoDB</li>
+            </ul>
+          </div>
+          <div class="skills__group fade-up">
+            <h3 class="skills__group-title">
+              <i class="fa-solid fa-wrench"></i>
+              <span data-i18n="skills.groups.tools">Tools</span>
+            </h3>
+            <ul class="skills__list">
+              <li>Git</li>
+              <li>GitHub</li>
+              <li>Docker</li>
+              <li>Podman</li>
+            </ul>
+          </div>
+          <div class="skills__group fade-up">
+            <h3 class="skills__group-title">
+              <i class="fa-solid fa-diagram-project"></i>
+              <span data-i18n="skills.groups.concepts">Concepts</span>
+            </h3>
+            <ul class="skills__list">
+              <li>CI/CD</li>
+              <li>Microservices</li>
+              <li>REST APIs</li>
+              <li>Asynchronism</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================== EXPERIENCE ======================== -->
+    <section class="section experience" id="experience">
+      <div class="container">
+        <h2 class="section__title fade-up" data-i18n="experience.title">
+          Experience
+        </h2>
+        <div class="timeline">
+          <div class="timeline__item fade-up">
+            <div class="timeline__marker"></div>
+            <div class="timeline__content">
+              <span
+                class="timeline__date"
+                data-i18n="experience.items.lumu.date"
+                >2024 - 2025 | 6 months</span
+              >
+              <h3
+                class="timeline__title"
+                data-i18n="experience.items.lumu.role"
+              >
+                Software Developer Intern
+              </h3>
+              <span
+                class="timeline__company"
+                data-i18n="experience.items.lumu.company"
+                >Lumu Technologies</span
+              >
+              <p data-i18n="experience.items.lumu.description">
+                I contributed to the development of technological solutions by
+                building APIs, backend functionalities, and frontend components
+                for internal applications...
+              </p>
             </div>
           </div>
-          <h3 class="project-card__title" data-i18n="projects.items.sportspulse.title">Sports Pulse API</h3>
-          <p class="project-card__description" data-i18n="projects.items.sportspulse.description">
-            Real-time football analytics platform...
-          </p>
-          <ul class="project-card__tags">
-            <li>Java</li><li>Spring Boot</li><li>PostgreSQL</li><li>Docker</li><li>CI/CD</li>
-          </ul>
-        </article>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ======================== CONTACT ======================== -->
-  <section class="section contact" id="contact">
-    <div class="container">
-      <h2 class="section__title fade-up" data-i18n="contact.title">Get in Touch</h2>
-      <p class="contact__subtitle fade-up" data-i18n="contact.subtitle">
-        Have a project in mind or just want to say hello? I'd love to hear from you.
-      </p>
-      <form class="contact__form fade-up" id="contact-form" action="#" data-form="">
-        <div class="form-group">
-          <label for="name" data-i18n="contact.form.name.label">Name</label>
-          <input type="text" id="name" name="from_name" required
-            placeholder="Your name"
-            data-i18n-placeholder="contact.form.name.placeholder" />
-          <span class="form-error" id="name-error"></span>
-        </div>
-        <div class="form-group">
-          <label for="email" data-i18n="contact.form.email.label">Email</label>
-          <input type="email" id="email" name="from_email" required
-            placeholder="you@example.com"
-            data-i18n-placeholder="contact.form.email.placeholder" />
-          <span class="form-error" id="email-error"></span>
-        </div>
-        <div class="form-group form-group--full">
-          <label for="message" data-i18n="contact.form.message.label">Message</label>
-          <textarea id="message" name="message" rows="5" required
-            placeholder="Tell me about your project..."
-            data-i18n-placeholder="contact.form.message.placeholder"></textarea>
-          <span class="form-error" id="message-error"></span>
-        </div>
-        <button data-form-btn="" disabled type="submit" class="btn btn--primary btn--full">
-          <i class="fa-solid fa-paper-plane"></i>
-          <span data-i18n="contact.form.submit">Send Message</span>
-        </button>
-        <div class="form-status" id="form-status"></div>
-      </form>
-    </div>
-  </section>
+    <!-- ======================== PROJECTS ======================== -->
+    <section class="section projects" id="projects">
+      <div class="container">
+        <h2 class="section__title fade-up" data-i18n="projects.title">
+          Projects
+        </h2>
+        <div class="projects__grid">
+          <article class="project-card fade-up">
+            <div class="project-card__header">
+              <i class="fa-solid fa-folder-open"></i>
+              <div class="project-card__links">
+                <a
+                  href="https://github.com/sebas679og/bankcore-system"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  aria-label="GitHub"
+                  ><i class="fa-brands fa-github"></i
+                ></a>
+              </div>
+            </div>
+            <h3
+              class="project-card__title"
+              data-i18n="projects.items.bankcore.title"
+            >
+              Bankcore System Api
+            </h3>
+            <p
+              class="project-card__description"
+              data-i18n="projects.items.bankcore.description"
+            >
+              Banking system composed of two microservices...
+            </p>
+            <ul class="project-card__tags">
+              <li>Java</li>
+              <li>Spring Boot</li>
+              <li>PostgreSQL</li>
+              <li>Docker</li>
+              <li>CI/CD</li>
+            </ul>
+          </article>
 
-  <!-- ======================== FOOTER ======================== -->
-  <footer class="footer">
-    <div class="container footer__inner">
-      <p class="footer__copy" data-i18n="footer.copy">&copy; 2026 Sebastian Orjuela. All rights reserved.</p>
-      <div class="footer__socials">
-        <a href="https://github.com/sebas679og" rel="noopener noreferrer"
-          target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
-        <a href="https://www.linkedin.com/in/sebas679og/" rel="noopener noreferrer"
-          target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-        <a href="mailto:sebastianorjuelagiraldo@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+          <article class="project-card fade-up">
+            <div class="project-card__header">
+              <i class="fa-solid fa-folder-open"></i>
+              <div class="project-card__links">
+                <a
+                  href="https://github.com/sebas679og/Equipo03-SportsPulseMS"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  aria-label="GitHub"
+                  ><i class="fa-brands fa-github"></i
+                ></a>
+              </div>
+            </div>
+            <h3
+              class="project-card__title"
+              data-i18n="projects.items.sportspulse.title"
+            >
+              Sports Pulse API
+            </h3>
+            <p
+              class="project-card__description"
+              data-i18n="projects.items.sportspulse.description"
+            >
+              Real-time football analytics platform...
+            </p>
+            <ul class="project-card__tags">
+              <li>Java</li>
+              <li>Spring Boot</li>
+              <li>PostgreSQL</li>
+              <li>Docker</li>
+              <li>CI/CD</li>
+            </ul>
+          </article>
+        </div>
       </div>
-    </div>
-  </footer>
+    </section>
 
-  <script src="./assets/js/script.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js" type="text/javascript"></script>
-  <script src="./assets/js/email.js"></script>
-  <script src="./assets/js/translate.js"></script>
-</body>
+    <!-- ======================== CONTACT ======================== -->
+    <section class="section contact" id="contact">
+      <div class="container">
+        <h2 class="section__title fade-up" data-i18n="contact.title">
+          Get in Touch
+        </h2>
+        <p class="contact__subtitle fade-up" data-i18n="contact.subtitle">
+          Have a project in mind or just want to say hello? I'd love to hear
+          from you.
+        </p>
+        <form
+          class="contact__form fade-up"
+          id="contact-form"
+          action="#"
+          data-form=""
+        >
+          <div class="form-group">
+            <label for="name" data-i18n="contact.form.name.label">Name</label>
+            <input
+              type="text"
+              id="name"
+              name="from_name"
+              required
+              placeholder="Your name"
+              data-i18n-placeholder="contact.form.name.placeholder"
+            />
+            <span class="form-error" id="name-error"></span>
+          </div>
+          <div class="form-group">
+            <label for="email" data-i18n="contact.form.email.label"
+              >Email</label
+            >
+            <input
+              type="email"
+              id="email"
+              name="from_email"
+              required
+              placeholder="you@example.com"
+              data-i18n-placeholder="contact.form.email.placeholder"
+            />
+            <span class="form-error" id="email-error"></span>
+          </div>
+          <div class="form-group form-group--full">
+            <label for="message" data-i18n="contact.form.message.label"
+              >Message</label
+            >
+            <textarea
+              id="message"
+              name="message"
+              rows="5"
+              required
+              placeholder="Tell me about your project..."
+              data-i18n-placeholder="contact.form.message.placeholder"
+            ></textarea>
+            <span class="form-error" id="message-error"></span>
+          </div>
+          <button
+            data-form-btn=""
+            disabled
+            type="submit"
+            class="btn btn--primary btn--full"
+          >
+            <i class="fa-solid fa-paper-plane"></i>
+            <span data-i18n="contact.form.submit">Send Message</span>
+          </button>
+          <div class="form-status" id="form-status"></div>
+        </form>
+      </div>
+    </section>
+
+    <!-- ======================== FOOTER ======================== -->
+    <footer class="footer">
+      <div class="container footer__inner">
+        <p class="footer__copy" data-i18n="footer.copy">
+          &copy; 2026 Sebastian Orjuela. All rights reserved.
+        </p>
+        <div class="footer__socials">
+          <a
+            href="https://github.com/sebas679og"
+            rel="noopener noreferrer"
+            target="_blank"
+            aria-label="GitHub"
+            ><i class="fa-brands fa-github"></i
+          ></a>
+          <a
+            href="https://www.linkedin.com/in/sebas679og/"
+            rel="noopener noreferrer"
+            target="_blank"
+            aria-label="LinkedIn"
+            ><i class="fa-brands fa-linkedin-in"></i
+          ></a>
+          <a href="mailto:sebastianorjuelagiraldo@gmail.com" aria-label="Email"
+            ><i class="fa-solid fa-envelope"></i
+          ></a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./assets/js/script.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+      type="text/javascript"
+    ></script>
+    <script src="./assets/js/email.js"></script>
+    <script src="./assets/js/translate.js"></script>
+  </body>
 </html>

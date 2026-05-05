@@ -13,13 +13,13 @@ document.addEventListener("DOMContentLoaded", () => {
     window.currentLang = lang;
 
     // Textos normales
-    document.querySelectorAll("[data-i18n]").forEach(el => {
+    document.querySelectorAll("[data-i18n]").forEach((el) => {
       const value = resolve(t, el.getAttribute("data-i18n"));
       if (value) el.textContent = value;
     });
 
     // Placeholders
-    document.querySelectorAll("[data-i18n-placeholder]").forEach(el => {
+    document.querySelectorAll("[data-i18n-placeholder]").forEach((el) => {
       const value = resolve(t, el.getAttribute("data-i18n-placeholder"));
       if (value) el.setAttribute("placeholder", value);
     });
@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
         "href",
         lang === "es"
           ? "/assets/cv/Sebastian_Orjuela_CV_ES.pdf"
-          : "/assets/cv/Sebastian_Orjuela_CV_EN.pdf"
+          : "/assets/cv/Sebastian_Orjuela_CV_EN.pdf",
       );
     }
 

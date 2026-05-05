@@ -7,7 +7,9 @@ document.addEventListener("DOMContentLoaded", () => {
   function t(path) {
     const translations = window.translations;
     if (!translations) return path;
-    return path.split(".").reduce((acc, key) => acc?.[key], translations) || path;
+    return (
+      path.split(".").reduce((acc, key) => acc?.[key], translations) || path
+    );
   }
 
   // ── EmailJS init ──────────────────────────────────────────
@@ -19,18 +21,18 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // ── Verificar si el form está completo ────────────────────
-    function checkFormFilled() {
-        const name = document.getElementById("name");
-        const email = document.getElementById("email");
-        const message = document.getElementById("message");
+  function checkFormFilled() {
+    const name = document.getElementById("name");
+    const email = document.getElementById("email");
+    const message = document.getElementById("message");
 
-        const allFilled =
-            name.value.trim() !== "" &&
-            email.value.trim() !== "" &&
-            message.value.trim().length >= 10;
+    const allFilled =
+      name.value.trim() !== "" &&
+      email.value.trim() !== "" &&
+      message.value.trim().length >= 10;
 
-        sendBtn.disabled = !allFilled;
-    }
+    sendBtn.disabled = !allFilled;
+  }
 
   form.addEventListener("input", checkFormFilled);
 
@@ -61,7 +63,11 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     if (message.value.trim() === "") {
-      setError(message, "message-error", t("contact.form.errors.messageRequired"));
+      setError(
+        message,
+        "message-error",
+        t("contact.form.errors.messageRequired"),
+      );
       isValid = false;
     } else {
       clearError(message, "message-error");
@@ -89,14 +95,17 @@ document.addEventListener("DOMContentLoaded", () => {
     sendBtn.disabled = true;
     sendBtn.innerHTML = `<i class="fa-solid fa-spinner fa-spin"></i> ${t("contact.form.sending")}`;
 
-    emailjs.sendForm("service_q7r35ir", "template_s7v45rp", form)
+    emailjs
+      .sendForm("service_q7r35ir", "template_s7v45rp", form)
       .then(() => {
         showStatus(t("contact.form.success"), "success");
         form.reset();
         // Resetear botón y re-verificar estado
         restoreBtn();
         checkFormFilled();
-        form.querySelectorAll(".invalid").forEach(el => el.classList.remove("invalid"));
+        form
+          .querySelectorAll(".invalid")
+          .forEach((el) => el.classList.remove("invalid"));
       })
       .catch((error) => {
         console.error("EmailJS error:", error);
