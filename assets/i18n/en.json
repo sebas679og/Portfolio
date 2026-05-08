@@ -82,6 +82,10 @@
   },
   "projects": {
     "title": "Projects",
+    "status": {
+      "complete": "Complete",
+      "inProgress": "In Progress"
+    },
     "items": {
       "bankcore": {
         "title": "Bankcore System Api",

@@ -95,9 +95,7 @@ img {
   background: rgba(10, 10, 15, 0.85);
   backdrop-filter: blur(12px);
   border-bottom: 1px solid transparent;
-  transition:
-    border-color 0.3s,
-    background 0.3s;
+  transition: border-color 0.3s, background 0.3s;
 }
 
 /* ─── Navbar Brand (logo + lang toggle) ────────────────── */
@@ -120,8 +118,7 @@ img {
   padding: 4px 10px;
   cursor: pointer;
   letter-spacing: 0.5px;
-  transition:
-    background 0.3s var(--ease),
+  transition: background 0.3s var(--ease),
     color 0.3s var(--ease),
     transform 0.3s var(--ease),
     box-shadow 0.3s var(--ease);
@@ -222,9 +219,7 @@ img {
   height: 2px;
   background: var(--text-primary);
   border-radius: 2px;
-  transition:
-    transform 0.3s var(--ease),
-    opacity 0.3s;
+  transition: transform 0.3s var(--ease), opacity 0.3s;
 }
 
 .navbar__toggle.open span:nth-child(1) {
@@ -249,9 +244,7 @@ img {
   position: relative;
   padding: 120px 0 80px;
   background:
-    radial-gradient(ellipse 80% 60% at 50% 40%,
-      var(--accent-glow),
-      transparent),
+    radial-gradient(ellipse 80% 60% at 50% 40%, var(--accent-glow), transparent),
     var(--bg-primary);
 }
 
@@ -271,9 +264,7 @@ img {
   font-weight: 700;
   line-height: 1.1;
   margin-bottom: 8px;
-  background: linear-gradient(135deg,
-      var(--text-primary) 0%,
-      var(--accent-light) 100%);
+  background: linear-gradient(135deg, var(--text-primary) 0%, var(--accent-light) 100%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -420,7 +411,7 @@ img {
 .about__grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 56px;
+  gap: 40px;
   align-items: start;
 }
 
@@ -469,10 +460,10 @@ img {
 
 .code-window__body {
   margin: 0;
-  padding: 24px 20px;
+  padding: 20px 16px;
   font-family: var(--font-mono);
   font-size: 0.82rem;
-  line-height: 1.75;
+  line-height: 1.7;
   overflow-x: auto;
   color: var(--text-secondary);
 }
@@ -576,9 +567,7 @@ img {
   border: 1px solid var(--border);
   border-radius: var(--radius);
   padding: 28px;
-  transition:
-    border-color 0.3s var(--ease),
-    transform 0.3s var(--ease);
+  transition: border-color 0.3s var(--ease), transform 0.3s var(--ease);
 }
 
 .skills__group:hover {
@@ -699,6 +688,67 @@ img {
   line-height: 1.7;
 }
 
+
+/* ─── Project status badge ──────────────────────────────── */
+.project-card__status {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  font-family: var(--font-mono);
+  padding: 4px 10px;
+  border-radius: 20px;
+  margin-bottom: 10px;
+  width: fit-content;
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+/* Complete — green */
+.project-card__status--complete {
+  background: rgba(74, 222, 128, 0.1);
+  color: #4ade80;
+  border: 1px solid rgba(74, 222, 128, 0.25);
+}
+
+.project-card__status--complete .status-dot {
+  background: #4ade80;
+  box-shadow: 0 0 6px rgba(74, 222, 128, 0.6);
+}
+
+/* In Progress — orange */
+.project-card__status--progress {
+  background: rgba(251, 146, 60, 0.1);
+  color: #fb923c;
+  border: 1px solid rgba(251, 146, 60, 0.25);
+}
+
+.project-card__status--progress .status-dot {
+  background: #fb923c;
+  box-shadow: 0 0 6px rgba(251, 146, 60, 0.6);
+  animation: pulse-dot 1.8s ease-in-out infinite;
+}
+
+@keyframes pulse-dot {
+
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 0.5;
+    transform: scale(0.75);
+  }
+}
+
 /* ─── Projects ─────────────────────────────────────────── */
 .projects__grid {
   display: grid;
@@ -713,18 +763,13 @@ img {
   padding: 32px;
   display: flex;
   flex-direction: column;
-  transition:
-    transform 0.3s var(--ease),
-    border-color 0.3s var(--ease),
-    box-shadow 0.3s;
+  transition: transform 0.3s var(--ease), border-color 0.3s var(--ease), box-shadow 0.3s;
 }
 
 .project-card:hover {
   transform: translateY(-6px);
   border-color: var(--accent);
-  box-shadow:
-    0 8px 30px rgba(0, 0, 0, 0.3),
-    0 0 20px var(--accent-glow);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3), 0 0 20px var(--accent-glow);
 }
 
 .project-card__header {
@@ -747,9 +792,7 @@ img {
 .project-card__links a {
   font-size: 1.1rem;
   color: var(--text-muted);
-  transition:
-    color 0.3s var(--ease),
-    transform 0.3s var(--ease);
+  transition: color 0.3s var(--ease), transform 0.3s var(--ease);
 }
 
 .project-card__links a:hover {
@@ -842,9 +885,7 @@ img {
   border-radius: var(--radius-sm);
   padding: 12px 16px;
   outline: none;
-  transition:
-    border-color 0.3s var(--ease),
-    box-shadow 0.3s var(--ease);
+  transition: border-color 0.3s var(--ease), box-shadow 0.3s var(--ease);
   resize: vertical;
 }
 
@@ -926,9 +967,7 @@ img {
 .footer__socials a {
   font-size: 1.15rem;
   color: var(--text-muted);
-  transition:
-    color 0.3s var(--ease),
-    transform 0.3s var(--ease);
+  transition: color 0.3s var(--ease), transform 0.3s var(--ease);
 }
 
 .footer__socials a:hover {
@@ -940,9 +979,7 @@ img {
 .fade-up {
   opacity: 0;
   transform: translateY(30px);
-  transition:
-    opacity 0.6s var(--ease),
-    transform 0.6s var(--ease);
+  transition: opacity 0.6s var(--ease), transform 0.6s var(--ease);
 }
 
 .fade-up.visible {
@@ -966,6 +1003,7 @@ img {
 .fade-up:nth-child(5) {
   transition-delay: 0.32s;
 }
+
 
 /* ─── Education ─────────────────────────────────────────── */
 .education {
@@ -1012,9 +1050,7 @@ img {
   border: 1px solid var(--border);
   border-radius: var(--radius);
   padding: 20px 28px;
-  transition:
-    border-color 0.3s var(--ease),
-    transform 0.3s var(--ease);
+  transition: border-color 0.3s var(--ease), transform 0.3s var(--ease);
 }
 
 .education__card:hover {
@@ -1059,18 +1095,13 @@ img {
   border: 1px solid var(--border);
   border-radius: var(--radius);
   padding: 20px 24px;
-  transition:
-    border-color 0.3s var(--ease),
-    transform 0.3s var(--ease),
-    box-shadow 0.3s;
+  transition: border-color 0.3s var(--ease), transform 0.3s var(--ease), box-shadow 0.3s;
 }
 
 .education__cert-card:hover {
   border-color: var(--accent);
   transform: translateY(-4px);
-  box-shadow:
-    0 6px 24px rgba(0, 0, 0, 0.25),
-    0 0 14px var(--accent-glow);
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.25), 0 0 14px var(--accent-glow);
 }
 
 .education__cert-icon {
@@ -1131,9 +1162,7 @@ img {
     border-bottom: 1px solid var(--border);
     transform: translateY(-120%);
     opacity: 0;
-    transition:
-      transform 0.35s var(--ease),
-      opacity 0.35s;
+    transition: transform 0.35s var(--ease), opacity 0.35s;
     pointer-events: none;
   }
 
@@ -1150,14 +1179,16 @@ img {
 
   .about__grid {
     grid-template-columns: 1fr;
+    gap: 0;
   }
 
+  /* Hide code window on mobile — text content takes priority */
   .about__code {
-    order: 2;
+    display: none;
   }
 
   .about__right {
-    order: 1;
+    gap: 20px;
   }
 
   .education__card {
@@ -1199,7 +1230,19 @@ img {
 
 @media (max-width: 480px) {
   .section {
-    padding: 72px 0;
+    padding: 64px 0;
+  }
+
+  .about__right {
+    gap: 16px;
+  }
+
+  .about__card {
+    padding: 16px;
+  }
+
+  .about__card-item {
+    gap: 12px;
   }
 
   .hero__actions {

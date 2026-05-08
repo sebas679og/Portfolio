@@ -95,7 +95,7 @@ test("Visualization test", async ({ page }) => {
   await expect(
     page.getByText(en.projects.items.bankcore.description),
   ).toBeVisible();
-  await expect(page.getByText("Java").nth(3)).toBeVisible();
+  await expect(page.getByText("Java", {exact:true}).nth(1)).toBeVisible();
   await expect(page.getByText("Spring Boot").nth(3)).toBeVisible();
   await expect(page.getByText("PostgreSQL").nth(1)).toBeVisible();
   await expect(page.getByText("Docker").nth(1)).toBeVisible();
@@ -231,7 +231,7 @@ test("Visualization test in spanish", async ({ page }) => {
   await expect(
     page.getByText(es.projects.items.bankcore.description),
   ).toBeVisible();
-  await expect(page.getByText("Java").nth(3)).toBeVisible();
+  await expect(page.getByText("Java", {exact:true}).nth(1)).toBeVisible();
   await expect(page.getByText("Spring Boot").nth(3)).toBeVisible();
   await expect(page.getByText("PostgreSQL").nth(1)).toBeVisible();
   await expect(page.getByText("Docker").nth(1)).toBeVisible();
