@@ -4,6 +4,7 @@
       "about": "Sobre mí",
       "skills": "Habilidades",
       "experience": "Experiencia",
+      "education": "Educación",
       "projects": "Proyectos",
       "contact": "Contacto"
     }
@@ -11,7 +12,7 @@
   "hero": {
     "greeting": "Hola, soy",
     "title": "Desarrollador Backend",
-    "description": "Backend Developer especializado en Java y Spring Boot. Desarrollo APIs robustas y escalables, integrando Python (FastAPI, Quart), CI/CD con GitHub Actions y prácticas de testing para asegurar calidad.",
+    "description": "Backend Developer especializado en APIs robustas con Java y Spring Boot. Experiencia en concurrencia, automatización y arquitectura limpia.",
     "actions": {
       "contact": "Contáctame",
       "cv": "Descargar CV"
@@ -25,18 +26,6 @@
       "p3": "Me enfoco en escribir código limpio, aplicar buenas prácticas y construir soluciones orientadas a resolver problemas reales de forma eficiente."
     },
     "card": {
-      "edu1": {
-        "degree": "Técnico en Programación de Aplicaciones y Servicios para la Nube",
-        "institution": "SENA | 2026 - Actualmente"
-      },
-      "edu2": {
-        "degree": "Tecnólogo en Análisis y Desarrollo de Software",
-        "institution": "SENA | 2023 - 2025"
-      },
-      "edu3": {
-        "degree": "Técnico en Sistemas",
-        "institution": "SENA | 2021 - 2022"
-      },
       "location": "Colombia",
       "availability": "Disponible para trabajo remoto"
     }
@@ -62,6 +51,20 @@
       }
     }
   },
+  "education": {
+    "title": "Educación",
+    "degrees": {
+      "heading": "Títulos académicos",
+      "d2": {
+        "title": "Tecnólogo en Análisis y Desarrollo de Software",
+        "institution": "SENA (Servicio Nacional de Aprendizaje)"
+      },
+      "d1": {
+        "title": "Técnico en Sistemas",
+        "institution": "SENA (Servicio Nacional de Aprendizaje)"
+      }
+    }
+  },
   "projects": {
     "title": "Proyectos",
     "items": {
@@ -81,14 +84,17 @@
     "form": {
       "name": { "label": "Nombre", "placeholder": "Tu nombre" },
       "email": { "label": "Correo", "placeholder": "tu@ejemplo.com" },
-      "message": { "label": "Mensaje", "placeholder": "Cuéntame sobre tu proyecto..." },
+      "message": {
+        "label": "Mensaje",
+        "placeholder": "Cuéntame sobre tu proyecto..."
+      },
       "submit": "Enviar Mensaje",
       "sending": "Enviando…",
       "success": "¡Mensaje enviado! Me pondré en contacto contigo pronto.",
       "error": "Algo salió mal. Por favor intenta de nuevo o contáctame directamente."
     }
   },
-    "errors": {
+  "errors": {
     "nameRequired": "El nombre es obligatorio.",
     "emailRequired": "El correo es obligatorio.",
     "emailInvalid": "Ingresa un correo válido.",

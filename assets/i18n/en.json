@@ -4,6 +4,7 @@
       "about": "About",
       "skills": "Skills",
       "experience": "Experience",
+      "education": "Education",
       "projects": "Projects",
       "contact": "Contact"
     }
@@ -11,7 +12,7 @@
   "hero": {
     "greeting": "Hello, I'm",
     "title": "Backend Developer",
-    "description": "Backend Developer specialized in Java and Spring Boot. I develop robust and scalable APIs, integrating Python (FastAPI, Quart), CI/CD with GitHub Actions, and testing practices to ensure quality.",
+    "description": "Backend Developer specialized in robust APIs with Java and Spring Boot. Experience in concurrency, automation, and clean architecture.",
     "actions": {
       "contact": "Get in Touch",
       "cv": "Download CV"
@@ -25,18 +26,6 @@
       "p3": "I focus on writing clean code, applying best practices, and building solutions aimed at efficiently solving real problems."
     },
     "card": {
-      "edu1": {
-        "degree": "Technician in Application and Cloud Services Programming",
-        "institution": "SENA | 2026 - Present"
-      },
-      "edu2": {
-        "degree": "Technologist in Software Analysis and Development",
-        "institution": "SENA | 2023 - 2025"
-      },
-      "edu3": {
-        "degree": "System Technician",
-        "institution": "SENA | 2021 - 2022"
-      },
       "location": "Colombia",
       "availability": "Available for remote work"
     }
@@ -59,6 +48,20 @@
         "role": "Software Developer Intern",
         "company": "Lumu Technologies",
         "description": "I contributed to the development of technological solutions by building APIs, backend functionalities, and frontend components for internal applications. I participated in projects following programming best practices, version control, and agile methodologies, while also supporting system maintenance, documentation, and continuous improvement. This experience strengthened my agile development skills and allowed me to deliver functional enhancements to internal tools that improved team processes."
+      }
+    }
+  },
+  "education": {
+    "title": "Education",
+    "degrees": {
+      "heading": "Academic Degrees",
+      "d2": {
+        "title": "Technologist in Software Analysis and Development",
+        "institution": "SENA (Servicio Nacional de Aprendizaje)"
+      },
+      "d1": {
+        "title": "System Technician",
+        "institution": "SENA (Servicio Nacional de Aprendizaje)"
       }
     }
   },
