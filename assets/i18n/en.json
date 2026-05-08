@@ -63,6 +63,21 @@
         "title": "System Technician",
         "institution": "SENA (Servicio Nacional de Aprendizaje)"
       }
+    },
+    "certs": {
+      "heading": "Certifications & Courses",
+      "c1": {
+        "title": "Digital Creative Industries",
+        "issuer": "UTP – Misión TIC 2022"
+      },
+      "c2": {
+        "title": "Introduction to JavaScript Programming",
+        "issuer": "Universidad Distrital FJC – Generación TIC"
+      },
+      "c3": {
+        "title": "Google Cybersecurity",
+        "issuer": "Coursera"
+      }
     }
   },
   "projects": {

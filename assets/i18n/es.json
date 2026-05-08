@@ -63,6 +63,21 @@
         "title": "Técnico en Sistemas",
         "institution": "SENA (Servicio Nacional de Aprendizaje)"
       }
+    },
+    "certs": {
+      "heading": "Certificaciones & Cursos",
+      "c1": {
+        "title": "Industrias Creativas Digitales",
+        "issuer": "UTP – Misión TIC 2022"
+      },
+      "c2": {
+        "title": "Introducción a la Programación en JavaScript",
+        "issuer": "Universidad Distrital FJC – Generación TIC"
+      },
+      "c3": {
+        "title": "Ciberseguridad de Google",
+        "issuer": "Coursera"
+      }
     }
   },
   "projects": {
