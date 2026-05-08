@@ -81,6 +81,12 @@
             >Experience</a
           >
           <a
+            href="#education"
+            class="navbar__link"
+            data-i18n="header.nav.education"
+            >Education</a
+          >
+          <a
             href="#projects"
             class="navbar__link"
             data-i18n="header.nav.projects"
@@ -104,9 +110,8 @@
           Backend Developer
         </h2>
         <p class="hero__description fade-up" data-i18n="hero.description">
-          Backend Developer specialized in Java and Spring Boot. I develop
-          robust and scalable APIs, integrating Python (FastAPI, Quart), CI/CD
-          with GitHub Actions, and testing practices to ensure quality.
+          Backend Developer specialized in robust APIs with Java and Spring
+          Boot. Experience in concurrency, automation, and clean architecture.
         </p>
         <div class="hero__actions fade-up">
           <a
@@ -138,58 +143,73 @@
       <div class="container">
         <h2 class="section__title fade-up" data-i18n="about.title">About Me</h2>
         <div class="about__grid">
-          <div class="about__text fade-up">
-            <p data-i18n="about.paragraphs.p1">
-              I am a backend developer with a focus on Java and Spring Boot,
-              specialized in designing and building robust, scalable, and
-              maintainable APIs.
-            </p>
-            <p data-i18n="about.paragraphs.p2">
-              I have complementary experience in Python using frameworks such as
-              FastAPI and Quart, which allows me to adapt to different
-              environments and development needs. Additionally, I work with
-              process automation through GitHub Actions and apply testing to
-              ensure the quality and reliability of applications.
-            </p>
-            <p data-i18n="about.paragraphs.p3">
-              I focus on writing clean code, applying best practices, and
-              building solutions aimed at efficiently solving real problems.
-            </p>
+          <!-- Code window: Java + Python combined -->
+          <div class="about__code fade-up">
+            <div class="code-window">
+              <div class="code-window__header">
+                <span class="code-dot code-dot--red"></span>
+                <span class="code-dot code-dot--yellow"></span>
+                <span class="code-dot code-dot--green"></span>
+                <span class="code-window__filename">Developer.java</span>
+              </div>
+              <pre
+                class="code-window__body"
+              ><code><span class="cw-comment">// Java — primary stack</span>
+<span class="cw-keyword">public class</span> <span class="cw-class">BackendDeveloper</span> {
+
+  <span class="cw-keyword">private final</span> String name    = <span class="cw-string">"Sebas Orjuela"</span>;
+  <span class="cw-keyword">private final</span> String role    = <span class="cw-string">"Backend Developer"</span>;
+  <span class="cw-keyword">private final</span> String[] stack = {
+    <span class="cw-string">"Java"</span>, <span class="cw-string">"Spring Boot"</span>,
+    <span class="cw-string">"Python"</span>, <span class="cw-string">"FastAPI"</span>
+  };
+
+  <span class="cw-keyword">public</span> String passion() {
+    <span class="cw-keyword">return</span> <span class="cw-string">"Clean APIs &amp; Microservices"</span>;
+  }
+}
+
+<span class="cw-comment"># Python — complementary stack</span>
+<span class="cw-keyword">class</span> <span class="cw-class">SameDevPythonSide</span>:
+    stack    = [<span class="cw-string">"FastAPI"</span>, <span class="cw-string">"Quart"</span>]
+    devops   = [<span class="cw-string">"GitHub Actions"</span>, <span class="cw-string">"Docker"</span>]
+    approach = <span class="cw-string">"Test-driven &amp; CI/CD first"</span>
+</code></pre>
+            </div>
           </div>
-          <div class="about__details fade-up">
+
+          <!-- Text + info card -->
+          <div class="about__right fade-up">
+            <div class="about__text">
+              <p data-i18n="about.paragraphs.p1">
+                I am a backend developer focused on Java and Spring Boot,
+                specialized in designing and building robust, scalable, and
+                maintainable APIs.
+              </p>
+              <p data-i18n="about.paragraphs.p2">
+                I have complementary experience in Python with FastAPI and
+                Quart, which lets me adapt to different environments. I also
+                work with GitHub Actions for CI/CD automation and apply testing
+                practices to ensure application quality.
+              </p>
+              <p data-i18n="about.paragraphs.p3">
+                I focus on clean code, best practices, and building solutions
+                that efficiently solve real problems.
+              </p>
+            </div>
             <div class="about__card">
               <div class="about__card-item">
-                <i class="fa-solid fa-graduation-cap"></i>
+                <i class="fa-solid fa-code"></i>
                 <div>
-                  <strong data-i18n="about.card.edu1.degree"
-                    >Technician in Application and Cloud Services
-                    Programming</strong
-                  >
-                  <span data-i18n="about.card.edu1.institution"
-                    >SENA | 2026 - Present</span
-                  >
+                  <strong>Java &amp; Python</strong>
+                  <span>Spring Boot · FastAPI · Quart</span>
                 </div>
               </div>
               <div class="about__card-item">
-                <i class="fa-solid fa-graduation-cap"></i>
+                <i class="fa-solid fa-gears"></i>
                 <div>
-                  <strong data-i18n="about.card.edu2.degree"
-                    >Technologist in Software Analysis and Development</strong
-                  >
-                  <span data-i18n="about.card.edu2.institution"
-                    >SENA | 2023 - 2025</span
-                  >
-                </div>
-              </div>
-              <div class="about__card-item">
-                <i class="fa-solid fa-graduation-cap"></i>
-                <div>
-                  <strong data-i18n="about.card.edu3.degree"
-                    >System Technician</strong
-                  >
-                  <span data-i18n="about.card.edu3.institution"
-                    >SENA | 2021 - 2022</span
-                  >
+                  <strong>DevOps &amp; CI/CD</strong>
+                  <span>GitHub Actions · Docker · Podman</span>
                 </div>
               </div>
               <div class="about__card-item">
@@ -305,6 +325,114 @@
                 building APIs, backend functionalities, and frontend components
                 for internal applications...
               </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================== EDUCATION ======================== -->
+    <section class="section education" id="education">
+      <div class="container">
+        <h2 class="section__title fade-up" data-i18n="education.title">
+          Education
+        </h2>
+
+        <!-- Degrees -->
+        <div class="education__block fade-up">
+          <h3 class="education__block-title">
+            <i class="fa-solid fa-graduation-cap"></i>
+            <span data-i18n="education.degrees.heading">Academic Degrees</span>
+          </h3>
+          <div class="education__cards">
+            <div class="education__card">
+              <div class="education__card-year">2023 – 2025</div>
+              <div class="education__card-body">
+                <h4 data-i18n="education.degrees.d2.title">
+                  Technologist in Software Analysis and Development
+                </h4>
+                <span
+                  class="education__institution"
+                  data-i18n="education.degrees.d1.institution"
+                  >SENA</span
+                >
+              </div>
+            </div>
+
+            <div class="education__card">
+              <div class="education__card-year">2021 – 2022</div>
+              <div class="education__card-body">
+                <h4 data-i18n="education.degrees.d1.title">
+                  System Technician
+                </h4>
+                <span
+                  class="education__institution"
+                  data-i18n="education.degrees.d1.institution"
+                  >SENA</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Certifications -->
+        <div class="education__block fade-up">
+          <h3 class="education__block-title">
+            <i class="fa-solid fa-certificate"></i>
+            <span data-i18n="education.certs.heading"
+              >Certifications &amp; Courses</span
+            >
+          </h3>
+          <div class="education__certs-grid">
+            <div class="education__cert-card">
+              <div class="education__cert-icon">
+                <i class="fa-solid fa-shield-halved"></i>
+              </div>
+              <div class="education__cert-body">
+                <h4 data-i18n="education.certs.c3.title">
+                  Google Cybersecurity
+                </h4>
+                <span
+                  class="education__cert-issuer"
+                  data-i18n="education.certs.c3.issuer"
+                  >Coursera</span
+                >
+                <span class="education__cert-year">June 2025</span>
+              </div>
+            </div>
+
+            <div class="education__cert-card">
+              <div class="education__cert-icon">
+                <i class="fa-brands fa-js"></i>
+              </div>
+              <div class="education__cert-body">
+                <h4 data-i18n="education.certs.c2.title">
+                  Introduction to JavaScript Programming
+                </h4>
+                <span
+                  class="education__cert-issuer"
+                  data-i18n="education.certs.c2.issuer"
+                  >Universidad Distrital FJC – Generación TIC</span
+                >
+                <span class="education__cert-year">March 2022</span>
+              </div>
+            </div>
+
+            <div class="education__cert-card">
+              <div class="education__cert-icon">
+                <i class="fa-solid fa-laptop-code"></i>
+              </div>
+              <div class="education__cert-body">
+                <h4 data-i18n="education.certs.c1.title">
+                  Digital Creative Industries
+                </h4>
+                <span
+                  class="education__cert-issuer"
+                  data-i18n="education.certs.c1.issuer"
+                  >UTP – Misión TIC 2022</span
+                >
+                <span class="education__cert-year">December 2022</span>
+              </div>
             </div>
           </div>
         </div>
