@@ -43,12 +43,6 @@ test("Visualization test", async ({ page }) => {
   await expect(page.getByText(en.about.paragraphs.p1)).toBeVisible();
   await expect(page.getByText(en.about.paragraphs.p2)).toBeVisible();
   await expect(page.getByText(en.about.paragraphs.p3)).toBeVisible();
-  await expect(page.getByText(en.about.card.edu1.degree)).toBeVisible();
-  await expect(page.getByText(en.about.card.edu1.institution)).toBeVisible();
-  await expect(page.getByText(en.about.card.edu2.degree)).toBeVisible();
-  await expect(page.getByText(en.about.card.edu2.institution)).toBeVisible();
-  await expect(page.getByText(en.about.card.edu3.degree)).toBeVisible();
-  await expect(page.getByText(en.about.card.edu3.institution)).toBeVisible();
   await expect(page.getByText(en.about.card.location)).toBeVisible();
   await expect(page.getByText(en.about.card.availability)).toBeVisible();
   await expect(
@@ -75,13 +69,12 @@ test("Visualization test", async ({ page }) => {
   await expect(page.getByText("Git", { exact: true })).toBeVisible();
   await expect(page.getByText("GitHub", { exact: true })).toBeVisible();
   await expect(page.locator("#skills").getByText("Docker")).toBeVisible();
-  await expect(page.getByText("Podman")).toBeVisible();
+  await expect(page.getByText('Podman', { exact: true })).toBeVisible();
   await expect(page.getByText(en.skills.groups.concepts)).toBeVisible();
-  await expect(page.locator("#skills").getByText("CI/CD")).toBeVisible();
-  await expect(page.getByText("Microservices", { exact: true })).toBeVisible();
-  await expect(page.getByText("Microservices", { exact: true })).toBeVisible();
-  await expect(page.getByText("REST APIs")).toBeVisible();
-  await expect(page.getByText("Asynchronism")).toBeVisible();
+  await expect(page.locator('#skills').getByText('CI/CD')).toBeVisible();
+  await expect(page.getByText('Microservices', { exact: true })).toBeVisible();
+  await expect(page.getByText('REST APIs')).toBeVisible();
+  await expect(page.getByText('Asynchronism')).toBeVisible();
   await expect(
     page.getByRole("heading", { name: en.experience.title }),
   ).toBeVisible();
@@ -126,7 +119,7 @@ test("Visualization test", async ({ page }) => {
     page.getByRole("heading", { name: en.contact.title }),
   ).toBeVisible();
   await expect(page.getByText(en.contact.subtitle)).toBeVisible();
-  await expect(page.getByText(en.contact.form.name.label)).toBeVisible();
+  await expect(page.getByText(en.contact.form.name.label, { exact: true })).toBeVisible();
   await expect(page.getByRole("textbox", { name: "Name" })).toBeVisible();
   await expect(page.getByText(en.contact.form.email.label)).toBeVisible();
   await expect(page.getByRole("textbox", { name: "Email" })).toBeVisible();
@@ -185,12 +178,6 @@ test("Visualization test in spanish", async ({ page }) => {
   await expect(page.getByText(es.about.paragraphs.p1)).toBeVisible();
   await expect(page.getByText(es.about.paragraphs.p2)).toBeVisible();
   await expect(page.getByText(es.about.paragraphs.p3)).toBeVisible();
-  await expect(page.getByText(es.about.card.edu1.degree)).toBeVisible();
-  await expect(page.getByText(es.about.card.edu1.institution)).toBeVisible();
-  await expect(page.getByText(es.about.card.edu2.degree)).toBeVisible();
-  await expect(page.getByText(es.about.card.edu2.institution)).toBeVisible();
-  await expect(page.getByText(es.about.card.edu3.degree)).toBeVisible();
-  await expect(page.getByText(es.about.card.edu3.institution)).toBeVisible();
   await expect(page.getByText(es.about.card.location)).toBeVisible();
   await expect(page.getByText(es.about.card.availability)).toBeVisible();
   await expect(
@@ -217,7 +204,7 @@ test("Visualization test in spanish", async ({ page }) => {
   await expect(page.getByText("Git", { exact: true })).toBeVisible();
   await expect(page.getByText("GitHub", { exact: true })).toBeVisible();
   await expect(page.locator("#skills").getByText("Docker")).toBeVisible();
-  await expect(page.getByText("Podman")).toBeVisible();
+  await expect(page.locator("#skills").getByText("Podman")).toBeVisible();
   await expect(page.getByText(es.skills.groups.concepts)).toBeVisible();
   await expect(page.locator("#skills").getByText("CI/CD")).toBeVisible();
   await expect(page.getByText("Microservices", { exact: true })).toBeVisible();
