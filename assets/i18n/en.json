@@ -37,6 +37,7 @@
       "frameworks": "Frameworks",
       "databases": "Databases",
       "tools": "Tools",
+      "testing": "Testing",
       "concepts": "Concepts"
     }
   },
@@ -93,7 +94,11 @@
       },
       "sportspulse": {
         "title": "Sports Pulse API",
-        "description": "Real-time football analytics platform composed of 8 interconnected microservices that communicate with each other and consume data from the RapidAPI Football API."
+        "description": "Real-time football analytics platform composed of 8 interconnected microservices that communicate with each other and consume data from the Football-API."
+      },
+      "swissroute": {
+        "title": "SwissRoute API",
+        "description": "Public transport trip planning REST API built with Spring Boot and PostgreSQL. Integrates external transport APIs to manage stations, connections, favorite routes, and travel history"
       }
     }
   },
