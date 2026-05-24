@@ -7,25 +7,30 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
-    name: Run Playwright Tests
 
     steps:
       - name: 📥 Checkout code
         uses: actions/checkout@v4
 
+      - name: 📦 Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 11
+
       - name: ⚙️ Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '24'
+          cache: 'pnpm'
 
       - name: 📦 Install dependencies
-        run: npm install
+        run: pnpm install
 
       - name: 🎭 Install Playwright Browsers
-        run: npx playwright install --with-deps
+        run: pnpm exec playwright install --with-deps
 
       - name: 🧪 Run Playwright Tests
-        run: npx playwright test
+        run: pnpm test
 
       - name: 📊 Upload Playwright Report
         if: always()
