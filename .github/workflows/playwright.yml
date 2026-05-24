@@ -7,11 +7,15 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
-    name: Run Playwright Tests
 
     steps:
       - name: 📥 Checkout code
         uses: actions/checkout@v4
+
+      - name: 📦 Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 11
 
       - name: ⚙️ Setup Node.js
         uses: actions/setup-node@v4
@@ -19,13 +23,8 @@ jobs:
           node-version: '24'
           cache: 'pnpm'
 
-      - name: 📦 Setup pnpm
-        uses: pnpm/action-setup@v4
-        with:
-          version: 10
-
       - name: 📦 Install dependencies
-        run: pnpm install --frozen-lockfile
+        run: pnpm install
 
       - name: 🎭 Install Playwright Browsers
         run: pnpm exec playwright install --with-deps
