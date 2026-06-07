@@ -48,7 +48,7 @@
         "date": "2024 - 2025 | 6 meses",
         "role": "Desarrollador de Software Practicante",
         "company": "Lumu Technologies",
-        "description": "Contribuí al desarrollo de soluciones tecnológicas construyendo APIs, funcionalidades backend y componentes frontend para aplicaciones internas. Participé en proyectos siguiendo buenas prácticas de programación, control de versiones y metodologías ágiles, apoyando además el mantenimiento, la documentación y la mejora continua del sistema. Esta experiencia fortaleció mis habilidades en desarrollo ágil y me permitió entregar mejoras funcionales a herramientas internas que optimizaron los procesos del equipo."
+        "description": "Desarrollé y mantuve APIs REST en Python utilizando el framework Quart, siguiendo principios de clean code y estándares de documentación técnica. Contribuí al desarrollo frontend de aplicaciones internas con React, TypeScript y Material UI (MUI), implementando componentes reutilizables y mejoras funcionales. Colaboré en flujos de trabajo ágiles utilizando Git, Bitbucket, Jira y Confluence bajo metodología Scrum, apoyando el mantenimiento de sistemas, la mejora continua y entregando mejoras que optimizaron los procesos del equipo de ingeniería."
       }
     }
   },
