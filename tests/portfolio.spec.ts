@@ -520,7 +520,7 @@ test("mock emailjs contact form submission with error in Spanish", async ({
 
 test("mock resume download test in english", async ({ page }) => {
   await page.route(
-    "**/assets/cv/Sebastian_Orjuela_CV_EN.pdf",
+    "**/assets/cv/en/Sebastian_Orjuela_CV.pdf",
     async (route) => {
       await route.fulfill({
         status: 200,
@@ -540,7 +540,7 @@ test("mock resume download test in english", async ({ page }) => {
 
 test("mock resume download test in Spanish", async ({ page }) => {
   await page.route(
-    "**/assets/cv/Sebastian_Orjuela_CV_ES.pdf",
+    "**/assets/cv/es/Sebastian_Orjuela_CV.pdf",
     async (route) => {
       await route.fulfill({
         status: 200,
