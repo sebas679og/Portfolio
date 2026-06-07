@@ -48,7 +48,7 @@
         "date": "2024 - 2025 | 6 months",
         "role": "Software Developer Intern",
         "company": "Lumu Technologies",
-        "description": "I contributed to the development of technological solutions by building APIs, backend functionalities, and frontend components for internal applications. I participated in projects following programming best practices, version control, and agile methodologies, while also supporting system maintenance, documentation, and continuous improvement. This experience strengthened my agile development skills and allowed me to deliver functional enhancements to internal tools that improved team processes."
+        "description": "I developed and maintained REST APIs in Python using the Quart framework, following clean code principles and technical documentation standards. I contributed to the frontend development of internal applications using React, TypeScript, and Material UI (MUI), implementing reusable components and functional improvements. I collaborated in agile workflows using Git, Bitbucket, Jira, and Confluence under Scrum methodology, supporting system maintenance, continuous improvement, and delivering enhancements that optimized engineering team processes."
       }
     }
   },
