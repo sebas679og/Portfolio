@@ -78,6 +78,10 @@
       "c3": {
         "title": "Ciberseguridad de Google",
         "issuer": "Coursera"
+      },
+      "c4": {
+        "title": "Construcción de Bases de Datos con MySQL",
+        "issuer": "SENA"
       }
     }
   },
