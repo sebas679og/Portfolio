@@ -30,8 +30,8 @@ document.addEventListener("DOMContentLoaded", () => {
       cvLink.setAttribute(
         "href",
         lang === "es"
-          ? "/assets/cv/Sebastian_Orjuela_CV_ES.pdf"
-          : "/assets/cv/Sebastian_Orjuela_CV_EN.pdf",
+          ? "/assets/cv/es/Sebastian_Orjuela_CV.pdf"
+          : "/assets/cv/en/Sebastian_Orjuela_CV.pdf",
       );
     }
 
