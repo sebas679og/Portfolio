@@ -45,7 +45,7 @@
     "title": "Experiencia",
     "items": {
       "lumu": {
-        "date": "2024 - 2025 | 6 meses",
+        "date": "Diciembre 2024 - Junio 2025 | 6 meses",
         "role": "Desarrollador de Software Practicante",
         "company": "Lumu Technologies",
         "description": "Desarrollé y mantuve APIs REST en Python utilizando el framework Quart, siguiendo principios de clean code y estándares de documentación técnica. Contribuí al desarrollo frontend de aplicaciones internas con React, TypeScript y Material UI (MUI), implementando componentes reutilizables y mejoras funcionales. Colaboré en flujos de trabajo ágiles utilizando Git, Bitbucket, Jira y Confluence bajo metodología Scrum, apoyando el mantenimiento de sistemas, la mejora continua y entregando mejoras que optimizaron los procesos del equipo de ingeniería."
@@ -69,19 +69,23 @@
       "heading": "Certificaciones & Cursos",
       "c1": {
         "title": "Industrias Creativas Digitales",
-        "issuer": "UTP – Misión TIC 2022"
+        "issuer": "UTP – Misión TIC 2022",
+        "date": "Diciembre 2022"
       },
       "c2": {
         "title": "Introducción a la Programación en JavaScript",
-        "issuer": "Universidad Distrital FJC – Generación TIC"
+        "issuer": "Universidad Distrital FJC – Generación TIC",
+        "date": "Diciembre 2023"
       },
       "c3": {
         "title": "Ciberseguridad de Google",
-        "issuer": "Coursera"
+        "issuer": "Coursera",
+        "date": "Junio 2025"
       },
       "c4": {
         "title": "Construcción de Bases de Datos con MySQL",
-        "issuer": "SENA"
+        "issuer": "SENA",
+        "date": "Mayo 2026"
       }
     }
   },
@@ -129,6 +133,6 @@
     "messageRequired": "El mensaje no puede estar vacío."
   },
   "footer": {
-    "copy": "© 2026 Sebastian Orjuela. Todos los derechos reservados."
+    "copy": "© {year} Sebastian Orjuela. Todos los derechos reservados."
   }
 }
