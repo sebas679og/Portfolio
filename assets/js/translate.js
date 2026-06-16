@@ -8,14 +8,19 @@ document.addEventListener("DOMContentLoaded", () => {
   async function setLanguage(lang) {
     const res = await fetch(`./assets/i18n/${lang}.json`);
     const t = await res.json();
+    const year = new Date().getFullYear();
 
     window.translations = t;
     window.currentLang = lang;
 
     // Textos normales
     document.querySelectorAll("[data-i18n]").forEach((el) => {
-      const value = resolve(t, el.getAttribute("data-i18n"));
-      if (value) el.textContent = value;
+      const key = el.getAttribute("data-i18n");
+      const value = resolve(t, key);
+
+      if (value) {
+        el.innerHTML = value.replace("{year}", new Date().getFullYear());
+      }
     });
 
     // Placeholders
