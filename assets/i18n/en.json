@@ -45,7 +45,7 @@
     "title": "Experience",
     "items": {
       "lumu": {
-        "date": "2024 - 2025 | 6 months",
+        "date": "December 2024 - June 2025 | 6 months",
         "role": "Software Developer Intern",
         "company": "Lumu Technologies",
         "description": "I developed and maintained REST APIs in Python using the Quart framework, following clean code principles and technical documentation standards. I contributed to the frontend development of internal applications using React, TypeScript, and Material UI (MUI), implementing reusable components and functional improvements. I collaborated in agile workflows using Git, Bitbucket, Jira, and Confluence under Scrum methodology, supporting system maintenance, continuous improvement, and delivering enhancements that optimized engineering team processes."
@@ -69,19 +69,23 @@
       "heading": "Certifications & Courses",
       "c1": {
         "title": "Digital Creative Industries",
-        "issuer": "UTP – Misión TIC 2022"
+        "issuer": "UTP – Misión TIC 2022",
+        "date": "December 2022"
       },
       "c2": {
         "title": "Introduction to JavaScript Programming",
-        "issuer": "Universidad Distrital FJC – Generación TIC"
+        "issuer": "Universidad Distrital FJC – Generación TIC",
+        "date": "December 2023"
       },
       "c3": {
         "title": "Google Cybersecurity",
-        "issuer": "Coursera"
+        "issuer": "Coursera",
+        "date": "June 2025"
       },
       "c4": {
         "title": "Database Development with MySQL",
-        "issuer": "SENA"
+        "issuer": "SENA",
+        "date": "May 2026"
       }
     }
   },
@@ -129,6 +133,6 @@
     "messageRequired": "Message cannot be empty."
   },
   "footer": {
-    "copy": "© 2026 Sebastian Orjuela. All rights reserved."
+    "copy": "© {year} Sebastian Orjuela. All rights reserved."
   }
 }
