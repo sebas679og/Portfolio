@@ -128,7 +128,7 @@ portfolio/
 ├── .gitignore
 ├── index.html
 ├── LICENSE
-├── package-lock.json
+├── pnpm-lock.yaml
 ├── package.json
 ├── playwright.config.ts
 ├── README.md
