@@ -48,7 +48,7 @@ Este proyecto no requiere instalación de dependencias tradicionales.
 Para levantar un servidor local puedes usar:
 
 ```bash
-npx serve . -s
+pnpm exec serve . -s
 ```
 
 Luego abre en tu navegador:
@@ -66,7 +66,7 @@ El proyecto incluye pruebas end-to-end utilizando **Playwright**.
 ## 🔧 Instalación de dependencias de Playwright
 
 ```bash
-npx playwright install --with-deps
+pnpm exec playwright install --with-deps
 ```
 
 ---
@@ -76,7 +76,7 @@ npx playwright install --with-deps
 Este comando abre la interfaz gráfica para grabar pruebas automáticamente:
 
 ```bash
-npx playwright codegen http://localhost:3000
+pnpm exec playwright codegen http://localhost:3000
 ```
 
 ---
@@ -84,7 +84,7 @@ npx playwright codegen http://localhost:3000
 ## ▶️ Ejecutar pruebas
 
 ```bash
-npx playwright test
+pnpm exec playwright test
 ```
 
 ### Opciones útiles
@@ -92,13 +92,13 @@ npx playwright test
 * 🖥️ Modo UI (interfaz gráfica):
 
   ```bash
-  npx playwright test --ui
+  pnpm exec playwright test --ui
   ```
 
 * ⚙️ Ejecutar con número específico de hilos:
 
   ```bash
-  npx playwright test --workers=1
+  pnpm exec playwright test --workers=1
   ```
 
 > ⚠️ Se recomienda no superar el número de núcleos de tu procesador.
@@ -128,7 +128,7 @@ portfolio/
 ├── .gitignore
 ├── index.html
 ├── LICENSE
-├── package-lock.json
+├── pnpm-lock.yaml
 ├── package.json
 ├── playwright.config.ts
 ├── README.md
@@ -146,10 +146,3 @@ Este portafolio tiene como objetivo:
 * Centralizar mis proyectos
 * Servir como carta de presentación profesional
 * Aplicar buenas prácticas de frontend y testing
-
----
-
-## 📄 Licencia
-
-Este proyecto es de uso personal.
-La plantilla original pertenece a su respectivo autor.
