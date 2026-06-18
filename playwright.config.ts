@@ -62,7 +62,7 @@ export default defineConfig({
   /* Run your local dev server before starting the tests */
 
    webServer: {
-    command: 'npx serve . -s',
+    command: 'pnpm exec serve . -s',
     port: 3000,
     reuseExistingServer: !process.env.CI,
   },

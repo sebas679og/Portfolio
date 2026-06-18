@@ -3,6 +3,8 @@ import en from "../assets/i18n/en.json";
 import es from "../assets/i18n/es.json";
 
 test("Visualization test", async ({ page }) => {
+  const currentYear = new Date().getFullYear();
+
   await page.goto("/");
   await expect(
     page.getByRole("link", { name: en.header.nav.about }),
@@ -49,32 +51,46 @@ test("Visualization test", async ({ page }) => {
     page.getByRole("heading", { name: en.skills.title }),
   ).toBeVisible();
   await expect(page.getByText(en.skills.groups.languages)).toBeVisible();
-  await expect(page.locator("#skills").getByText("Java")).toBeVisible();
+  await expect(
+    page.locator("#skills").getByText("Java", { exact: true }),
+  ).toBeVisible();
   await expect(page.getByText("Python", { exact: true })).toBeVisible();
+  await expect(page.getByText("TypeScript", { exact: true })).toBeVisible();
+  await expect(page.getByText("JavaScript", { exact: true })).toBeVisible();
   await expect(
     page.getByText(en.skills.groups.frameworks, { exact: true }),
   ).toBeVisible();
   await expect(page.locator("#skills").getByText("Spring Boot")).toBeVisible();
   await expect(page.getByText("Quart", { exact: true })).toBeVisible();
   await expect(page.getByText("FastAPI", { exact: true })).toBeVisible();
+  await expect(page.getByText("React", { exact: true })).toBeVisible();
   await expect(
     page.getByRole("heading", { name: en.skills.groups.databases }),
   ).toBeVisible();
   await expect(page.locator("#skills").getByText("PostgreSQL")).toBeVisible();
+  await expect(page.getByText("MySQL", { exact: true })).toBeVisible();
   await expect(page.getByText("MongoDB")).toBeVisible();
-  await expect(page.getByText("MySQL")).toBeVisible();
   await expect(
     page.getByText(en.skills.groups.tools, { exact: true }),
   ).toBeVisible();
   await expect(page.getByText("Git", { exact: true })).toBeVisible();
   await expect(page.getByText("GitHub", { exact: true })).toBeVisible();
   await expect(page.locator("#skills").getByText("Docker")).toBeVisible();
-  await expect(page.getByText('Podman', { exact: true })).toBeVisible();
+  await expect(page.getByText("Podman", { exact: true })).toBeVisible();
+  await expect(page.getByText("Maven")).toBeVisible();
+  await expect(
+    page.getByText(en.skills.groups.testing, { exact: true }),
+  ).toBeVisible();
+  await expect(page.locator("#skills").getByText("JUnit")).toBeVisible();
+  await expect(page.locator("#skills").getByText("Mockito")).toBeVisible();
+  await expect(page.getByText("Pytest")).toBeVisible();
+  await expect(page.getByText("Playwright")).toBeVisible();
+  await expect(page.getByText("Postman")).toBeVisible();
   await expect(page.getByText(en.skills.groups.concepts)).toBeVisible();
-  await expect(page.locator('#skills').getByText('CI/CD')).toBeVisible();
-  await expect(page.getByText('Microservices', { exact: true })).toBeVisible();
-  await expect(page.getByText('REST APIs')).toBeVisible();
-  await expect(page.getByText('Asynchronism')).toBeVisible();
+  await expect(page.getByText("REST APIs", { exact: true })).toBeVisible();
+  await expect(page.getByText("Microservices", { exact: true })).toBeVisible();
+  await expect(page.locator("#skills").getByText("CI/CD")).toBeVisible();
+  await expect(page.getByText("Asynchronism")).toBeVisible();
   await expect(
     page.getByRole("heading", { name: en.experience.title }),
   ).toBeVisible();
@@ -95,7 +111,7 @@ test("Visualization test", async ({ page }) => {
   await expect(
     page.getByText(en.projects.items.bankcore.description),
   ).toBeVisible();
-  await expect(page.getByText("Java", {exact:true}).nth(1)).toBeVisible();
+  await expect(page.getByText("Java", { exact: true }).nth(1)).toBeVisible();
   await expect(page.getByText("Spring Boot").nth(3)).toBeVisible();
   await expect(page.getByText("PostgreSQL").nth(1)).toBeVisible();
   await expect(page.getByText("Docker").nth(1)).toBeVisible();
@@ -119,7 +135,9 @@ test("Visualization test", async ({ page }) => {
     page.getByRole("heading", { name: en.contact.title }),
   ).toBeVisible();
   await expect(page.getByText(en.contact.subtitle)).toBeVisible();
-  await expect(page.getByText(en.contact.form.name.label, { exact: true })).toBeVisible();
+  await expect(
+    page.getByText(en.contact.form.name.label, { exact: true }),
+  ).toBeVisible();
   await expect(page.getByRole("textbox", { name: "Name" })).toBeVisible();
   await expect(page.getByText(en.contact.form.email.label)).toBeVisible();
   await expect(page.getByRole("textbox", { name: "Email" })).toBeVisible();
@@ -128,7 +146,9 @@ test("Visualization test", async ({ page }) => {
   ).toBeVisible();
   await expect(page.getByRole("textbox", { name: "Message" })).toBeVisible();
   await expect(page.getByText("Name Email Message Send")).toBeVisible();
-  await expect(page.getByText(en.footer.copy)).toBeVisible();
+  await expect(
+    page.getByText(en.footer.copy.replace("{year}", currentYear.toString())),
+  ).toBeVisible();
   await expect(
     page.getByRole("contentinfo").getByRole("link", { name: "GitHub" }),
   ).toBeVisible();
@@ -137,6 +157,8 @@ test("Visualization test", async ({ page }) => {
 });
 
 test("Visualization test in spanish", async ({ page }) => {
+  const currentYear = new Date().getFullYear();
+
   await page.goto("/");
   await page.getByRole("button", { name: "ES", exact: true }).click();
   await expect(
@@ -184,32 +206,45 @@ test("Visualization test in spanish", async ({ page }) => {
     page.getByRole("heading", { name: es.skills.title }),
   ).toBeVisible();
   await expect(page.getByText(es.skills.groups.languages)).toBeVisible();
-  await expect(page.locator("#skills").getByText("Java")).toBeVisible();
+  await expect(
+    page.locator("#skills").getByText("Java", { exact: true }),
+  ).toBeVisible();
   await expect(page.getByText("Python", { exact: true })).toBeVisible();
+  await expect(page.getByText("TypeScript", { exact: true })).toBeVisible();
+  await expect(page.getByText("JavaScript", { exact: true })).toBeVisible();
   await expect(
     page.getByText(es.skills.groups.frameworks, { exact: true }),
   ).toBeVisible();
   await expect(page.locator("#skills").getByText("Spring Boot")).toBeVisible();
   await expect(page.getByText("Quart", { exact: true })).toBeVisible();
   await expect(page.getByText("FastAPI", { exact: true })).toBeVisible();
+  await expect(page.getByText("React", { exact: true })).toBeVisible();
   await expect(
-    page.getByRole("heading", { name: es.skills.groups.databases }),
+    page.getByText(es.skills.groups.databases, { exact: true }),
   ).toBeVisible();
   await expect(page.locator("#skills").getByText("PostgreSQL")).toBeVisible();
+  await expect(page.getByText("MySQL", { exact: true })).toBeVisible();
   await expect(page.getByText("MongoDB")).toBeVisible();
-  await expect(page.getByText("MySQL")).toBeVisible();
   await expect(
     page.getByText(es.skills.groups.tools, { exact: true }),
   ).toBeVisible();
   await expect(page.getByText("Git", { exact: true })).toBeVisible();
   await expect(page.getByText("GitHub", { exact: true })).toBeVisible();
   await expect(page.locator("#skills").getByText("Docker")).toBeVisible();
-  await expect(page.locator("#skills").getByText("Podman")).toBeVisible();
+  await expect(page.getByText("Podman", { exact: true })).toBeVisible();
+  await expect(page.getByText("Maven")).toBeVisible();
+  await expect(
+    page.getByText(es.skills.groups.testing, { exact: true }),
+  ).toBeVisible();
+  await expect(page.locator("#skills").getByText("JUnit")).toBeVisible();
+  await expect(page.locator("#skills").getByText("Mockito")).toBeVisible();
+  await expect(page.getByText("Pytest")).toBeVisible();
+  await expect(page.getByText("Playwright")).toBeVisible();
+  await expect(page.getByText("Postman")).toBeVisible();
   await expect(page.getByText(es.skills.groups.concepts)).toBeVisible();
+  await expect(page.getByText("REST APIs", { exact: true })).toBeVisible();
+  await expect(page.getByText("Microservices", { exact: true })).toBeVisible();
   await expect(page.locator("#skills").getByText("CI/CD")).toBeVisible();
-  await expect(page.getByText("Microservices", { exact: true })).toBeVisible();
-  await expect(page.getByText("Microservices", { exact: true })).toBeVisible();
-  await expect(page.getByText("REST APIs")).toBeVisible();
   await expect(page.getByText("Asynchronism")).toBeVisible();
   await expect(
     page.getByRole("heading", { name: es.experience.title }),
@@ -231,7 +266,7 @@ test("Visualization test in spanish", async ({ page }) => {
   await expect(
     page.getByText(es.projects.items.bankcore.description),
   ).toBeVisible();
-  await expect(page.getByText("Java", {exact:true}).nth(1)).toBeVisible();
+  await expect(page.getByText("Java", { exact: true }).nth(1)).toBeVisible();
   await expect(page.getByText("Spring Boot").nth(3)).toBeVisible();
   await expect(page.getByText("PostgreSQL").nth(1)).toBeVisible();
   await expect(page.getByText("Docker").nth(1)).toBeVisible();
@@ -265,7 +300,9 @@ test("Visualization test in spanish", async ({ page }) => {
     page.getByText(es.contact.form.message.label, { exact: true }),
   ).toBeVisible();
   await expect(page.getByRole("textbox", { name: "Mensaje" })).toBeVisible();
-  await expect(page.getByText(es.footer.copy)).toBeVisible();
+  await expect(
+    page.getByText(es.footer.copy.replace("{year}", currentYear.toString())),
+  ).toBeVisible();
   await expect(
     page.getByRole("contentinfo").getByRole("link", { name: "GitHub" }),
   ).toBeVisible();
@@ -535,7 +572,7 @@ test("mock resume download test in english", async ({ page }) => {
   await page.getByRole("link", { name: en.hero.actions.cv }).click();
   const download = await downloadPromise;
 
-  expect(download.suggestedFilename()).toBe("Sebastian_Orjuela_CV_EN.pdf");
+  expect(download.suggestedFilename()).toBe("Sebastian_Orjuela_CV.pdf");
 });
 
 test("mock resume download test in Spanish", async ({ page }) => {
@@ -557,5 +594,5 @@ test("mock resume download test in Spanish", async ({ page }) => {
   await page.getByRole("link", { name: es.hero.actions.cv }).click();
   const download = await downloadPromise;
 
-  expect(download.suggestedFilename()).toBe("Sebastian_Orjuela_CV_ES.pdf");
+  expect(download.suggestedFilename()).toBe("Sebastian_Orjuela_CV.pdf");
 });
