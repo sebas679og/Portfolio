@@ -56,6 +56,10 @@
     "title": "Educación",
     "degrees": {
       "heading": "Títulos académicos",
+      "d3": {
+        "title": "Ingeniería Informática",
+        "institution": "Universidad de Caldas"
+      },
       "d2": {
         "title": "Tecnólogo en Análisis y Desarrollo de Software",
         "institution": "SENA (Servicio Nacional de Aprendizaje)"
