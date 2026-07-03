@@ -56,6 +56,10 @@
     "title": "Education",
     "degrees": {
       "heading": "Academic Degrees",
+      "d3": {
+        "title": "Computer Engineering",
+        "institution": "Universidad de Caldas"
+      },
       "d2": {
         "title": "Technologist in Software Analysis and Development",
         "institution": "SENA (Servicio Nacional de Aprendizaje)"
