@@ -22,8 +22,8 @@
   },
   "homepage": "https://github.com/sebas679og/Portfolio?tab=readme-ov-file#portafolio-personal--sebasti%C3%A1n-orjuela",
   "devDependencies": {
-    "@playwright/test": "^1.61.0",
-    "@types/node": "^25.9.3",
+    "@playwright/test": "^1.64.1",
+    "@types/node": "^25.9.9",
     "serve": "^14.2.6"
   }
 }
